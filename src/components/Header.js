@@ -18,7 +18,7 @@ const Header = props => {
 
           <div className="col-md d-flex align-items-center">
               <div className="con d-flex align-items-center">
-                <div className="icon"><span className="flaticon-clock"></span></div>
+                <div className="icon"><span className="far fa-clock"></span></div>
                 <div className="text">
                   <span>Monday - Friday</span>
                   <strong>8:00AM-4:00PM</strong>
@@ -28,7 +28,7 @@ const Header = props => {
 
           <div className="col-md d-flex align-items-center">
             <div className="con d-flex align-items-center">
-              <div className="icon"><span className="flaticon-telephone"></span></div>
+              <div className="icon"><span className="fas fa-phone-alt"></span></div>
               <div className="text">
                 {/* call functionality */}
                 <span><strong>+23233313797</strong></span>

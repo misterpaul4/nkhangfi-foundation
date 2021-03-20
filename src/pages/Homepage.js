@@ -1,10 +1,21 @@
+import React, { useEffect } from 'react';
+import Hero from '../components/Hero/Homepage';
+import {setActive, removeActive} from '../utils/activeLink';
 import '../css/style.css';
 
 function Homepage() {
-  return (
-    <div>
+  useEffect(() => {
+    setActive('nav-home');
 
-    </div>
+    return () => {
+      removeActive('nav-home')
+    };
+  }, []);
+
+  return (
+    <>
+      <Hero />
+    </>
   );
 }
 

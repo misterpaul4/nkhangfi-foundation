@@ -1,9 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { updateCurrentPage } from '../redux/actions'
 
-const Nav = () => {
+const Nav = props => {
   return(
     <nav className="navbar navbar-expand-lg  ftco-navbar-light">
       <div className="container-xl">
@@ -13,13 +12,13 @@ const Nav = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item"><Link className="nav-link" to={"/"}>Home</Link></li>
-            <li className="nav-item"><Link className="nav-link" to={"/services"}>Nkhangfi Travel</Link></li>
-            <li className="nav-item"><Link className="nav-link" to={"/studyAbroad"}>Study Abroad</Link></li>
-            <li className="nav-item"><Link className="nav-link" to={"/gallery"}>Gallery</Link></li>
-            <li className="nav-item"><Link className="nav-link" to={"/careers"}>Careers</Link></li>
-            <li className="nav-item"><Link className="nav-link" to={"/team"}>Our Team</Link></li>
-            <li className="nav-item"><Link className="nav-link" to={"/contact"}>Contact</Link></li>
+            <li className="nav-item"><Link className="nav-link nav-home" to={"/"}>Home</Link></li>
+            <li className="nav-item"><Link className="nav-link nav-travel" to={"/services"}>Nkhangfi Travel</Link></li>
+            <li className="nav-item"><Link className="nav-link nav-study" to={"/studyAbroad"}>Study Abroad</Link></li>
+            <li className="nav-item"><Link className="nav-link nav-gallery" to={"/gallery"}>Gallery</Link></li>
+            <li className="nav-item"><Link className="nav-link nav-careers" to={"/careers"}>Careers</Link></li>
+            <li className="nav-item"><Link className="nav-link nav-team" to={"/team"}>Our Team</Link></li>
+            <li className="nav-item"><Link className="nav-link nav-contact" to={"/contact"}>Contact</Link></li>
           </ul>
         </div>
       </div>
@@ -31,10 +30,10 @@ const mapStateToProps = state => ({
   current_page: state.page,
 });
 
-const mapDispatchToProps = dispatch => ({
-  updateCurrentPageNav: pg => {
-    dispatch(updateCurrentPage(pg));
-  },
-});
+// const mapDispatchToProps = dispatch => ({
+//   updateCurrentPageNav: pg => {
+//     dispatch(updateCurrentPage(pg));
+//   },
+// });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Nav);
+export default connect(mapStateToProps)(Nav);
