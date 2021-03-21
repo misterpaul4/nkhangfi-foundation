@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Nav = props => {
   return(
-    <nav className="navbar navbar-expand-lg  ftco-navbar-light">
+    <nav className="navbar navbar-expand-lg ftco-navbar-light">
       <div className="container-xl">
         <Link to={"/donate"} className="btn-custom order-lg-last">donate</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

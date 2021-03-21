@@ -1,3 +1,14 @@
 .homepage-hero-bg {
   background-image: url('../images/bg_1.jpg');
 }
+
+.spread-p {
+  height: 15em;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.spread-p::-webkit-scrollbar {
+  display: none;
+}
