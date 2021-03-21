@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import {setActive, removeActive} from '../utils/activeLink';
 import Hero from '../components/Hero/Homepage';
 
-const Careers = () => {
+const Events = () => {
   useEffect(() => {
-    setActive('nav-careers');
+    setActive('nav-event');
 
     return () => {
-      removeActive('nav-careers')
+      removeActive('nav-event')
     };
   }, []);
 
@@ -18,4 +18,4 @@ const Careers = () => {
   );
 };
 
-export default Careers;
+export default Events;

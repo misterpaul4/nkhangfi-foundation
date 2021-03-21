@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Hero from '../components/Hero/Homepage';
 import {setActive, removeActive} from '../utils/activeLink';
 import '../css/style.css';
 import About from '../components/About';
 import Progress from '../components/Progress';
+import StudyAbroad from '../components/IconTitleMoreGrid';
 
 function Homepage() {
   useEffect(() => {
@@ -40,7 +42,40 @@ function Homepage() {
         paragraph: "to annually create and support innovative workshops and educational scholarship programs that would otherwise not be available to most African students. Cultivate  partnerships with foreign universities and the local community to provide the resources necessary to ensure deserving students get the support they need to have a better future through quality higher education",
       }
     ],
+  };
+
+  const studyAbroadObj = [
+  {
+    icon: "flaticon-design",
+    title: "study in australia",
+    key: "australia"
+  },
+  {
+    icon: "flaticon-paint-palette",
+    title: "study in belarus",
+    key: "belarus"
+  },
+  {
+    icon: "flaticon-computer-science",
+    title: "study in china",
+    key: "china"
+  },
+  {
+    icon: "flaticon-magnifying-glass",
+    title: "study in cyprus",
+    key: "cyprus"
+  },
+  {
+    icon: "flaticon-engineer",
+    title: "study in poland",
+    key: "poland"
+  },
+  {
+    icon: "flaticon-dumbbell",
+    title: "study in ukraine",
+    key: "ukraine"
   }
+  ];
 
   return (
     <>
@@ -101,6 +136,22 @@ function Homepage() {
     </section>
 
       <Progress />
+
+      {/* NSP */}
+      <section className="ftco-section">
+        <div className="container-xl">
+          <div className="row justify-content-center">
+            <div className="col-md-8 heading-section text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+              <span className="subheading">nkhangfi scholarship program (nsp)</span>
+              <h2 className="mb-4">Study Abroad For Less</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea harum nisi, amet itaque, unde obcaecati deserunt recusandae voluptatum fugiat praesentium, accusantium iure impedit? Delectus nostrum corrupti quam molestiae non dolor?</p>
+              <Link to={"/event/nsp"} className="btn link-to-btn">Learn More</Link>
+            </div>
+          </div>
+
+          <StudyAbroad data={studyAbroadObj}/>
+        </div>
+      </section>
     </>
   );
 }
