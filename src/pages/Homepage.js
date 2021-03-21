@@ -3,6 +3,7 @@ import Hero from '../components/Hero/Homepage';
 import {setActive, removeActive} from '../utils/activeLink';
 import '../css/style.css';
 import About from '../components/About';
+import Progress from '../components/Progress';
 
 function Homepage() {
   useEffect(() => {
@@ -19,7 +20,7 @@ function Homepage() {
     message: () => (
       <>
         <p>A Non-Governmental organization developed by young African Educational Consultants and Travel Agencies from different countries, using education as a tool to alleviate poverty in Africa.</p>
-        <p>The Nkhangfi Foundation Team sources for scholarships in reputable and world-class universities around the globe. We bring them to students in African communities who have little or no financial resources to travel abroad to continue their undergraduate or post-graduate studies.</p>
+        <p>The Nkhangfi Foundation Team sources for scholarships in reputable and world-className universities around the globe. We bring them to students in African communities who have little or no financial resources to travel abroad to continue their undergraduate or post-graduate studies.</p>
       </>
     ),
     spread: [
@@ -45,6 +46,61 @@ function Homepage() {
     <>
       <Hero />
       <About data={aboutObj} />
+
+      {/* benefits */}
+      <section className="ftco-section ftco-no-pt ftco-no-pb">
+      <div className="container-xl">
+        <div className="row g-xl-5">
+          <div className="col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+            <div className="img w-100 benefit-img">
+            </div>
+          </div>
+          <div className="col-md-6 heading-section d-flex align-items-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            <div className="mt-0 my-lg-5 py-5">
+              <span className="subheading">Benefits</span>
+              <h2 className="mb-2">What Can I Benefit From Nkhangfi Foundation?</h2>
+              <div className="row mt-4 g-lg-2">
+
+                <div className="col-lg-12 d-flex align-items-stretch services-wrap">
+                  <div className="services d-flex">
+                    <div className="icon"><span className="flaticon-certificate"></span></div>
+                    <div className="text">
+                      <h2>Scholarship opportunities for over 2,000 courses from 27 Universities</h2>
+                      <p className="mb-0">
+                        Study in some of the best universities in the top countries in Europe. Benefit from 25% - 100% scholarships in Cyprus, Belarus, Turkey, Poland and more.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-lg-12 d-flex align-items-stretch services-wrap">
+                  <div className="services d-flex">
+                    <div className="icon"><span className="flaticon-scientist"></span></div>
+                    <div className="text">
+                      <h2>Work abroad opportunities</h2>
+                      <p className="mb-0">Nkhangfi Foundation holds regular work fair programs for those that wish to work in Canada, Croatia, Hungary, Lithuania, Mexico, Poland, Romania & more.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-lg-12 d-flex align-items-stretch services-wrap">
+                  <div className="services d-flex">
+                    <div className="icon"><span className="flaticon-online-learning"></span></div>
+                    <div className="text">
+                      <h2>Support</h2>
+                      <p className="mb-0">Benefit from a huge support system. We never leave our clients behind. Be a part of the Nkhangfi family.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <Progress />
     </>
   );
 }

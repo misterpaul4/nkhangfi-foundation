@@ -10,6 +10,7 @@ import Careers from '../pages/Careers';
 import Team from '../pages/Team';
 import Contact from '../pages/Contact';
 import '../css/style.css';
+import '../css/flaticon.css';
 
 const Routes = () => (
   <BrowserRouter>

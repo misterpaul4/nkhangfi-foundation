@@ -12,3 +12,11 @@
 .spread-p::-webkit-scrollbar {
   display: none;
 }
+
+.benefit-img {
+  background-image: url('../images/about.jpg');
+}
+
+.progress-bg {
+  background-image: url('../images/progress.jpg');
+}

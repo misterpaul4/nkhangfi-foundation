@@ -7,7 +7,7 @@ const About = props => {
     const {icon, heading, paragraph} = data;
 
     return (
-    <div className="item" key={heading}>
+    <div className="item tetet" key={heading}>
       <div className="courses">
         <div className="d-flex">
           <div className="icon"><span className={icon}></span></div>
