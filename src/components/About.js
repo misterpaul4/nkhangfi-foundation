@@ -24,13 +24,14 @@ const About = props => {
   return (
     <section className="ftco-section courses-section ftco-no-pb">
       <div className="container">
-        <div className="row justify-content-center pb-4">
+        <div className="row justify-content-center">
           <div className="col-md-10 text-center heading-section" data-aos="fade-up">
             <span className="subheading">{title}</span>
             <h2 className="mb-5 text-capitalize">{catchphrase}</h2>
             {message()}
           </div>
         </div>
+
         <div className="row">
           <div className="col-md-12" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
             <div className="flex-3 d-flex flex-wrap">

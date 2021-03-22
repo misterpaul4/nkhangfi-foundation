@@ -10,6 +10,7 @@ import Event from '../pages/Event';
 import Team from '../pages/Team';
 import Contact from '../pages/Contact';
 import StudyAbroadSingle from '../pages/StudyAbroadSingle';
+import ServicePage from '../pages/ServicesSingle';
 import '../css/style.css';
 import '../css/flaticon.css';
 
@@ -19,13 +20,14 @@ const Routes = () => (
     <Switch>
       <Route exact path="/" component={Homepage} />
       <Route exact path="/donate" component={Donate} />
-      <Route exact path="/services" component={NkhangfiTravel} />
+      <Route exact path="/services/overview" component={NkhangfiTravel} />
       <Route exact path="/studyAbroad/overview" component={StudyAbroad} />
       <Route exact path="/gallery" component={Gallery} />
       <Route exact path="/event/:id" component={Event} />
       <Route exact path="/team" component={Team} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/studyAbroad/:id" component={StudyAbroadSingle} />
+      <Route exact path="/services/:id" component={ServicePage} />
     </Switch>
   </BrowserRouter>
 );

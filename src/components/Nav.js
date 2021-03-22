@@ -13,7 +13,7 @@ const Nav = props => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item"><Link className="nav-link nav-home" to={"/"}>Home</Link></li>
-            <li className="nav-item"><Link className="nav-link nav-travel" to={"/services"}>Nkhangfi Travel</Link></li>
+            <li className="nav-item"><Link className="nav-link nav-travel" to={"/services/overview"}>Nkhangfi Travel</Link></li>
             <li className="nav-item"><Link className="nav-link nav-study" to={"/studyAbroad/overview"}>Study Abroad</Link></li>
             <li className="nav-item"><Link className="nav-link nav-gallery" to={"/gallery"}>Gallery</Link></li>
             <li className="nav-item"><Link className="nav-link nav-event" to={"/event/:id"}>Event</Link></li>

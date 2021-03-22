@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import Hero from '../components/Hero/Homepage';
 import {setActive, removeActive} from '../utils/activeLink';
 import '../css/style.css';
 import About from '../components/About';
 import Progress from '../components/Progress';
 import StudyAbroad from '../components/IconTitleMoreGrid';
+import Teaser from '../components/Teaser';
+import Slider from '../components/Slider';
 
 function Homepage() {
   useEffect(() => {
@@ -44,7 +45,7 @@ function Homepage() {
     ],
   };
 
-  const studyAbroadObj = [
+  const studyAbroadObjGrid = [
   {
     icon: "flaticon-design",
     title: "study in australia",
@@ -76,6 +77,53 @@ function Homepage() {
     key: "ukraine"
   }
   ];
+
+  const studyAbroadTease = {
+    title: "nkhangfi scholarship program (nsp)",
+    catchphrase: "Study Abroad For Less",
+    message: () => (
+      <>
+        <p>message about nkhangfi scholarship program
+        </p>
+      </>
+    ),
+    actionLink: "/event/nsp",
+  };
+
+  const travelServiceTease = {
+    title: "nkhangfi Travel",
+    catchphrase: "Explore Some Of The Nkhangfi Travel Services",
+    message: () => (
+      <>
+       <p>message about travel services and mini history</p>
+      </>
+    ),
+    actionLink: "/services/overview",
+  }
+
+  const travelServiceSlide = [
+    {
+      icon: "flaticon-engineer",
+      title: "tour packages",
+      message: "message about nkhangfi tour packages such as honeymoon package and their prices",
+      actionLink: "/services/tours",
+      action: "check it out",
+    },
+    {
+      icon: "flaticon-engineer",
+      title: "tour packages",
+      message: "message about nkhangfi tour packages such as honeymoon package and their prices",
+      actionLink: "/services/tours",
+      action: "check it out",
+    },
+    {
+      icon: "flaticon-engineer",
+      title: "tour packages",
+      message: "message about nkhangfi tour packages such as honeymoon package and their prices",
+      actionLink: "/services/tours",
+      action: "check it out",
+    }
+  ]
 
   return (
     <>
@@ -140,16 +188,16 @@ function Homepage() {
       {/* NSP */}
       <section className="ftco-section">
         <div className="container-xl">
-          <div className="row justify-content-center">
-            <div className="col-md-8 heading-section text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
-              <span className="subheading">nkhangfi scholarship program (nsp)</span>
-              <h2 className="mb-4">Study Abroad For Less</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea harum nisi, amet itaque, unde obcaecati deserunt recusandae voluptatum fugiat praesentium, accusantium iure impedit? Delectus nostrum corrupti quam molestiae non dolor?</p>
-              <Link to={"/event/nsp"} className="btn link-to-btn">Learn More</Link>
-            </div>
-          </div>
+          <Teaser data={studyAbroadTease}/>
+          <StudyAbroad data={studyAbroadObjGrid}/>
+        </div>
+      </section>
 
-          <StudyAbroad data={studyAbroadObj}/>
+      {/* travel services */}
+      <section className="ftco-section courses-section ftco-no-pb">
+        <div className="container">
+          <Teaser data={travelServiceTease}/>
+          <Slider data={travelServiceSlide}/>
         </div>
       </section>
     </>
