@@ -11,6 +11,7 @@ import Team from '../pages/Team';
 import Contact from '../pages/Contact';
 import StudyAbroadSingle from '../pages/StudyAbroadSingle';
 import ServicePage from '../pages/ServicesSingle';
+import EventSingle from '../pages/EventSingle';
 import '../css/style.css';
 import '../css/flaticon.css';
 
@@ -23,7 +24,8 @@ const Routes = () => (
       <Route exact path="/services/overview" component={NkhangfiTravel} />
       <Route exact path="/studyAbroad/overview" component={StudyAbroad} />
       <Route exact path="/gallery" component={Gallery} />
-      <Route exact path="/event/:id" component={Event} />
+      <Route exact path="/event/overview" component={Event} />
+      <Route exact path="/event/:id" component={EventSingle} />
       <Route exact path="/team" component={Team} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/studyAbroad/:id" component={StudyAbroadSingle} />

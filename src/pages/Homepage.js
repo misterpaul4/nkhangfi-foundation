@@ -8,6 +8,7 @@ import StudyAbroad from '../components/IconTitleMoreGrid';
 import Teaser from '../components/Teaser';
 import Slider from '../components/Slider';
 import Testimonial from '../components/Testimonial';
+import Events from '../components/UpcomingEvents';
 
 function Homepage() {
   useEffect(() => {
@@ -224,6 +225,7 @@ function Homepage() {
       </section>
 
       <Testimonial />
+      <Events />
     </>
   );
 }
