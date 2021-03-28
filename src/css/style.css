@@ -9722,13 +9722,13 @@ textarea.form-control {
       border-radius: 2px;
       margin-bottom: 10px; } }
   .courses .icon {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background: #216811;
     position: relative; }
     .courses .icon span {
-      font-size: 50px;
+      font-size: 35px;
       line-height: 1.2;
       color: #fff;
       position: absolute;

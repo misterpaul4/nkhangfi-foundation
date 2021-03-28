@@ -103,22 +103,43 @@ function Homepage() {
 
   const travelServiceSlide = [
     {
-      icon: "flaticon-engineer",
+      icon: "fas fa-umbrella-beach",
       title: "tour packages",
       message: "message about nkhangfi tour packages such as honeymoon package and their prices",
       actionLink: "/services/tours",
       action: "check it out",
     },
     {
-      icon: "flaticon-engineer",
-      title: "tour packages",
+      icon: "fab fa-cc-visa",
+      title: "visa assitance",
       message: "message about nkhangfi tour packages such as honeymoon package and their prices",
       actionLink: "/services/tours",
       action: "check it out",
     },
     {
-      icon: "flaticon-engineer",
-      title: "tour packages",
+      icon: "fas fa-plane-departure",
+      title: "flight reservation & booking",
+      message: "message about nkhangfi tour packages such as honeymoon package and their prices",
+      actionLink: "/services/tours",
+      action: "check it out",
+    },
+    {
+      icon: "fas fa-plane-departure",
+      title: "work & travel programs",
+      message: "message about nkhangfi tour packages such as honeymoon package and their prices",
+      actionLink: "/services/tours",
+      action: "check it out",
+    },
+    {
+      icon: "fas fa-hotel",
+      title: "hotel reservation & airport pickUp",
+      message: "message about nkhangfi tour packages such as honeymoon package and their prices",
+      actionLink: "/services/tours",
+      action: "check it out",
+    },
+    {
+      icon: "fas fa-language",
+      title: "translation services",
       message: "message about nkhangfi tour packages such as honeymoon package and their prices",
       actionLink: "/services/tours",
       action: "check it out",
