@@ -12,6 +12,7 @@ import Contact from '../pages/Contact';
 import StudyAbroadSingle from '../pages/StudyAbroadSingle';
 import ServicePage from '../pages/ServicesSingle';
 import EventSingle from '../pages/EventSingle';
+import Footer from '../components/Footer';
 import '../css/style.css';
 import '../css/flaticon.css';
 
@@ -31,6 +32,7 @@ const Routes = () => (
       <Route exact path="/studyAbroad/:id" component={StudyAbroadSingle} />
       <Route exact path="/services/:id" component={ServicePage} />
     </Switch>
+    <Footer />
   </BrowserRouter>
 );
 

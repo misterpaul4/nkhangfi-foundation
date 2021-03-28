@@ -46,10 +46,6 @@ const Newsletter = () => {
     setShow(true);
   };
 
-  // const submitNewsLetter = e => {
-  //   e.preventDefault();
-  // };
-
   const setEmail = e => {
     updateState({
       ...state,
@@ -81,6 +77,10 @@ const Newsletter = () => {
     </div>
 
     <Modal show={show} onHide={handleSubmitted}>
+     <Modal.Header>
+        <Modal.Title>Message Sent!</Modal.Title>
+      </Modal.Header>
+
       <Modal.Body>Woohoo, you have been subscribed! Ensure to check your spam folder just in case.</Modal.Body>
       <Modal.Footer>
         <button variant="secondary" onClick={handleSubmitted} className="border-0 send-btn">

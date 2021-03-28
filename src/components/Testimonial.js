@@ -33,7 +33,7 @@ const Testimonial = () => {
   }
 ]
   const Attach = testimony => (
-    <div className="item col-md-5" key={testimony.name}>
+    <div className="item col-md-5 m-3" key={testimony.name}>
     <div className="testimony-wrap">
       <div className="text">
         <div className="d-flex align-items-center mb-4">

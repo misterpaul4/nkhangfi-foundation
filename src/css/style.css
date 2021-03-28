@@ -69,7 +69,8 @@ footer .footer-brand {
   font-size: 1rem;
 }
 
-.send-btn:hover {
+.send-btn:hover,
+.faqs {
   cursor: pointer !important;
 }
 

@@ -10,6 +10,7 @@ import Slider from '../components/Slider';
 import Testimonial from '../components/Testimonial';
 import Events from '../components/UpcomingEvents';
 import Newsletter from '../components/Newsletter';
+import FAQ from '../components/FAQ';
 
 function Homepage() {
   useEffect(() => {
@@ -228,6 +229,7 @@ function Homepage() {
       <Testimonial />
       <Events />
       <Newsletter />
+      <FAQ />
     </>
   );
 }
