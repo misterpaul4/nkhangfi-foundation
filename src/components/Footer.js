@@ -1,8 +1,24 @@
 import React from 'react';
 import logo from '../images/logo.png';
 import { Link } from 'react-router-dom';
+import Events from '../utils/events';
 
 const Footer = () => {
+  const AttachEvents = (ev, index) =>{
+    if(index < 3) {
+      return (
+        <div className="block-21 mb-4 d-flex">
+          <Link to={`/event/${ev.link}`} className="blog-img img rounded" style={{backgroundImage: `url(${ev.image})`}}></Link>
+          <div className="text">
+            <div className="meta">
+              <div><Link to={`/event/${ev.link}`}><i className="fa fa-calendar me-1"></i>{ev.startdate} &nbsp; - &nbsp; <i className="fa fa-calendar me-1"></i>{ev.enddate}</Link></div></div>
+            <h3 className="heading"><Link to={`/event/${ev.link}`}>{ev.title}</Link></h3>
+          </div>
+        </div>
+      );
+    }
+  };
+
   return (
     <footer className="ftco-footer">
     <div className="container-xl">
@@ -43,25 +59,7 @@ const Footer = () => {
         <div className="col-md-6 col-lg">
           <div className="ftco-footer-widget mb-4">
             <h2 className="ftco-heading-2">Events</h2>
-
-            <div className="block-21 mb-4 d-flex">
-              {/* <a className="blog-img img rounded" style="background-image: url(images/events/yos1.png);"></a> */}
-              <div className="text">
-                <div className="meta">
-                  {/* <div><a href="#"><i className="fa fa-calendar me-1"></i>May. 10, 2021 &nbsp; - &nbsp; <i className="fa fa-calendar me-1"></i>May. 24, 2021</a></div>                  </div> */}
-                {/* <h3 className="heading"><a href="#">Turkish Foreign Student Entrance Exams (Y.Ö.S)</a></h3> */}
-              </div>
-            </div>
-
-            <div className="block-21 mb-4 d-flex">
-              {/* <a className="blog-img img rounded" style="background-image: url(images/events/nsp1.png);"></a> */}
-              <div className="text">
-                <div className="meta">
-                  {/* <div><a href="#"><i className="fa fa-calendar me-1"></i>May. 31, 2021 &nbsp; - &nbsp; <i className="fa fa-calendar me-1"></i>June. 19, 2021</a></div>                  </div> */}
-                {/* <h3 className="heading"><a href="#">Nkhangfi Scholarship Program (NSP) 2021</a></h3> */}
-              </div>
-            </div>
-
+            {Events.map(AttachEvents)}
           </div>
         </div>
 
@@ -71,10 +69,11 @@ const Footer = () => {
             <div className="block-23 mb-3">
               <ul>
                 <li><span className="icon fa fa-map marker"></span><span className="text">Awae 0000 Yaoundé, Cameroon</span></li>
-                {/* <li><a href="tel:+232-33-313797"><span className="icon fa fa-phone"></span><span className="text">+23233313797</span></a>
-                  <a href="tel:+232-33-313797"><span className="icon fa fa-phone"></span><span className="text">+35389976 0743</span></a>
-                </li> */}
-                {/* <li><a href="mailto: nkhangfitravel@gmail.com"><span className="icon fa fa-paper-plane"></span><span className="text">nkhangfitravel@gmail.com</span></a></li> */}
+                <li><Link to={{pathname: "tel:+232-33-313797"}}><span className="icon fa fa-phone"></span><span className="text">+23233313797</span></Link>
+                  <Link to={{pathname:  "tel:+232-33-313797"}}><span className="icon fa fa-phone"></span><span className="text">+35389976 0743</span></Link>
+                </li>
+
+                <li><Link to={{pathname: "mailto: info@nkhangfitravel.com"}}><span className="icon fa fa-paper-plane"></span><span className="text">info@nkhangfitravel.com</span></Link></li>
               </ul>
             </div>
           </div>
@@ -85,12 +84,10 @@ const Footer = () => {
       <div className="container-xl">
         <div className="row">
           <div className="col-md-12 text-center">
-            {/* <p className="mb-0" style="font-size: 14px;">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Nkhangfi Foundation</p> */}
+            <p className="mb-0">Copyright &copy; 2021 All rights reserved | Nkhangfi Travel</p>
           </div>
         </div>
       </div>
-    </div>
-    </div>
     </div>
   </footer>
   );
