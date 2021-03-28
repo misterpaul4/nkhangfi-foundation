@@ -27,7 +27,7 @@ const Slider = props => {
   };
 
   return (
-    <div className="row justify-content-center">
+    <div className="row justify-content-center align-items-end">
         {services.map(Attach)}
     </div>
   );

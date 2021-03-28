@@ -7,6 +7,7 @@ import Progress from '../components/Progress';
 import StudyAbroad from '../components/IconTitleMoreGrid';
 import Teaser from '../components/Teaser';
 import Slider from '../components/Slider';
+import Testimonial from '../components/Testimonial';
 
 function Homepage() {
   useEffect(() => {
@@ -103,13 +104,6 @@ function Homepage() {
 
   const travelServiceSlide = [
     {
-      icon: "fas fa-umbrella-beach",
-      title: "tour packages",
-      message: "message about nkhangfi tour packages such as honeymoon package and their prices",
-      actionLink: "/services/tours",
-      action: "check it out",
-    },
-    {
       icon: "fab fa-cc-visa",
       title: "visa assitance",
       message: "message about nkhangfi tour packages such as honeymoon package and their prices",
@@ -119,6 +113,13 @@ function Homepage() {
     {
       icon: "fas fa-plane-departure",
       title: "flight reservation & booking",
+      message: "message about nkhangfi tour packages such as honeymoon package and their prices",
+      actionLink: "/services/tours",
+      action: "check it out",
+    },
+    {
+      icon: "fas fa-umbrella-beach",
+      title: "tour packages",
       message: "message about nkhangfi tour packages such as honeymoon package and their prices",
       actionLink: "/services/tours",
       action: "check it out",
@@ -221,6 +222,8 @@ function Homepage() {
           <Slider data={travelServiceSlide}/>
         </div>
       </section>
+
+      <Testimonial />
     </>
   );
 }
