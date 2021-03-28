@@ -69,6 +69,14 @@ footer .footer-brand {
   font-size: 1rem;
 }
 
+.send-btn:hover {
+  cursor: pointer !important;
+}
+
+.send-btn {
+  background: none !important;
+}
+
 /* template styles */
 body {
   margin: 0;

@@ -24,7 +24,7 @@ const Events = () => {
   ];
 
   const Attach = ev => (
-    <div className="col-md-6 col-lg-4 d-flex">
+    <div className="col-md-6 col-lg-4 d-flex" key={ev.link}>
     <div className="blog-entry justify-content-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
       <Link to={`/event/${ev.link}`} className="block-20 img" style={{backgroundImage: `url(${ev.image})`}}>
       </Link>
@@ -50,7 +50,7 @@ const Events = () => {
       </div>
       <div className="row justify-content-center">
         {eventts.map(Attach)}
-        <Link to={"/event/overview"} className="text-center">View All</Link>
+        <div className="text-center"><Link to={"/event/overview"}>View All</Link></div>
       </div>
     </div>
   </section>

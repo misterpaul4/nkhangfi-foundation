@@ -9,7 +9,7 @@ const Slider = props => {
     const { icon, title, message, actionLink, action } = service;
 
     return (
-      <div className="col-xl-4 col-lg-5 col-md-6">
+      <div className="col-xl-4 col-lg-5 col-md-6" key={title}>
         <div className="courses">
           <div className="d-flex">
             <div className="icon"><span className={icon}></span></div>

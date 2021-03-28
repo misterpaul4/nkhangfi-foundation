@@ -9,6 +9,7 @@ import Teaser from '../components/Teaser';
 import Slider from '../components/Slider';
 import Testimonial from '../components/Testimonial';
 import Events from '../components/UpcomingEvents';
+import Newsletter from '../components/Newsletter';
 
 function Homepage() {
   useEffect(() => {
@@ -226,6 +227,7 @@ function Homepage() {
 
       <Testimonial />
       <Events />
+      <Newsletter />
     </>
   );
 }
