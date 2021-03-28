@@ -4,10 +4,17 @@ import { Link } from 'react-router-dom';
 import Events from '../utils/events';
 
 const Footer = () => {
+  const handleFaqClick = () => {
+    const FAQEle = document.getElementById('faq');
+    if (FAQEle) {
+      FAQEle.scrollIntoView();
+    };
+  };
+
   const AttachEvents = (ev, index) =>{
     if(index < 3) {
       return (
-        <div className="block-21 mb-4 d-flex">
+        <div className="block-21 mb-4 d-flex" key={index}>
           <Link to={`/event/${ev.link}`} className="blog-img img rounded" style={{backgroundImage: `url(${ev.image})`}}></Link>
           <div className="text">
             <div className="meta">
@@ -43,19 +50,21 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* quick links */}
         <div className="col-md-6 col-lg-2">
            <div className="ftco-footer-widget mb-4">
             <h2 className="ftco-heading-2">Quick Links</h2>
             <ul className="list-unstyled">
               <li><Link to={"/contact"}><span className="fas fa-long-arrow-alt-right me-2"></span>Contact</Link></li>
               <li><Link to={"/gallery"}><span className="fas fa-long-arrow-alt-right me-2"></span>Gallery</Link></li>
-              <li><Link to={"/contact"}><span className="fas fa-long-arrow-alt-right me-2"></span>F.A.Q</Link></li>
+              <li><Link to={"/"} onClick={handleFaqClick}><span className="fas fa-long-arrow-alt-right me-2"></span>F.A.Q</Link></li>
               <li><Link to={"/services/overview"}><span className="fas fa-long-arrow-alt-right me-2"></span>Nkhangfi Travel</Link></li>
               <li><Link to={"/team"}><span className="fas fa-long-arrow-alt-right me-2"></span>Our Team</Link></li>
             </ul>
           </div>
         </div>
 
+        {/* events */}
         <div className="col-md-6 col-lg">
           <div className="ftco-footer-widget mb-4">
             <h2 className="ftco-heading-2">Events</h2>

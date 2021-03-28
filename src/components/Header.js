@@ -9,24 +9,24 @@ const Header = props => {
     <div className="top-wrap">
       <div className="container">
         <div className="row">
-          <div className="col-md col-xl-5 d-flex align-items-center">
+          <div className="col-md col-lg-5 d-flex align-items-center">
             <img src={logo} alt="logo" className="header-logo"/>
             <Link to={'/'} className="navbar-brand align-items-center">
             Nkhangfi Foundation <span>building lives, shaping destiny</span>
             </Link>
           </div>
 
-          <div className="col-md d-flex align-items-center">
-              <div className="con d-flex align-items-center">
-                <div className="icon"><span className="far fa-clock"></span></div>
-                <div className="text">
-                  <span>Monday - Friday</span>
-                  <strong>8:00AM-4:00PM</strong>
-                </div>
+          <div className="col-md d-xl-flex d-none align-items-center">
+            <div className="con d-flex align-items-center">
+              <div className="icon"><span className="far fa-clock"></span></div>
+              <div className="text">
+                <span>Monday - Friday</span>
+                <strong>8:00AM-4:00PM</strong>
               </div>
             </div>
+          </div>
 
-          <div className="col-md d-flex align-items-center">
+          <div className="col-md d-xl-flex d-none align-items-center">
             <div className="con d-flex align-items-center">
               <div className="icon"><span className="fas fa-phone-alt"></span></div>
               <div className="text">

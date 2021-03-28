@@ -18,7 +18,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="ftco-section ftco-no-pt my-5" id="f-a-q">
+    <section className="ftco-section ftco-no-pt my-5" id="faq">
         <div className="row justify-content-center pb-5">
             <div className="col-md-7 text-center heading-section" data-aos="fade-up" data-aos-duration="1000">
               <span className="subheading">FAQs</span>
