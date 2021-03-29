@@ -54,14 +54,14 @@ const Testimonial = () => {
   return (
     <section className="ftco-section testimony-section bg-light">
       <div className="container-xl">
-        <div className="row justify-content-center pb-4">
+        <div className="row justify-content-center">
           <div className="col-md-7 text-center heading-section" data-aos="fade-up" data-aos-duration="1000">
             <span className="subheading">Testimonial</span>
             <h2 className="mb-5">Our Successes</h2>
           </div>
         </div>
 
-        <div className="row border justify-content-center">
+        <div className="row justify-content-center">
           {tts.map(Attach)}
         </div>
       </div>

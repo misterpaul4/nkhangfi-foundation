@@ -19,7 +19,7 @@ const Slider = props => {
             </div>
           </div>
           <div className="text-center">
-            <Link to={actionLink} className="btn d-block btn-primary btn-outline-primary py-3">{action}</Link>
+            <Link to={actionLink} className="d-block py-3">{action}</Link>
           </div>
         </div>
       </div>
@@ -27,7 +27,7 @@ const Slider = props => {
   };
 
   return (
-    <div className="row justify-content-center align-items-end">
+    <div className="row justify-content-center align-items-start">
         {services.map(Attach)}
     </div>
   );

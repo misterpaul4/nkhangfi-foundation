@@ -87,7 +87,7 @@ function Homepage() {
     catchphrase: "Study Abroad For Less",
     message: () => (
       <>
-        <p>message about nkhangfi scholarship program
+        <p>a program brought by Nkhangfi foundation to help african students who dream to study aborad to achieve such dream through providing affordable tuition fee and tuition fee wavier. Students who participate in the Nkhangfi scholarship program stands a chance to get a 25%, 50%,65%,70%, 80% and 100% tuition wavier scholarship to study in Belarus, Northern Cyprus, Poland, Australia, China and Ukraine.
         </p>
       </>
     ),
@@ -99,7 +99,7 @@ function Homepage() {
     catchphrase: "Explore Some Of The Nkhangfi Travel Services",
     message: () => (
       <>
-       <p>message about travel services and mini history</p>
+       <p>Nkhangfi Travel with main branch in Yaounde, Cameroon specializes in providing a comprehensive range of travel, cultural, training, consultancy & other business services</p>
       </>
     ),
     actionLink: "/services/overview",
@@ -109,44 +109,40 @@ function Homepage() {
     {
       icon: "fab fa-cc-visa",
       title: "visa assitance",
-      message: "message about nkhangfi tour packages such as honeymoon package and their prices",
-      actionLink: "/services/tours",
-      action: "check it out",
+      message: "We provide professional support for your visas. We also provide electronic visas to countries that accepts e-visas. We can assist you in providing all the required documents as these are the challenges most clients face",
+      actionLink: "/services/visa",
+      action: "learn more",
     },
     {
       icon: "fas fa-plane-departure",
       title: "flight reservation & booking",
-      message: "message about nkhangfi tour packages such as honeymoon package and their prices",
-      actionLink: "/services/tours",
-      action: "check it out",
+      message: "Getting affordable air tickets is not a matter of luck. It is challenging and for that purpose, we assist our students in finding the best deals at reasonable rates.",
     },
     {
       icon: "fas fa-umbrella-beach",
       title: "tour packages",
-      message: "message about nkhangfi tour packages such as honeymoon package and their prices",
+      message: "Our tour packages include some exotic and adventurous places. These packages will include visa processing and tours(boat cruise, historical places, city tours etc) for couples, singles and groups.",
       actionLink: "/services/tours",
       action: "check it out",
     },
     {
       icon: "fas fa-plane-departure",
       title: "work & travel programs",
-      message: "message about nkhangfi tour packages such as honeymoon package and their prices",
-      actionLink: "/services/tours",
+      message: "The Nkhangfi Team regularly holds work fair programs for those who wish to work in Canada, Crotia, Hungary, Lithuania, Mexico, Poland and Romania. We help you secure your work visa and necessary travel documents.",
+      actionLink: "/services/workNtravel",
       action: "check it out",
     },
     {
       icon: "fas fa-hotel",
       title: "hotel reservation & airport pickUp",
-      message: "message about nkhangfi tour packages such as honeymoon package and their prices",
-      actionLink: "/services/tours",
-      action: "check it out",
+      message: "With thousands of hotels worldwide, our clients are guaranteed to get the best of relaxation. Our hotel reservations are reliable and cost efficient. We also arrange airport pickups & transfers to your desired destination.",
     },
     {
       icon: "fas fa-language",
       title: "translation services",
-      message: "message about nkhangfi tour packages such as honeymoon package and their prices",
-      actionLink: "/services/tours",
-      action: "check it out",
+      message: "We have a team of professional linguist that can provide linguistically fluent and technically accurate documentation translations. We can deliver unrivaled translation efficiency regardless of your document formats",
+      actionLink: "/services/translate",
+      action: "get started",
     }
   ]
 

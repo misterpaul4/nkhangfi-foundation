@@ -22,8 +22,8 @@ const FAQ = () => {
         <div className="row justify-content-center pb-5">
             <div className="col-md-7 text-center heading-section" data-aos="fade-up" data-aos-duration="1000">
               <span className="subheading">FAQs</span>
-              <h2 className="mb-3">Frequesntly Ask Question</h2>
-          </div>
+              <h2 className="mb-3">Frequently Asked Questions</h2>
+            </div>
 
         <div className="row justify-content-center">
           <div className="col-md-8" data-aos="fade-up" data-aos-duration="1000">
