@@ -16,7 +16,7 @@ const Hero = () => {
               <p className="mb-4">"It looks impossible until you take a step. The path might look difficult, but start the journey & you will become all that you ever dreamt of becoming."</p>
               <p>- Neche</p>
           		<p>
-                <Link to={"/event/nsp"} className="btn btn-primary p-4 py-3">scholarship program (NSP)<span className="fas fa-long-arrow-alt-right"></span></Link>
+                <Link to={"/event/nsp"} className="btn btn-primary p-4 py-3 my-1">scholarship program (NSP)<span className="fas fa-long-arrow-alt-right"></span></Link>
                 <Link to={"/event/yos"} className="btn btn-white p-4 py-3">Y.Ö.S Turkey <span className="fas fa-long-arrow-alt-right"></span></Link>
               </p>
             </div>

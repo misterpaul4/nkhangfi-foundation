@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Modal from 'react-bootstrap/Modal';
-import axios from "axios";
+// import axios from "axios";
 
 const Newsletter = () => {
   const [preMailState, updatePreMailState] = useState({
@@ -10,7 +10,7 @@ const Newsletter = () => {
 
   const [postMailState, updatePostMailState] = useState({
     messageHead: 'Delivered!!!',
-    messageBody: 'Woohoo, you have been subscribed! Ensure to check your spam folder just in case.'
+    messageBody: 'Woohoo!, you have been subscribed. Ensure to check your spam folder just in case.'
   })
 
   const [show, setShow] = useState(false);
@@ -36,25 +36,24 @@ const Newsletter = () => {
       icon: "spinner-border spinner-border-sm",
     });
 
-
     const form = e.target;
+    const XHR = new XMLHttpRequest();
+    const FD = new FormData(form);
 
-    axios({
-      method: "POST",
-      url: "https://formspree.io/f/mjvjbljz",
-      data: new FormData(form),
-      headers: {
-        'Accept': 'application/json'
-      },
-    }).then(r => {
-      // succesful
+    XHR.open('POST', 'https://formspree.io/f/mjvjbljz');
+    XHR.setRequestHeader('Accept', 'application/json');
+    XHR.send(FD);
+
+    XHR.addEventListener('load', () => {
       setShow(true);
-    }).catch(r => {
-      // unsuccesful
+    });
+
+    XHR.addEventListener('error', () => {
       updatePostMailState({
         messageHead: 'Oooops!',
-        messageBody: 'Please try again or refresh your browser & try again.',
+        messageBody: 'Please try again or refresh your browser then try again.',
       });
+
       setShow(true);
     });
   };
