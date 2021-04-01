@@ -1,5 +1,11 @@
+.navbar-dropdown-links {
+  color: black;
+}
 
-.nav-dropdown-items > *:hover {
-  background: #216811;
-  color: white;
+#dropdown-basic {
+  border: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  font-weight: 500 !important;
+  font-size: inherit;
 }

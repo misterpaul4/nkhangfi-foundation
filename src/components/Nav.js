@@ -28,22 +28,23 @@ const Nav = () => {
             <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-home" to={"/"}>Home</Link></li>
             <li className="nav-item">
               <Dropdown className="nav-link">
-                <Dropdown.Toggle id="dropdown-basic" className="nav-dropdown">
-                  Services
+                <Dropdown.Toggle id="dropdown-basic" className="nav-link nav-dropdown text-capitalize b-0 pt-1">
+                  Nkhangfi Travel
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className="nav-dropdown-items">
-                  <Dropdown.Item href="#/action-1">visa processing</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">flight reservation</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">tour packages</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">work & travel</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">hotel reservation & airport pickup</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">document translation</Dropdown.Item>
+                  <Dropdown.Item><Link to={"/services/overview"} className="nav-travel navbar-dropdown-links">overview</Link></Dropdown.Item>
+                  <Dropdown.Item><Link to={"/services/visa"} className="navbar-dropdown-links">visa processing</Link></Dropdown.Item>
+                  <Dropdown.Item><Link to={"/503"} className="navbar-dropdown-links">flight reservation</Link></Dropdown.Item>
+                  <Dropdown.Item><Link className="navbar-dropdown-links">tour packages</Link></Dropdown.Item>
+                  <Dropdown.Item><Link className="navbar-dropdown-links">work & travel</Link></Dropdown.Item>
+                  <Dropdown.Item><Link className="navbar-dropdown-links">hotel reservation & airport pickup</Link></Dropdown.Item>
+                  <Dropdown.Item><Link className="navbar-dropdown-links">document translation</Link></Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </li>
 
-            <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-travel" to={"/services/overview"}>Nkhangfi Travel</Link></li>
+            {/* <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-travel" to={"/services/overview"}>Nkhangfi Travel</Link></li> */}
             <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-study" to={"/studyAbroad/overview"}>Study Abroad</Link></li>
             <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-gallery" to={"/gallery"}>Gallery</Link></li>
             <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-event" to={"/event/overview"}>Event</Link></li>
