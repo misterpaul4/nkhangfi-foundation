@@ -7,6 +7,7 @@ import img5 from '../images/tours/egypt.jpg';
 import img6 from '../images/tours/georgia.jpg';
 import img7 from '../images/tours/nicaragua.jpg';
 import img8 from '../images/tours/dubai.jpg';
+import img9 from '../images/tours/albania.jpg';
 
 const services = [
   {
@@ -137,7 +138,7 @@ const services = [
             },
             {
               title: "7 days UNESCO tour of Albania",
-              image: img6,
+              image: img9,
               opt: () => (
                 <>
                   <div className="d-flex justify-content-between align-items-center"><span><i className="fa fa-calendar me-1"></i>7 days</span>  €1000 EUR</div>

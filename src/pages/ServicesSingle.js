@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Hero from '../components/Hero/Others';
 import services from '../utils/serviceSingle';
@@ -6,9 +6,18 @@ import Teaser from '../components/Teaser';
 import Testimonial from '../components/Testimonial';
 import Newsletter from '../components/Newsletter';
 import Form from '../components/ContactForm';
+import { setActive, removeActive } from '../utils/activeLink';
 import '../css/services.css';
 
 const Service = () => {
+  useEffect(() => {
+    setActive('nav-services');
+
+    return () => {
+      removeActive('nav-services')
+    };
+  }, []);
+
   let page = {};
 
   const currentPath = useLocation().pathname;
