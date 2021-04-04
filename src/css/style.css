@@ -93,6 +93,11 @@ body {
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important; }
 
+  ::selection {
+    background: #216811;
+  }
+
+
 hr {
   margin: 1rem 0;
   color: inherit;

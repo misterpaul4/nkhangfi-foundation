@@ -137,7 +137,7 @@ const services = [
               ),
             },
             {
-              title: "7 days UNESCO tour of Albania",
+              title: "UNESCO tour of Albania",
               image: img9,
               opt: () => (
                 <>
