@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../css/style.css'
-import '../../css/homepage.css'
+import '../../css/style.css';
+import '../../css/hero.css';
 
 const Hero = () => {
   return (
@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="container">
         <div className="row no-gutters slider-text align-items-center">
         	<div className="col-lg-5">
-            <div className="text mt-5 pt-5 container" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            <div className="text mt-5 pt-5 container hp-hero-content" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
               <span className="subheading">Welcome to Nkhangfi Foundation</span>
           		<h1 className="mb-4">Give Your Child An Opportunity</h1>
               <p className="mb-4">"It looks impossible until you take a step. The path might look difficult, but start the journey & you will become all that you ever dreamt of becoming."</p>

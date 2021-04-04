@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Hero from '../components/Hero/Homepage';
 import {setActive, removeActive} from '../utils/activeLink';
 import '../css/style.css';
+import '../css/homepage.css';
 import About from '../components/About';
 import Progress from '../components/Progress';
 import StudyAbroad from '../components/IconTitleMoreGrid';

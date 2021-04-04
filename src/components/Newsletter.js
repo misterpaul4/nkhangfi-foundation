@@ -40,18 +40,25 @@ const Newsletter = () => {
     const XHR = new XMLHttpRequest();
     const FD = new FormData(form);
 
-    XHR.open('POST', 'https://formspree.io/f/mjvjbljz');
+    XHR.open('POST', 'https://formspree.io/f/xwkakvyj');
     XHR.setRequestHeader('Accept', 'application/json');
     XHR.send(FD);
 
+    // suuccesfull
     XHR.addEventListener('load', () => {
+      updatePostMailState({
+        messageHead: 'Delivered!!!',
+        messageBody: `Woohoo!, you have been subscribed. A confirmation emaill will be sent to ${preMailState.email}. Ensure to check your spam folder just in case.`,
+      });
+
       setShow(true);
     });
 
+    // unsuccessful
     XHR.addEventListener('error', () => {
       updatePostMailState({
         messageHead: 'Oooops!',
-        messageBody: 'Please try again or refresh your browser then try again.',
+        messageBody: 'Please try again or send us an email directly at info@nkhangfitravel.com.',
       });
 
       setShow(true);
@@ -76,9 +83,9 @@ const Newsletter = () => {
               <p>Be the first to find out the latest updates on events and social related programs</p>
             </div>
             <div className="col-md-5 border-left d-flex align-items-center">
-              <form action="#" className="subscribe-form" onSubmit={handleSubmit}>
+              <form className="subscribe-form" onSubmit={handleSubmit}>
                 <div className="form-group d-flex align-items-center">
-                  <input type="email" className="form-control" name="email" placeholder="Enter email address" onChange={setEmail} value={preMailState.email} />
+                  <input type="email" className="form-control" name="email" placeholder="Enter email address" onChange={setEmail} value={preMailState.email} required />
                   <button className="btn-icon send-btn border-0" type="submit"><span className={preMailState.icon} role="status"></span></button>
                 </div>
               </form>
