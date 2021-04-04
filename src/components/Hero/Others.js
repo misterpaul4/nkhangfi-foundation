@@ -8,7 +8,7 @@ const Hero = props => {
     name,
     bg,
     theme,
-    parent
+    parent,
   } = props.data;
 
   return (
