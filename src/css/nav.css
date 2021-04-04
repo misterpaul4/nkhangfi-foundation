@@ -9,3 +9,7 @@
   font-weight: 500 !important;
   font-size: inherit;
 }
+
+.nav-dropdown-items a:active {
+  background: none;
+}
