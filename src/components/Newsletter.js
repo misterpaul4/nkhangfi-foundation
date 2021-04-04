@@ -79,7 +79,7 @@ const Newsletter = () => {
         <div className="col-lg-10">
           <div className="row g-lg-5">
             <div className="col-md-7">
-              <h2 className="mb-0">Newsletter - Stay tune and get the latest update</h2>
+              <h2 className="mb-0">Newsletter - Stay tuned and get the latest update</h2>
               <p>Be the first to find out the latest updates on events and social related programs</p>
             </div>
             <div className="col-md-5 border-left d-flex align-items-center">
