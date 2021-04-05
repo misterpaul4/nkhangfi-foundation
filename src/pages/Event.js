@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import {setActive, removeActive} from '../utils/activeLink';
-import Hero from '../components/Hero/Homepage';
+import Hero from '../components/Hero/Others';
+import Allevent from '../components/UpcomingEvents';
 
 const Events = () => {
   useEffect(() => {
@@ -11,9 +12,19 @@ const Events = () => {
     };
   }, []);
 
+  const heroContent = {
+    name: "events",
+    bg: "nk-events-bg",
+    theme: "events",
+    parent: "home",
+  };
+
   return (
     <section>
-      <Hero />
+      <Hero data={heroContent} />
+      <div className="mt-4">
+        <Allevent />
+      </div>
     </section>
   );
 };

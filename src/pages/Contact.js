@@ -4,6 +4,7 @@ import {setActive, removeActive} from '../utils/activeLink';
 import Hero from '../components/Hero/Others';
 import Form from '../components/ContactForm';
 import { contactForm } from '../utils/Forms';
+import Newsletter from '../components/Newsletter';
 import '../css/contact.css';
 
 const Contact = () => {
@@ -77,6 +78,8 @@ const Contact = () => {
 
         </div>
       </div>
+
+      <Newsletter />
     </section>
   );
 }

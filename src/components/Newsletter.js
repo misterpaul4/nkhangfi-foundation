@@ -40,7 +40,7 @@ const Newsletter = () => {
     const XHR = new XMLHttpRequest();
     const FD = new FormData(form);
 
-    XHR.open('POST', 'https://submit-form.com/oRmRmRHu');
+    XHR.open('POST', 'https://formspree.io/f/xwkakvyj');
     XHR.setRequestHeader('Accept', 'application/json');
     XHR.setRequestHeader("Content-Type", "application/json");
     XHR.send(FD);

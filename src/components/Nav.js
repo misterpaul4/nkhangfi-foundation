@@ -33,7 +33,7 @@ const Nav = () => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className="nav-dropdown-items">
-                  <Dropdown.Item><Link to={"/services/overview"} className="nav-travel navbar-dropdown-links">overview</Link></Dropdown.Item>
+                  <Dropdown.Item><Link to={"/503"} className="nav-travel navbar-dropdown-links">overview</Link></Dropdown.Item>
                   <Dropdown.Item><Link to={"/services/visa"} className="navbar-dropdown-links">visa processing</Link></Dropdown.Item>
                   <Dropdown.Item><Link to={"/503"} className="navbar-dropdown-links">flight reservation</Link></Dropdown.Item>
                   <Dropdown.Item><Link to={"/services/tours"} className="navbar-dropdown-links">tour packages</Link></Dropdown.Item>
@@ -46,9 +46,9 @@ const Nav = () => {
 
             {/* <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-travel" to={"/services/overview"}>Nkhangfi Travel</Link></li> */}
             <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-study" to={"/503"}>Study Abroad</Link></li>
-            <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-gallery" to={"/gallery"}>Gallery</Link></li>
+            <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-gallery" to={"/503"}>Gallery</Link></li>
             <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-event" to={"/event/overview"}>Event</Link></li>
-            <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-team" to={"/team"}>Our Team</Link></li>
+            <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-team" to={"/503"}>Our Team</Link></li>
             <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-contact" to={"/contact"}>Contact</Link></li>
           </ul>
         </div>

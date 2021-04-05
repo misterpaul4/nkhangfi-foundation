@@ -25,12 +25,11 @@ const Events = () => {
         <div className="row justify-content-center mb-5">
           <div className="col-md-7 heading-section text-center">
             <span className="subheading">events</span>
-            <h2>Upcoming Events</h2>
+            <h2>Nkhangfi Events</h2>
           </div>
         </div>
         <div className="row justify-content-center">
           {eventts.map(Attach)}
-          <div className="text-center"><Link to={"/event/overview"}>View All</Link></div>
         </div>
       </div>
     </section>
