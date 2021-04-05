@@ -102,6 +102,9 @@ body {
     list-style: none;
   }
 
+.sm-images {
+  gap: 10px;
+}
 
 hr {
   margin: 1rem 0;

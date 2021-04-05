@@ -45,7 +45,7 @@ const Nav = () => {
             </li>
 
             {/* <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-travel" to={"/services/overview"}>Nkhangfi Travel</Link></li> */}
-            <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-study" to={"/studyAbroad/overview"}>Study Abroad</Link></li>
+            <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-study" to={"/503"}>Study Abroad</Link></li>
             <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-gallery" to={"/gallery"}>Gallery</Link></li>
             <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-event" to={"/event/overview"}>Event</Link></li>
             <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-team" to={"/team"}>Our Team</Link></li>

@@ -1,4 +1,8 @@
-import banner from '../../images/events/yos_banner.png';
+import banner from '../../images/about.jpg';
+import img1 from '../../images/events/nspSL.png';
+import img2 from '../../images/events/liberia.png';
+import img3 from '../../images/events/guinea.png';
+
 
 const Event = {
   pathName: 'nsp',
@@ -22,6 +26,12 @@ const Event = {
         <li>Application fee of $50 USD</li>
         <li>Age 17 - 35 years</li>
     </ul>
+
+    <div className="row sm-images justify-content-center">
+      <img src={img1} alt="nsp flyers" className="col-sm-3"></img>
+      <img src={img2} alt="nsp flyers" className="col-sm-3"></img>
+      <img src={img3} alt="nsp flyers" className="col-sm-3"></img>
+    </div>
     </>
   ),
   sideContent: () => (
