@@ -50,7 +50,7 @@ const Event = props => {
 
 
             <div className="col-lg-4 sidebar pl-md-4">
-              <div class="sidebar-box">
+              <div className="sidebar-box">
                 {page.sideContent()}
               </div>
             </div>

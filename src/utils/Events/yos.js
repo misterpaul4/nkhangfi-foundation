@@ -40,13 +40,13 @@ const Event = {
   sideContent: () => (
     <>
       <h3>Examination Dates</h3>
-      <ul class="no-list-style categories me-md-4">
-        <li><span className="font-weight-bold mr-3"><i class="far fa-flag"></i> Cameroon:</span>May 10th, 2021</li>
-        <li><span className="font-weight-bold mr-3"><i class="far fa-flag"></i> Côte d'Ivoire:</span>May 13th, 2021</li>
-        <li><span className="font-weight-bold mr-3"><i class="far fa-flag"></i> Togo:</span>May 15th, 2021</li>
-        <li><span className="font-weight-bold mr-3"><i class="far fa-flag"></i> Guinea:</span>May 18th, 2021</li>
-        <li><span className="font-weight-bold mr-3"><i class="far fa-flag"></i> Liberia:</span>May 21st, 2021</li>
-        <li><span className="font-weight-bold mr-3"><i class="far fa-flag"></i> Sierra Leone:</span>May 24th, 2021</li>
+      <ul className="no-list-style categories me-md-4">
+        <li><span className="font-weight-bold mr-3"><i className="far fa-flag"></i> Cameroon:</span>May 10th, 2021</li>
+        <li><span className="font-weight-bold mr-3"><i className="far fa-flag"></i> Côte d'Ivoire:</span>May 13th, 2021</li>
+        <li><span className="font-weight-bold mr-3"><i className="far fa-flag"></i> Togo:</span>May 15th, 2021</li>
+        <li><span className="font-weight-bold mr-3"><i className="far fa-flag"></i> Guinea:</span>May 18th, 2021</li>
+        <li><span className="font-weight-bold mr-3"><i className="far fa-flag"></i> Liberia:</span>May 21st, 2021</li>
+        <li><span className="font-weight-bold mr-3"><i className="far fa-flag"></i> Sierra Leone:</span>May 24th, 2021</li>
       </ul>
 
       <div>

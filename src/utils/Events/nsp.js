@@ -48,7 +48,7 @@ const Event = {
 
       <h3>Program Schedule</h3>
       <h4>Sierra Leone</h4>
-      <ul class="no-list-style categories me-md-4">
+      <ul className="no-list-style categories me-md-4">
         <li><span className="font-weight-bold mr-3">Seminar:</span>31st May, 2021</li>
         <li><span className="font-weight-bold mr-3">Workshop:</span>1st June, 2021</li>
         <li><span className="font-weight-bold mr-3">Exam:</span>2nd June, 2021</li>
@@ -57,7 +57,7 @@ const Event = {
       </ul>
 
       <h4>Liberia</h4>
-      <ul class="no-list-style categories me-md-4">
+      <ul className="no-list-style categories me-md-4">
         <li><span className="font-weight-bold mr-3">Seminar & Workshop:</span>7th June, 2021</li>
         <li><span className="font-weight-bold mr-3">Exam:</span>8th June, 2021</li>
         <li><span className="font-weight-bold mr-3">Work Fair:</span>9th June, 2021</li>
@@ -66,7 +66,7 @@ const Event = {
 
 
       <h4>Guinea</h4>
-      <ul class="no-list-style categories me-md-4">
+      <ul className="no-list-style categories me-md-4">
       <li><span className="font-weight-bold mr-3">Work Fair:</span>12th June, 2021</li>
         <li><span className="font-weight-bold mr-3">Seminar & Workshop:</span>14th June, 2021</li>
         <li><span className="font-weight-bold mr-3">Exam:</span>15th June, 2021</li>
