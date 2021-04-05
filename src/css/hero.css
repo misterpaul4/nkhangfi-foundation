@@ -33,6 +33,12 @@
   url('../images/events/yos-bg.jpg');
 }
 
+.nk-contact-bg {
+  background-image:
+  linear-gradient(to bottom, rgba(26,33,64, 0.52), rgba(81,84,115, 0.73)),
+  url('../images/contact-bg.jpg');
+}
+
 .hp-hero-content {
   width: 150% !important;
 }

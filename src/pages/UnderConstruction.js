@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero/Others';
 import Newsletter from '../components/Newsletter';
 import Form from '../components/ContactForm';
+import { contactForm } from '../utils/Forms';
 
 const UnderConstruction = () => {
   const heroData = {
@@ -11,6 +12,12 @@ const UnderConstruction = () => {
     theme: "under construction",
   }
 
+  const formData = {
+    FORMSPARK_ACTION_URL: contactForm,
+    formName: "contact",
+    formExtrasEduc: false,
+  };
+
   return (
     <section>
       <Hero data={heroData} />
@@ -19,7 +26,7 @@ const UnderConstruction = () => {
         <p>This page is currently being worked on. Please exercise patience. In the meantime, you can send your querries directly on the contact form below</p>
       </div>
 
-      <Form />
+      <Form data={formData}/>
       <Newsletter />
     </section>
   );

@@ -1,0 +1,13 @@
+.contact-bg {
+	background-image: url('../images/contact-1.jpg');
+	background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+	width: 300px;
+	height: auto;
+	flex: 1 1 40%;
+}
+
+.contact-FORM {
+  flex: 1 0 60%;
+}

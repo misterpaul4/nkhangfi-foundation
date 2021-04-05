@@ -7,6 +7,7 @@ import Testimonial from '../components/Testimonial';
 import Newsletter from '../components/Newsletter';
 import Form from '../components/ContactForm';
 // import { setActive, removeActive } from '../utils/activeLink';
+import { contactForm } from '../utils/Forms';
 import '../css/services.css';
 
 const Service = () => {
@@ -29,6 +30,14 @@ const Service = () => {
     }
   });
 
+  const formData = {
+    FORMSPARK_ACTION_URL: contactForm,
+    formName: page.theme,
+    formExtrasEduc: false,
+  };
+
+  console.log(page);
+
   return (
     <section>
       <Hero data={page}/>
@@ -44,7 +53,7 @@ const Service = () => {
         </div>
       </div>
 
-      <Form />
+      <Form data={formData}/>
       <Newsletter />
       <Testimonial />
     </section>

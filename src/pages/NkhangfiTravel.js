@@ -6,7 +6,7 @@ const NkhangfiTravel = () => {
   return (
     <section>
       <Hero />
-      
+
     </section>
   );
 };
