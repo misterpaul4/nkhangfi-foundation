@@ -48,7 +48,7 @@ const Nav = () => {
             <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-study" to={"/503"}>Study Abroad</Link></li>
             <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-gallery" to={"/503"}>Gallery</Link></li>
             <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-event" to={"/event/overview"}>Event</Link></li>
-            <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-team" to={"/503"}>Our Team</Link></li>
+            <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-team" to={"/team"}>Our Team</Link></li>
             <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-contact" to={"/contact"}>Contact</Link></li>
           </ul>
         </div>

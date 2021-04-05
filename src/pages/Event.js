@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import {setActive, removeActive} from '../utils/activeLink';
 import Hero from '../components/Hero/Others';
 import Allevent from '../components/UpcomingEvents';
+import Newsletter from '../components/Newsletter';
 
 const Events = () => {
   useEffect(() => {
@@ -25,6 +26,7 @@ const Events = () => {
       <div className="mt-4">
         <Allevent />
       </div>
+      <Newsletter />
     </section>
   );
 };
