@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
+import countries from '../utils/countries';
 import '../css/form.css';
 
-const FORMSPARK_ACTION_URL = "https://submit-form.com/6VkNeC0j";
-
-const ContactForm = () => {
+const ContactForm = props => {
   // const {title, formID, embed} = props.data;
-
-  const [show, setShow] = useState(false);
-
+  const { formName, FORMSPARK_ACTION_URL, formExtrasEduc } = props.data;
 
   const [message, updateMessage] = useState("");
   const [email, updateEmail] = useState("");
@@ -18,11 +15,72 @@ const ContactForm = () => {
   const [statusMessage, updateStatusMessage] = useState({
     messageHead: "",
     messageBody: "",
-  })
+  });
+  const [age, updateAge] = useState("unselected");
+  const [gender, updateGender] = useState("unselected");
+  const [program, updateProgram] = useState("unselected");
+  const [social, updateSocial] = useState("unselected");
+  const [course, updateCourse] = useState("");
+  const [country, updateCountry] = useState("");
+
+  const AttachCountries = cts => (
+    <option value={cts} key={cts}></option>
+  );
+
+  const AttachEducExtras = () => (
+    <>
+      <fieldset className="col-md-6">
+        <input type="text" placeholder="What do you intend to study (e.g business administration)" name="course of study" id="course" required onChange={(e) => updateCourse(e.target.value)} value={course}></input>
+      </fieldset>
+
+      <fieldset className="col-md-6">
+        <input className="form-control" type="text" list="datalistOptions" name="country" id="country" placeholder="Country" onChange={(e) => updateCountry(e.target.value)} required value={country}></input>
+        <datalist id="datalistOptions">
+          {countries.map(AttachCountries)}
+        </datalist>
+      </fieldset>
+
+    <fieldset className="col-md-12 text-left">
+      <div>
+        <select name="age range" id="age" className="m-1" onChange={e => updateAge(e.target.value)} value={age} required>
+          <option value="unselected" disabled>age</option>
+          <option value="15-25">15 - 25</option>
+          <option value="25-35">25 - 35</option>
+          <option value="35-50">35 - 45</option>
+        </select>
+
+        <select name="gender" id="gender" className="m-1" onChange={e => updateGender(e.target.value)} value={gender} required>
+          <option value="unselected" disabled>Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+
+        <select name="program" id="program" className="m-1" onChange={e => updateProgram(e.target.value)} value={program} required>
+          <option value="unselected" disabled>Program</option>
+          <option value="undergraduate">Undergraduate</option>
+          <option value="postgraduate">Post-Graduate</option>
+          <option value="associate">Associate</option>
+        </select>
+
+        <select name="how did you hear about us" id="social" onChange={e => updateSocial(e.target.value)} value={social} className="m-1">
+          <option value="unselected" disabled>How did you hear about us?</option>
+          <option value="facebook">Facebook</option>
+          <option value="instagram">Instagram</option>
+          <option value="twitter">Twitter</option>
+          <option value="flyer">Flyer</option>
+          <option value="banner">Banner</option>
+          <option value="friends or relatives">From friends or relatives</option>
+        </select>
+      </div>
+    </fieldset>
+    </>
+  );
+
+  const [show, setShow] = useState(false);
 
   const formSuccess = {
     messageHead: "Delivered!!!",
-    messageBody: `Hi ${name}, form have been successfully delivered. A confirmation emaill will be sent to ${email}. Ensure to check your spam folder just in case.`
+    messageBody: `Hi ${name}, form have been successfully delivered. A confirmation email will be sent to ${email}. Ensure to check your spam folder just in case.`
   }
 
   const formFailure = {
@@ -34,12 +92,30 @@ const ContactForm = () => {
   const [icon, updateIcon] = useState('fa fa-paper-plane');
 
   const resetFormData = () => {
-    updateName("");
-    updatePhone("");
-    updateMessage("");
-    updateLastName("");
-    updateEmail("");
+    updateName(" ");
+    updatePhone(" ") ;
+    updateMessage(" ");
+    updateLastName(" ");
+    updateEmail(" ");
+    if (formExtrasEduc) {
+      updateAge('unselected');
+      updateGender('unselected');
+      updateProgram('unselected');
+      updateSocial('unselected');
+      updateCourse(" ");
+      updateCountry(" ");
+    }
   };
+
+  const plainForm = { name, lastName, phone, email, message };
+
+  const formFilled = () => {
+    if (formExtrasEduc) {
+      return {...plainForm, age, gender, program, social, course, country }
+    } else {
+      return plainForm;
+    }
+  }
 
   const handleSubmitted = () => setShow(false);
 
@@ -53,13 +129,7 @@ const ContactForm = () => {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify({
-        message,
-        name,
-        lastName,
-        phone,
-        email,
-      }),
+      body: JSON.stringify(formFilled()),
     }).then(() => {
       // succesful
       updateStatusMessage(formSuccess);
@@ -72,16 +142,13 @@ const ContactForm = () => {
       setShow(true);
       updateIcon("fa fa-paper-plane");
     });
-
-
-
   };
 
   return (
     <div className="container">
       <div className="text-center">
         <form id="contact" onSubmit={onSubmit}>
-          <h3 className="mb-4">Form</h3>
+          <h3 className="mb-4">{formName} Form</h3>
 
           <div className="row">
             <fieldset className="col-md-6">
@@ -99,6 +166,8 @@ const ContactForm = () => {
             <fieldset className="col-md-6">
               <input value={phone} onChange={(e) => updatePhone(e.target.value)} placeholder="Phone Number" name="number" id="phone" type="tel"></input>
             </fieldset>
+
+            { formExtrasEduc ? AttachEducExtras() : null }
 
             <fieldset className="col-12">
               <textarea value={message} onChange={(e) => updateMessage(e.target.value)} placeholder="Type your Message Here...." name="message" id="message"></textarea>

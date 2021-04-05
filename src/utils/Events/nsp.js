@@ -2,9 +2,13 @@ import banner from '../../images/about.jpg';
 import img1 from '../../images/events/nspSL.png';
 import img2 from '../../images/events/liberia.png';
 import img3 from '../../images/events/guinea.png';
+import { nspApplicationUrl } from '../Forms';
 
 
 const Event = {
+  formExtrasEduc: true,
+  FORMSPARK_ACTION_URL: nspApplicationUrl,
+  formName: "nkhangfi scholarship program application",
   pathName: 'nsp',
   bg: 'nk-events-nsp-bg',
   name: 'nkhangfi scholarship program',

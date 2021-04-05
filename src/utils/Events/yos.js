@@ -1,6 +1,10 @@
 import banner from '../../images/events/yos_banner.png';
+import { yosApplicationUrl } from '../Forms';
 
 const Event = {
+  formExtrasEduc: true,
+  FORMSPARK_ACTION_URL: yosApplicationUrl,
+  formName: "yös application",
   pathName: 'yos',
   bg: 'nk-events-yos-bg',
   name: 'yos',

@@ -59,7 +59,7 @@ const Event = props => {
         </div>
       </section>
 
-      <Form />
+      <Form data={page}/>
     </section>
   );
 };
