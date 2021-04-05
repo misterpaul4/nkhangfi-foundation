@@ -21,6 +21,18 @@
   url('../images/tours.jpg');
 }
 
+.nk-events-nsp-bg {
+  background-image:
+  linear-gradient(to bottom, rgba(26,33,64, 0.52), rgba(81,84,115, 0.73)),
+  url('../images/events/nsp-bg.jpeg');
+}
+
+.nk-events-yos-bg {
+  background-image:
+  linear-gradient(to bottom, rgba(26,33,64, 0.52), rgba(81,84,115, 0.73)),
+  url('../images/events/yos-bg.jpg');
+}
+
 .hp-hero-content {
   width: 150% !important;
 }

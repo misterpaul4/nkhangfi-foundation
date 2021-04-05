@@ -95,6 +95,11 @@ body {
 
   ::selection {
     background: #216811;
+    color: white;
+  }
+
+  .no-list-style > * {
+    list-style: none;
   }
 
 
