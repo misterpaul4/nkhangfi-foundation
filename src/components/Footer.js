@@ -56,9 +56,9 @@ const Footer = () => {
             <h2 className="ftco-heading-2">Quick Links</h2>
             <ul className="list-unstyled">
               <li><Link to={"/contact"}><span className="fas fa-long-arrow-alt-right me-2"></span>Contact</Link></li>
-              <li><Link to={"/gallery"}><span className="fas fa-long-arrow-alt-right me-2"></span>Gallery</Link></li>
-              <li><Link to={"/"} onClick={handleFaqClick}><span className="fas fa-long-arrow-alt-right me-2"></span>F.A.Q</Link></li>
-              <li><Link to={"/services/overview"}><span className="fas fa-long-arrow-alt-right me-2"></span>Nkhangfi Travel</Link></li>
+              {/* <li><Link to={"/gallery"}><span className="fas fa-long-arrow-alt-right me-2"></span>Gallery</Link></li> */}
+              <li><Link to={"/faq"} onClick={handleFaqClick}><span className="fas fa-long-arrow-alt-right me-2"></span>F.A.Q</Link></li>
+              {/* <li><Link to={"/services/overview"}><span className="fas fa-long-arrow-alt-right me-2"></span>Nkhangfi Travel</Link></li> */}
               <li><Link to={"/team"}><span className="fas fa-long-arrow-alt-right me-2"></span>Our Team</Link></li>
             </ul>
           </div>

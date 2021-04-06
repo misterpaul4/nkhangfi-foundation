@@ -19,7 +19,12 @@ const Slider = props => {
             </div>
           </div>
           <div className="text-center">
-            <Link to={actionLink} className="d-block py-3">{action}</Link>
+            {
+              actionLink ?
+              <Link to={actionLink} className="d-block py-3">{action}</Link>
+              :
+              null
+            }
           </div>
         </div>
       </div>

@@ -28,7 +28,7 @@ const UnderConstruction = () => {
     <section>
       <Hero data={heroData} />
       <div className="text-center container p-5 border">
-        <h1><i class="fas fa-tools mr-2"></i>We are currently working on this page</h1>
+        <h1><i className="fas fa-tools mr-2"></i>We are currently working on this page</h1>
         <p>This page is currently being worked on. Please exercise patience. In the meantime, you can send your querries directly on the contact form below</p>
       </div>
 

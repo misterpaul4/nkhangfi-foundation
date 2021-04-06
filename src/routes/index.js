@@ -14,6 +14,7 @@ import ServicePage from '../pages/ServicesSingle';
 import EventSingle from '../pages/EventSingle';
 import Footer from '../components/Footer';
 import UnderConstruction from '../pages/UnderConstruction';
+import FAQ from '../pages/FAQ';
 import '../css/style.css';
 import '../css/flaticon.css';
 
@@ -33,6 +34,7 @@ const Routes = () => (
       <Route exact path="/studyAbroad/:id" component={StudyAbroadSingle} />
       <Route exact path="/services/:id" component={ServicePage} />
       <Route exact path="/503" component={UnderConstruction} />
+      <Route exact path="/faq" component={FAQ} />
     </Switch>
     <Footer />
   </BrowserRouter>

@@ -32,7 +32,7 @@ const Team = () => {
   };
 
   const Attach = staff => (
-    <div className="col-md-6 col-lg-3">
+    <div className="col-md-6 col-lg-3" key={staff.name}>
     <div className="staff">
       <div className="img" style={{backgroundImage: `url(${staff.image})`}}>
         <ul className="ftco-social">

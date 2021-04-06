@@ -33,13 +33,13 @@ const Nav = () => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className="nav-dropdown-items">
-                  <Dropdown.Item><Link to={"/503"} className="nav-travel navbar-dropdown-links">overview</Link></Dropdown.Item>
+                  {/* <Dropdown.Item><Link to={"/503"} className="nav-travel navbar-dropdown-links">overview</Link></Dropdown.Item> */}
                   <Dropdown.Item><Link to={"/services/visa"} className="navbar-dropdown-links">visa processing</Link></Dropdown.Item>
-                  <Dropdown.Item><Link to={"/503"} className="navbar-dropdown-links">flight reservation</Link></Dropdown.Item>
+                  {/* <Dropdown.Item><Link to={"/503"} className="navbar-dropdown-links">flight reservation</Link></Dropdown.Item> */}
                   <Dropdown.Item><Link to={"/services/tours"} className="navbar-dropdown-links">tour packages</Link></Dropdown.Item>
-                  <Dropdown.Item><Link to={"/503"} className="navbar-dropdown-links">work & travel</Link></Dropdown.Item>
-                  <Dropdown.Item><Link to={"/503"} className="navbar-dropdown-links">hotel reservation & airport pickup</Link></Dropdown.Item>
-                  <Dropdown.Item><Link to={"/503"} className="navbar-dropdown-links">document translation</Link></Dropdown.Item>
+                  {/* <Dropdown.Item><Link to={"/503"} className="navbar-dropdown-links">work & travel</Link></Dropdown.Item> */}
+                  {/* <Dropdown.Item><Link to={"/503"} className="navbar-dropdown-links">hotel reservation & airport pickup</Link></Dropdown.Item> */}
+                  {/* <Dropdown.Item><Link to={"/503"} className="navbar-dropdown-links">document translation</Link></Dropdown.Item> */}
                 </Dropdown.Menu>
               </Dropdown>
             </li>

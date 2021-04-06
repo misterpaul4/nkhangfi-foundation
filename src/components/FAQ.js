@@ -6,9 +6,9 @@ import FAQuestions from '../utils/faqs';
 const FAQ = () => {
   const Attach = (item, index) => {
     return (
-    <Card key={index}>
-      <Accordion.Toggle as={Card.Header} eventKey={`${index}`} className="text-uppercase faqs">
-      {item.question}
+    <Card key={index} className="border-0">
+      <Accordion.Toggle as={Card.Header} eventKey={`${index}`} className="text-uppercase faqs border-0">
+      <i class="fas fa-angle-double-right mr-2"></i> {item.question}
       </Accordion.Toggle>
       <Accordion.Collapse eventKey={`${index}`}>
         <Card.Body>{item.answer}</Card.Body>

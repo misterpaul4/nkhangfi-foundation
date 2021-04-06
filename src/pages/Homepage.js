@@ -104,7 +104,7 @@ function Homepage() {
        <p>Nkhangfi Travel with main branch in Yaounde, Cameroon specializes in providing a comprehensive range of travel, cultural, training, consultancy & other business services</p>
       </>
     ),
-    actionLink: "/services/overview",
+    actionLink: "/503",
   }
 
   const travelServiceSlide = [
@@ -131,8 +131,6 @@ function Homepage() {
       icon: "fas fa-plane-departure",
       title: "work & travel programs",
       message: "The Nkhangfi Team regularly holds work fair programs for those who wish to work in Canada, Crotia, Hungary, Lithuania, Mexico, Poland and Romania. We help you secure your work visa and necessary travel documents.",
-      actionLink: "/services/workNtravel",
-      action: "check it out",
     },
     {
       icon: "fas fa-hotel",
@@ -143,8 +141,8 @@ function Homepage() {
       icon: "fas fa-language",
       title: "translation services",
       message: "We have a team of professional linguist that can provide linguistically fluent and technically accurate documentation translations. We can deliver unrivaled translation efficiency regardless of your document formats",
-      actionLink: "/services/translate",
-      action: "get started",
+      // actionLink: "/services/translate",
+      // action: "get started",
     }
   ]
 
