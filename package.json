@@ -1,6 +1,7 @@
 {
   "name": "website-react",
   "version": "0.1.0",
+  "homepage": "https://nkhangfitravel.com",
   "private": true,
   "dependencies": {
     "@formspark/use-formspark": "^0.1.27",
