@@ -56,10 +56,12 @@ const Footer = () => {
             <h2 className="ftco-heading-2">Quick Links</h2>
             <ul className="list-unstyled">
               <li><Link to={"/contact"}><span className="fas fa-long-arrow-alt-right me-2"></span>Contact</Link></li>
+              <li><Link to={"/services/tours"}><span className="fas fa-long-arrow-alt-right me-2"></span>Tour Packages</Link></li>
               {/* <li><Link to={"/gallery"}><span className="fas fa-long-arrow-alt-right me-2"></span>Gallery</Link></li> */}
               <li><Link to={"/faq"} onClick={handleFaqClick}><span className="fas fa-long-arrow-alt-right me-2"></span>F.A.Q</Link></li>
               {/* <li><Link to={"/services/overview"}><span className="fas fa-long-arrow-alt-right me-2"></span>Nkhangfi Travel</Link></li> */}
               <li><Link to={"/team"}><span className="fas fa-long-arrow-alt-right me-2"></span>Our Team</Link></li>
+              <li><Link to={"/event/overview"}><span className="fas fa-long-arrow-alt-right me-2"></span>Events</Link></li>
             </ul>
           </div>
         </div>
@@ -78,11 +80,13 @@ const Footer = () => {
             <div className="block-23 mb-3">
               <ul>
                 <li><span className="icon fa fa-map marker"></span><span className="text">Awae 0000 Yaoundé, Cameroon</span></li>
-                <li><Link to={{pathname: "tel:+232-33-313797"}}><span className="icon fa fa-phone"></span><span className="text">+23233313797</span></Link>
-                  <Link to={{pathname:  "tel:+232-33-313797"}}><span className="icon fa fa-phone"></span><span className="text">+35389976 0743</span></Link>
+                <li><Link to={{pathname: "tel:+232-33-313797"}} target="_blank" rel="noopener noreferrer"><span className="icon fa fa-phone"></span><span className="text">+23233313797</span></Link>
+                  <Link to={{pathname:  "tel:+353-89-976-0743"}} target="_blank" rel="noopener noreferrer"><span className="icon fa fa-phone"></span><span className="text">+35389976 0743</span></Link>
+                  <Link to={{pathname:  "tel:+905338245235"}} target="_blank" rel="noopener noreferrer"><span className="icon fa fa-phone"></span><span className="text">+905338245235</span></Link>
                 </li>
 
-                <li><Link to={{pathname: "mailto: info@nkhangfitravel.com"}}><span className="icon fa fa-paper-plane"></span><span className="text">info@nkhangfitravel.com</span></Link></li>
+
+                <li><Link to={{pathname: "mailto: info@nkhangfitravel.com"}} target="_blank" rel="noopener noreferrer"><span className="icon fa fa-paper-plane"></span><span className="text">info@nkhangfitravel.com</span></Link></li>
               </ul>
             </div>
           </div>
