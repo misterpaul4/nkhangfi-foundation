@@ -6,6 +6,7 @@ import Newsletter from '../components/Newsletter';
 
 const Events = () => {
   useEffect(() => {
+    window.scrollTo(-1, 0);
     setActive('nav-event');
 
     return () => {

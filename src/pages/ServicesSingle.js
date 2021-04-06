@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Hero from '../components/Hero/Others';
 import services from '../utils/serviceSingle';
@@ -11,13 +11,11 @@ import { contactForm } from '../utils/Forms';
 import '../css/services.css';
 
 const Service = () => {
-  // useEffect(() => {
-  //   setActive('nav-services');
+  useEffect(() => {
+    window.scrollTo(-1, 0);
 
-  //   return () => {
-  //     removeActive('nav-services')
-  //   };
-  // }, []);
+    return null;
+  }, []);
 
   let page = {};
 
@@ -35,8 +33,6 @@ const Service = () => {
     formName: page.theme,
     formExtrasEduc: false,
   };
-
-  console.log(page);
 
   return (
     <section>

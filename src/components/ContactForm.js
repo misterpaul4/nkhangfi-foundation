@@ -34,7 +34,7 @@ const ContactForm = props => {
       </fieldset>
 
       <fieldset className="col-md-6">
-        <input className="form-control" type="text" list="datalistOptions" name="country" id="country" placeholder="Country" onChange={(e) => updateCountry(e.target.value)} required value={country}></input>
+        <input className="form-control" type="text" list="datalistOptions" name="country" id="country" placeholder="Country" onChange={(e) => updateCountry(e.target.value)} value={country} required></input>
         <datalist id="datalistOptions">
           {countries.map(AttachCountries)}
         </datalist>

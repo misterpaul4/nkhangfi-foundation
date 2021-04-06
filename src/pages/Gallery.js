@@ -5,6 +5,7 @@ import Hero from '../components/Hero/Homepage';
 const Gallery = () => {
   useEffect(() => {
     setActive('nav-gallery');
+    window.scrollTo(-1, 0);
 
     return () => {
       removeActive('nav-gallery')

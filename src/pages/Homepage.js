@@ -16,6 +16,7 @@ import FAQ from '../components/FAQ';
 function Homepage() {
   useEffect(() => {
     setActive('nav-home');
+    window.scrollTo(-1, 0);
 
     return () => {
       removeActive('nav-home')

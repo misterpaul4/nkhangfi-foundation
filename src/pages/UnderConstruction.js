@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Hero from '../components/Hero/Others';
 import Newsletter from '../components/Newsletter';
 import Form from '../components/ContactForm';
 import { contactForm } from '../utils/Forms';
 
 const UnderConstruction = () => {
+  useEffect(() => {
+    window.scrollTo(-1, 0);
+
+    return null;
+  }, []);
+
   const heroData = {
     name: "under construction",
     parent: "nkhangfi travel",

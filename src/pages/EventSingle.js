@@ -11,6 +11,7 @@ const Event = props => {
 
   useEffect(() => {
     setActive('nav-event');
+    window.scrollTo(-1, 0);
 
     return () => {
       removeActive('nav-event')
