@@ -10,7 +10,7 @@ const Testimonial = () => {
     {
     name: "fofanah funkuba",
     dept: "computer engineering, north cyprus",
-    message: "I benefited from the Nkhangfi Scholarship Program which was held in Sierra Leone 2019. I was awarded 100% scholarship to study at Kyrenia University all thanks to the Nkhangfi Team.",
+    message: "I benefited from the Nkhangfi Scholarship Program which was held in Sierra Leone 2020. I was awarded 100% scholarship to study at Kyrenia University all thanks to the Nkhangfi Team.",
     img: bgImgFofanah,
   },
   {
@@ -28,7 +28,7 @@ const Testimonial = () => {
   {
     name: "Antoinette M.",
     dept: "worker, dubai",
-    message: "Nkangfi Travel is amazing!!!.  there really wasn’t a single hiccup and today, I am legally working in Dubai.",
+    message: "Nkhangfi Travel is amazing!!!.  there really wasn’t a single hiccup and today, I am legally working in Dubai.",
     img: bgImgAntone,
   }
 ]

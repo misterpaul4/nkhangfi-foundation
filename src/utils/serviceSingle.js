@@ -19,7 +19,7 @@ const services = [
     catchphrase: "visa support packages to most countries worldwide",
     message: () => (
       <>
-        <p>Nkhangfi Travel offer visa assistance services to clients from anywhere in the world. We have built a trusted corporate portfolio accross embassies and consulates in different part of Africa. Our suucess rate speaks for itself as we have succesfully assisted clients in getting visas in the following countries
+        <p>Nkhangfi Travel offer visa assistance services to clients from anywhere in the world. We have built a trusted corporate portfolio accross embassies and consulates in different part of Africa. Our success rate speaks for itself as we have succesfully assisted clients in getting visas in the following countries
         </p>
 
         <ul className="text-left">

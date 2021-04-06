@@ -49,7 +49,7 @@ const Newsletter = () => {
     XHR.addEventListener('load', () => {
       updatePostMailState({
         messageHead: 'Delivered!!!',
-        messageBody: `Woohoo!, you have been subscribed. A confirmation emaill will be sent to ${preMailState.email}. Ensure to check your spam folder just in case.`,
+        messageBody: `You have been subscribed. A confirmation email will be sent to ${preMailState.email}. Ensure to check your spam folder just in case.`,
       });
 
       setShow(true);
