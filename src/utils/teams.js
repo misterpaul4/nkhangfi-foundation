@@ -1,6 +1,6 @@
 import img1 from '../images/team/1.jpeg';
 import img2 from '../images/team/2.jpeg';
-import none from '../images/team/none.jpg';
+// import none from '../images/team/none.jpg';
 import img4 from '../images/team/4.jpg';
 import img5 from '../images/team/5.jpeg';
 import img6 from '../images/team/6.jpeg';
@@ -16,7 +16,7 @@ const defaultEmail = "info@nkhangfitravel.com";
 
 const staffs= [
   {
-    name: "estelle amabelle mabuh",
+    name: "Estelle A. Mabuh",
     title: "founder of nkhangfi foundation & director general of nkhangfi travel",
     facebook: defaultFacebook,
     instagram: defaultInstagram,
@@ -31,14 +31,14 @@ const staffs= [
     email: "neche@nkhangfitravel.com",
     image: img2,
   },
-  {
-    name: "Elevenus Deh Awah",
-    title: "PERSONAL ASSISTANT TO CEO, NKHANGFI TRAVEL",
-    facebook: defaultFacebook,
-    instagram: defaultInstagram,
-    email: "elevenus@nkhangfitravel.com",
-    image: none,
-  },
+  // {
+  //   name: "Elevenus Deh Awah",
+  //   title: "PERSONAL ASSISTANT TO CEO, NKHANGFI TRAVEL",
+  //   facebook: defaultFacebook,
+  //   instagram: defaultInstagram,
+  //   email: "elevenus@nkhangfitravel.com",
+  //   image: none,
+  // },
   {
     name: "Eryc Epolle Ndoumbe",
     title: "DIRECTEUR D'AGENCE NKHANGFI TRAVEL, DOUALA",
@@ -46,6 +46,14 @@ const staffs= [
     instagram: defaultInstagram,
     email: "eryc@nkhangfitravel.com",
     image: img10,
+  },
+  {
+    name: "J. F. YETNA",
+    title: "Director NKHANGFI TRAVEL. Yaounde",
+    facebook: defaultFacebook,
+    instagram: defaultInstagram,
+    email: defaultEmail,
+    image: img9,
   },
   {
     name: "chukwuebuka paul ajuizeogu",
@@ -94,14 +102,6 @@ const staffs= [
     instagram: defaultInstagram,
     email: defaultEmail,
     image: img8,
-  },
-  {
-    name: "J. F. YETNA",
-    title: "Director NKHANGFI TRAVEL. Yaounde",
-    facebook: defaultFacebook,
-    instagram: defaultInstagram,
-    email: defaultEmail,
-    image: img9,
   },
 ];
 

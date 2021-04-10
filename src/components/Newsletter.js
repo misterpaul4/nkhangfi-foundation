@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Modal from 'react-bootstrap/Modal';
-// import axios from "axios";
+
+const FORMSPARK_ACTION_URL = "https://submit-form.com/TKobHNPe"
 
 const Newsletter = () => {
   const [preMailState, updatePreMailState] = useState({
@@ -9,60 +10,57 @@ const Newsletter = () => {
   });
 
   const [postMailState, updatePostMailState] = useState({
-    messageHead: 'Delivered!!!',
-    messageBody: 'Woohoo!, you have been subscribed. Ensure to check your spam folder just in case.'
-  })
+    messageHead: " ",
+    messageBody: " ",
+  });
 
   const [show, setShow] = useState(false);
 
-  const handleSubmitted = () => {
-    let em = preMailState.email;
+  const handleSubmitted = () => setShow(false);
 
-    if (postMailState.messageHead === 'Delivered!!!') { em = ''}
-
-    updatePreMailState({
-      icon: 'fa fa-paper-plane',
-      email: em,
-    });
-
-    setShow(false);
-  };
-
-  const handleSubmit = e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const formData = {
+      email: preMailState.email
+    }
 
     updatePreMailState({
       ...preMailState,
       icon: "spinner-border spinner-border-sm",
     });
 
-    const form = e.target;
-    const XHR = new XMLHttpRequest();
-    const FD = new FormData(form);
-
-    XHR.open('POST', 'https://formspree.io/f/xwkakvyj');
-    XHR.setRequestHeader('Accept', 'application/json');
-    XHR.setRequestHeader("Content-Type", "application/json");
-    XHR.send(FD);
-
-    // suuccesfull
-    XHR.addEventListener('load', () => {
+    await fetch(FORMSPARK_ACTION_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(formData),
+    }).then(() => {
+      // success
       updatePostMailState({
         messageHead: 'Delivered!!!',
         messageBody: `You have been subscribed. A confirmation email will be sent to ${preMailState.email}. Ensure to check your spam folder just in case.`,
       });
 
       setShow(true);
-    });
-
-    // unsuccessful
-    XHR.addEventListener('error', () => {
+      updatePreMailState({
+        icon: "fa fa-paper-plane",
+        email: "",
+      });
+    }).catch(Err => {
+      // unsuccesful
       updatePostMailState({
-        messageHead: 'Oooops!',
-        messageBody: 'Please try again or send us an email directly at info@nkhangfitravel.com.',
+        messageHead: 'Not Subscribed!!!',
+        messageBody: `Please try again or send us an email directly at info@nkhangfitravel.com.`,
       });
 
       setShow(true);
+      updatePreMailState({
+        ...preMailState,
+        icon: "fa fa-paper-plane",
+      });
     });
   };
 
