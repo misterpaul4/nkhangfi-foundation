@@ -29,12 +29,13 @@ const StudyDestination = () => {
     }
   });
 
-  const Attach = em => <li>{em}</li>;
+  const Attach = em => <li key={em}>{em}</li>;
 
   const formData = {
     FORMSPARK_ACTION_URL: studyAbroadFormUrl,
     formName: `${page.name} study application`,
     formExtrasEduc: true,
+    studyDestinationProvided: page.name,
   }
 
   return (

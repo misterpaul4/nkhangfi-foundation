@@ -4,8 +4,7 @@ import countries from '../utils/countries';
 import '../css/form.css';
 
 const ContactForm = props => {
-  // const {title, formID, embed} = props.data;
-  const { formName, FORMSPARK_ACTION_URL, formExtrasEduc } = props.data;
+  const { formName, FORMSPARK_ACTION_URL, formExtrasEduc, studyDestinationProvided } = props.data;
 
   const [message, updateMessage] = useState("");
   const [email, updateEmail] = useState("");
@@ -22,6 +21,8 @@ const ContactForm = props => {
   const [social, updateSocial] = useState("unselected");
   const [course, updateCourse] = useState("");
   const [country, updateCountry] = useState("");
+  const [nationality, updateNationality] = useState("");
+  const [fatherName, updateFatherName] = useState("");
 
   const AttachCountries = cts => (
     <option value={cts} key={cts}></option>
@@ -30,7 +31,14 @@ const ContactForm = props => {
   const AttachEducExtras = () => (
     <>
       <fieldset className="col-md-6">
-        <input type="text" placeholder="What do you intend to study (e.g business administration)" name="course of study" id="course" required onChange={(e) => updateCourse(e.target.value)} value={course}></input>
+        <input type="text" placeholder="Father's Name" name="father's name" required onChange={(e) => updateFatherName(e.target.value)} value={fatherName}></input>
+      </fieldset>
+
+      <fieldset className="col-md-6">
+        <input className="form-control" type="text" list="datalistOptions" name="nationality" id="country" placeholder="Nationality" onChange={(e) => updateNationality(e.target.value)} value={nationality} required></input>
+        <datalist id="datalistOptions">
+          {countries.map(AttachCountries)}
+        </datalist>
       </fieldset>
 
       <fieldset className="col-md-6">
@@ -38,6 +46,10 @@ const ContactForm = props => {
         <datalist id="datalistOptions">
           {countries.map(AttachCountries)}
         </datalist>
+      </fieldset>
+
+      <fieldset className="col-md-6">
+        <input type="text" placeholder="What do you intend to study (e.g business administration)" name="course of study" id="course" required onChange={(e) => updateCourse(e.target.value)} value={course}></input>
       </fieldset>
 
     <fieldset className="col-md-12 text-left">
@@ -56,7 +68,7 @@ const ContactForm = props => {
         </select>
 
         <select name="program" id="program" className="m-1" onChange={e => updateProgram(e.target.value)} value={program} required>
-          <option value="unselected" disabled>Program</option>
+          <option value="unselected" disabled>Degree of Interest</option>
           <option value="undergraduate">Undergraduate</option>
           <option value="postgraduate">Post-Graduate</option>
           <option value="associate">Associate</option>
@@ -110,9 +122,20 @@ const ContactForm = props => {
   const plainForm = { name, lastName, phone, email, message };
 
   const formFilled = () => {
-    if (formExtrasEduc) {
-      return {...plainForm, age, gender, program, social, course, country }
-    } else {
+    const formObjs = {...plainForm, age, gender, program, social, course, nationality, country, fatherName };
+
+    if (studyDestinationProvided !== undefined) {
+      return {
+        StudyDestination: studyDestinationProvided,
+        ...formObjs,
+      }
+    }
+
+    else if (formExtrasEduc) {
+      return formObjs;
+    }
+
+    else {
       return plainForm;
     }
   }
