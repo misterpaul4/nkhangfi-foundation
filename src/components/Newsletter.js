@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import Modal from 'react-bootstrap/Modal';
-
-const FORMSPARK_ACTION_URL = "https://submit-form.com/TKobHNPe"
+import { newsletterUrl } from '../utils/Forms';
 
 const Newsletter = () => {
   const [preMailState, updatePreMailState] = useState({
@@ -30,7 +29,7 @@ const Newsletter = () => {
       icon: "spinner-border spinner-border-sm",
     });
 
-    await fetch(FORMSPARK_ACTION_URL, {
+    await fetch(newsletterUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -41,6 +41,7 @@ const Event = props => {
       <section className="ftco-section">
         <div className="container">
           <div className="row">
+
             <div className="col-lg-8 blog-single">
               <h2 className="mb-3 text-capitalize">{page.title}</h2>
               <p>{page.messageTop}</p>
