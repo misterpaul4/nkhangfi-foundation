@@ -67,7 +67,7 @@ const StudyDestination = () => {
 
                     <>
                       <h5>Visa Requirements</h5>
-                      <ul>
+                      <ul className="text-lowercase">
                           {page.visaRequirements.map(Attach)}
                       </ul>
                     </>

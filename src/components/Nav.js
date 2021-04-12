@@ -53,6 +53,10 @@ const Nav = () => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className="nav-dropdown-items">
+                  <Dropdown.Item as={Link} to={"/studyAbroad/australia"} className="navbar-dropdown-links">Australia</Dropdown.Item>
+                  <Dropdown.Item as={Link} to={"/studyAbroad/belarus"} className="navbar-dropdown-links">Belarus</Dropdown.Item>
+                  <Dropdown.Item as={Link} to={"/studyAbroad/china"} className="navbar-dropdown-links">China</Dropdown.Item>
+                  <Dropdown.Item as={Link} to={"/studyAbroad/cyprus"} className="navbar-dropdown-links">Cyprus</Dropdown.Item>
                   <Dropdown.Item as={Link} to={"/studyAbroad/poland"} className="navbar-dropdown-links">Poland</Dropdown.Item>
                   <Dropdown.Item as={Link} to={"/studyAbroad/ukraine"} className="navbar-dropdown-links">Ukraine</Dropdown.Item>
                 </Dropdown.Menu>
