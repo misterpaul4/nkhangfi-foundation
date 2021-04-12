@@ -51,7 +51,7 @@ const StudyDestination = () => {
 
                 {/* advantages of studying in that destination */}
                 <h5 className="text-capitalize">Why Study In {page.name}?</h5>
-                <ul>
+                <ul className="text-lowercase">
                   {page.advantages.map(Attach)}
                 </ul>
 

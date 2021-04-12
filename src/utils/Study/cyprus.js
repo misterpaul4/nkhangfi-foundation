@@ -1,12 +1,12 @@
 import img1 from '../../images/study/flyerCyprus.jpg';
-import img2 from '../../images/study/prop4.jpg';
+import img2 from '../../images/study/prop4.jpeg';
 
 const cyprus = {
   name: "cyprus",
   bg: "nk-cyprus-bg",
   theme: "study in North cyprus",
   parent: "study abroad",
-  tuition: "$995 USD",
+  tuition: "$995 USD per semester",
   flyer: img1,
   image: img2,
   message1: () => (
@@ -37,10 +37,7 @@ the best in the whole of Europe.
     "Very high standard of Education with Excellent facilities for social, cultural and sports activities",
     "Students tend to enjoy the peaceful and safe environment of Northern Cyprus",
   ],
-  visaIsRequired: true,
-  visaRequirements: [
-    "Visa on arrival",
-  ],
+  visaIsRequired: false,
   documentRequired: [
     "Passport",
     "Highschool certificate (Waec/WASSCE/NECO/Diploma & Transcript etc)",
