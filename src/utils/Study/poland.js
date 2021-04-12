@@ -37,6 +37,14 @@ const poland = {
     "Flight reservation",
     "Travel medical insurance",
     "School documents (Waec/WASSCE/Neco/GCE e.t.c)",
+  ],
+  documentRequired: [
+    "Passport",
+    "Highschool certificate (Waec/WASSCE/NECO/Diploma & Transcript etc)",
+    "Bachelor degree certificate & Transcript (for masters students)",
+    "Masters degree certificate & Transcript (for PHD students)",
+    "Translated Copy of school documents listed above (for non-english speaking countries)",
+    "Waec/WASSCE/Neco Scratch card (for West African students e.g nigeria, sierra leone)"
   ]
 };
 

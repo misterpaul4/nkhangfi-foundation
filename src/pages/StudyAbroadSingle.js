@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Hero from '../components/Hero/Others';
 import { useLocation } from 'react-router-dom';
-import {setActive, removeActive} from '../utils/activeLink';
+// import {setActive, removeActive} from '../utils/activeLink';
 import destinations from '../utils/Study';
 import Form from '../components/ContactForm';
 import { studyAbroadFormUrl } from '../utils/Forms';
@@ -9,11 +9,11 @@ import Progress from '../components/Progress';
 
 const StudyDestination = () => {
   useEffect(() => {
-    setActive('nav-study');
+    // setActive('nav-study');
     window.scrollTo(-1, 0);
 
     return () => {
-      removeActive('nav-study')
+      // removeActive('nav-study')
     };
   }, []);
 
@@ -55,6 +55,12 @@ const StudyDestination = () => {
                   {page.advantages.map(Attach)}
                 </ul>
 
+                {/* required documents */}
+                <h5>Required Documents</h5>
+                <ul className="text-lowercase">
+                  {page.documentRequired.map(Attach)}
+                </ul>
+
                 {/* visa requirements */}
                 {
                   page.visaIsRequired ?
@@ -76,8 +82,8 @@ const StudyDestination = () => {
               </div>
 
               <div className="col-lg-5 sidebar pl-md-4">
-                <img src={page.flyer} alt="flyer" className="w-100 mb-2"></img>
-                <img src={page.image} alt="flyer" className="w-100"></img>
+                <img src={page.flyer} alt="flyer" className="w-100"></img>
+                <img src={page.image} alt="flyer" className="w-100 my-3"></img>
               </div>
           </div>
         </div>
