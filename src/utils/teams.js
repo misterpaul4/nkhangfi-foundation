@@ -57,7 +57,7 @@ const staffs= [
   },
   {
     name: "chukwuebuka paul ajuizeogu",
-    title: "I.T administrator and EDUCATIONAL CONSULTANT OF NKHANGFI TRAVEL",
+    title: "I.T manager and EDUCATIONAL CONSULTANT OF NKHANGFI TRAVEL",
     facebook: defaultFacebook,
     instagram: "https://www.instagram.com/paulajuze/",
     email: "ajuzepaul@gmail.com",
