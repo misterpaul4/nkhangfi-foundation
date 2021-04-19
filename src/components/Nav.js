@@ -18,7 +18,7 @@ const Nav = () => {
   return(
     <nav className="navbar navbar-expand-lg ftco-navbar-light">
       <div className="container-xl">
-        <Link to={"/503"} className="btn-custom order-lg-last">donate</Link>
+        <Link to={"/donate"} className="btn-custom order-lg-last">donate</Link>
         <button className="navbar-toggler" type="button" onClick={toggleMenu}>
           <span className="fa fa-bars"></span>Menu
         </button>

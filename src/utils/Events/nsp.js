@@ -50,6 +50,22 @@ const Event = {
         $50 USD
       </div>
 
+      <div className="mb-3">
+        <h3>Payment Account</h3>
+        <div>
+          <span className="d-block font-weight-bold">Bank Name</span>
+          <span className="text-dark font-weight-bold">United Bank for Africa Plc (UBA)</span>
+
+          <span className="d-block font-weight-bold">Bank Account Name</span>
+          <span className="text-dark font-weight-bold">Nkhangfi Foundation</span>
+
+          <span className="d-block font-weight-bold">Bank Account Number</span>
+          <span className="text-dark font-weight-bold">540110110000766</span>
+        </div>
+
+        <p>Please note that you must forward your receipt of payment to <span className="font-weight-bold text-dark">info@nkhangfitravel.com</span>. As well as your name, phone number & country of residence</p>
+      </div>
+
       <h3>Program Schedule</h3>
       <h4>Sierra Leone</h4>
       <ul className="no-list-style categories me-md-4">
