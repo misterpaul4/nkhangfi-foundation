@@ -62,7 +62,7 @@ const Nav = () => {
                 </Dropdown.Menu>
               </Dropdown>
             </li>
-            <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-gallery" to={"/503"}>Gallery</Link></li>
+            <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-gallery" to={"/gallery"}>Gallery</Link></li>
             <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-event" to={"/event/overview"}>Event</Link></li>
             <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-team" to={"/team"}>Our Team</Link></li>
             <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-contact" to={"/contact"}>Contact</Link></li>
