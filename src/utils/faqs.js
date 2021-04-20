@@ -16,11 +16,11 @@ const FAQs = [
     answer: "If you are a foreign student who has obtained at least a high school leaving diploma, in an institute that is equivalent to high school in Turkey, you can take this exam. In addition, you must meet the enrolment requirements determined by their preferred higher education institutions. In Turkey, each institution and university has different conditions and preferences for accepting foreign students."
   },
   {
-    question: "What type of questions am i to expect?",
+    question: "What type of questions am i to expect in YÖS exam?",
     answer: "the exam has 80 questions. Most of the 45 exam questions are so-called IQ questions (general ability questions, intelligence questions). The remaining 35 questions are maths questions. You can compare the maths in the YÖS exam with the math questions in grade 10 high school."
   },
   {
-    question: "When can i take the YOS exam?",
+    question: "When can i take the YÖS exam?",
     answer: "The examination dates can be found in the events page."
   },
   {
@@ -40,7 +40,7 @@ const FAQs = [
     answer: "No. The exam is currently face to face only."
   },
   {
-    question: "Must i pay the application fee before i can write the exam?",
+    question: "Must i pay the application fee before i can write the YÖS exam?",
     answer: "Yes. It is required that you pay the $200 USD application fee before you can sit for the exams.",
   }
 ];

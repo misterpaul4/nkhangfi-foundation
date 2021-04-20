@@ -65,7 +65,7 @@ const Event = {
       </div>
 
       <div className="mb-3">
-        <h3>Payment Account</h3>
+        <h3 className="mb-0">Payment Account</h3>
         <div>
           <span className="d-block font-weight-bold">Bank Name</span>
           <span className="text-dark font-weight-bold">United Bank for Africa Plc (UBA)</span>

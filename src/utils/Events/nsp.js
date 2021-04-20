@@ -16,10 +16,10 @@ const Event = {
   parent: 'events',
   image: banner,
   title: 'register for the nkhangfi scholarship program in sierra leone, liberia and guinea',
-  messageTop: "The Nkhangfi Scholarship Program will consist of the following events, seminar, workfair, main exams, award ceremony & workshop. Scholarships ranging from 25% to 80% will be distributed to students based on merit.",
+  messageTop: "The Nkhangfi Scholarship Program is a porject of the Nkhangfi Foundation. It will consist of the following events, seminar, workfair, main exams, award ceremony & workshop. Scholarships ranging from 25% to 100% will be distributed to students based on merit.",
   messageBottom: () => (
     <>
-    <p>This Program will give students the opportunity to study in reputable private universities for as low as $995.</p>
+    <p>This Program will give students the opportunity to study in reputable private universities for as low as $995. You can study in North Cyprus, Belarus, Ukraine, Poland, India, Australia & China through this program.</p>
 
     <ul>
     <h4>Requirements</h4>
@@ -51,7 +51,7 @@ const Event = {
       </div>
 
       <div className="mb-3">
-        <h3>Payment Account</h3>
+        <h3 className="mb-0">Payment Account</h3>
         <div>
           <span className="d-block font-weight-bold">Bank Name</span>
           <span className="text-dark font-weight-bold">United Bank for Africa Plc (UBA)</span>

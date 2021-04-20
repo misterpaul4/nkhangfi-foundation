@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import {setActive, removeActive } from '../utils/activeLink';
 import events from '../utils/Events';
 import Form from '../components/ContactForm';
+import FAQ from '../components/FAQ';
 
 const Event = props => {
   const getPageFromprops = props.location.event;
@@ -60,6 +61,7 @@ const Event = props => {
       </section>
 
       <Form data={page}/>
+      <FAQ />
     </section>
   );
 };
