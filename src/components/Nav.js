@@ -34,9 +34,9 @@ const Nav = () => {
 
                 <Dropdown.Menu className="nav-dropdown-items">
                   {/* <Dropdown.Item><Link to={"/503"} className="nav-travel navbar-dropdown-links">overview</Link></Dropdown.Item> */}
-                  <Dropdown.Item as={Link} to={"/services/visa"} className="navbar-dropdown-links">visa processing</Dropdown.Item>
+                  <Dropdown.Item onClick={toggleMenu} as={Link} to={"/services/visa"} className="navbar-dropdown-links">visa processing</Dropdown.Item>
                   {/* <Dropdown.Item><Link to={"/503"} className="navbar-dropdown-links">flight reservation</Link></Dropdown.Item> */}
-                  <Dropdown.Item as={Link} to={"/services/tours"} className="navbar-dropdown-links">tour packages</Dropdown.Item>
+                  <Dropdown.Item onClick={toggleMenu} as={Link} to={"/services/tours"} className="navbar-dropdown-links">tour packages</Dropdown.Item>
                   {/* <Dropdown.Item><Link to={"/503"} className="navbar-dropdown-links">work & travel</Link></Dropdown.Item> */}
                   {/* <Dropdown.Item><Link to={"/503"} className="navbar-dropdown-links">hotel reservation & airport pickup</Link></Dropdown.Item> */}
                   {/* <Dropdown.Item><Link to={"/503"} className="navbar-dropdown-links">document translation</Link></Dropdown.Item> */}
@@ -53,12 +53,12 @@ const Nav = () => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className="nav-dropdown-items">
-                  <Dropdown.Item as={Link} to={"/studyAbroad/australia"} className="navbar-dropdown-links">Australia</Dropdown.Item>
-                  <Dropdown.Item as={Link} to={"/studyAbroad/belarus"} className="navbar-dropdown-links">Belarus</Dropdown.Item>
-                  <Dropdown.Item as={Link} to={"/studyAbroad/china"} className="navbar-dropdown-links">China</Dropdown.Item>
-                  <Dropdown.Item as={Link} to={"/studyAbroad/cyprus"} className="navbar-dropdown-links">Cyprus</Dropdown.Item>
-                  <Dropdown.Item as={Link} to={"/studyAbroad/poland"} className="navbar-dropdown-links">Poland</Dropdown.Item>
-                  <Dropdown.Item as={Link} to={"/studyAbroad/ukraine"} className="navbar-dropdown-links">Ukraine</Dropdown.Item>
+                  <Dropdown.Item onClick={toggleMenu} as={Link} to={"/studyAbroad/australia"} className="navbar-dropdown-links">Australia</Dropdown.Item>
+                  <Dropdown.Item onClick={toggleMenu} as={Link} to={"/studyAbroad/belarus"} className="navbar-dropdown-links">Belarus</Dropdown.Item>
+                  <Dropdown.Item onClick={toggleMenu} as={Link} to={"/studyAbroad/china"} className="navbar-dropdown-links">China</Dropdown.Item>
+                  <Dropdown.Item onClick={toggleMenu} as={Link} to={"/studyAbroad/cyprus"} className="navbar-dropdown-links">Cyprus</Dropdown.Item>
+                  <Dropdown.Item onClick={toggleMenu} as={Link} to={"/studyAbroad/poland"} className="navbar-dropdown-links">Poland</Dropdown.Item>
+                  <Dropdown.Item onClick={toggleMenu} as={Link} to={"/studyAbroad/ukraine"} className="navbar-dropdown-links">Ukraine</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </li>
