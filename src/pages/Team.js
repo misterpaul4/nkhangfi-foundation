@@ -11,7 +11,6 @@ import Progress from '../components/Progress';
 const Team = () => {
   useEffect(() => {
     setActive('nav-team');
-    window.scrollTo(-1, 0);
 
     return () => {
       removeActive('nav-team')

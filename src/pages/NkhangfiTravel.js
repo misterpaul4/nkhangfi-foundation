@@ -3,7 +3,6 @@ import Hero from '../components/Hero/Homepage';
 
 const NkhangfiTravel = () => {
   useEffect(() => {
-    window.scrollTo(-1, 0);
 
     return null;
   }, []);

@@ -5,7 +5,6 @@ import Hero from '../components/Hero/Homepage';
 const StudyAbroad = () => {
   useEffect(() => {
     setActive('nav-study');
-    window.scrollTo(-1, 0);
 
     return () => {
       removeActive('nav-study')

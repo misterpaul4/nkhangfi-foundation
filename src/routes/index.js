@@ -15,11 +15,13 @@ import EventSingle from '../pages/EventSingle';
 import Footer from '../components/Footer';
 import UnderConstruction from '../pages/UnderConstruction';
 import FAQ from '../pages/FAQ';
+import ScrollToTop from '../components/ScrollToTop';
 import '../css/style.css';
 import '../css/flaticon.css';
 
 const Routes = () => (
   <BrowserRouter>
+    <ScrollToTop />
     <Header />
     <Switch>
       <Route exact path="/" component={Homepage} />

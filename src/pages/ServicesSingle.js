@@ -12,7 +12,6 @@ import '../css/services.css';
 
 const Service = () => {
   useEffect(() => {
-    window.scrollTo(-1, 0);
 
     return null;
   }, []);

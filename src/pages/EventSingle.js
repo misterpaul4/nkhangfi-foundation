@@ -5,13 +5,11 @@ import {setActive, removeActive } from '../utils/activeLink';
 import events from '../utils/Events';
 import Form from '../components/ContactForm';
 
-
 const Event = props => {
   const getPageFromprops = props.location.event;
 
   useEffect(() => {
     setActive('nav-event');
-    window.scrollTo(-1, 0);
 
     return () => {
       removeActive('nav-event')

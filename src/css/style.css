@@ -35,10 +35,10 @@
 *::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
-
+/* 
 @media (prefers-reduced-motion: no-preference) {
   :root {
-    scroll-behavior: smooth; } }
+    scroll-behavior: smooth; } } */
 
 /* personal styles */
 .header-logo {

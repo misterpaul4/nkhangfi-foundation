@@ -9,7 +9,6 @@ import '../css/contact.css';
 
 const Contact = () => {
   useEffect(() => {
-    window.scrollTo(-1, 0);
     setActive('nav-contact');
 
     return () => {

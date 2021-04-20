@@ -6,7 +6,6 @@ import { contactForm } from '../utils/Forms';
 
 const UnderConstruction = () => {
   useEffect(() => {
-    window.scrollTo(-1, 0);
 
     return null;
   }, []);

@@ -10,7 +10,6 @@ import Progress from '../components/Progress';
 const StudyDestination = () => {
   useEffect(() => {
     // setActive('nav-study');
-    window.scrollTo(-1, 0);
 
     return () => {
       // removeActive('nav-study')
