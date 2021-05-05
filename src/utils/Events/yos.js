@@ -1,5 +1,8 @@
 import banner from '../../images/events/yos_banner.png';
+import { Link } from 'react-router-dom';
 import { yosApplicationUrl } from '../Forms';
+
+const isFirefox = typeof InstallTrigger !== 'undefined';
 
 const Event = {
   formExtrasEduc: true,
@@ -64,7 +67,7 @@ const Event = {
         $200 USD
       </div>
 
-      <div className="mb-3">
+      {/* <div className="mb-3">
         <h3 className="mb-0">Payment Account</h3>
         <div>
           <span className="d-block font-weight-bold">Bank Name</span>
@@ -78,12 +81,30 @@ const Event = {
         </div>
 
         <p>Please note that you must forward your receipt of payment to <span className="font-weight-bold text-dark">info@nkhangfitravel.com</span>. As well as your name, phone number & country of residence</p>
-      </div>
+      </div> */}
 
       <div>
         <h3>Venues</h3>
         TBA
       </div>
+
+      <hr></hr>
+
+      <h3>Watch our Interview with AYV Media Empire</h3>
+
+      {
+        isFirefox ?
+        <Link to={{pathname: "https://fb.watch/5iHAn1nDz-/"}} target="_blank" rel="noopener noreferrer"><span className="fas fa-link"> Link</span></Link>
+        :
+        <div>
+        <iframe src="https://www.facebook.com/plugins/video.php?&href=https%3A%2F%2Fwww.facebook.com%2FAYVSierraLeone%2Fvideos%2F145463617500853%2F"
+        title="embeded video"
+        scrolling="no"
+        frameBorder="0"
+        allowFullScreen={true}
+        />
+      </div>
+      }
     </>
   ),
 }

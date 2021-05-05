@@ -16,3 +16,8 @@
 .progress-bg {
   background-image: url('../images/progress.jpg');
 }
+
+.interview {
+  width: 560px;
+  height: 314px;
+}

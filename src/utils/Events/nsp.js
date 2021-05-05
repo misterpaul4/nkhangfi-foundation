@@ -3,7 +3,10 @@ import img1 from '../../images/events/nspSL.png';
 import img2 from '../../images/events/liberia.png';
 import img3 from '../../images/events/guinea.png';
 import { nspApplicationUrl } from '../Forms';
+import { Link } from 'react-router-dom';
+import '../../css/utils.css';
 
+const isFirefox = typeof InstallTrigger !== 'undefined';
 
 const Event = {
   formExtrasEduc: true,
@@ -16,7 +19,7 @@ const Event = {
   parent: 'events',
   image: banner,
   title: 'register for the nkhangfi scholarship program in sierra leone, liberia and guinea',
-  messageTop: "The Nkhangfi Scholarship Program is a porject of the Nkhangfi Foundation. It will consist of the following events, seminar, workfair, main exams, award ceremony & workshop. Scholarships ranging from 25% to 100% will be distributed to students based on merit.",
+  messageTop: "The Nkhangfi Scholarship Program is a project of the Nkhangfi Foundation. It will consist of the following events, seminar, workfair, main exams, award ceremony & workshop. Scholarships ranging from 25% to 100% will be distributed to students based on merit.",
   messageBottom: () => (
     <>
     <p>This Program will give students the opportunity to study in reputable private universities for as low as $995. You can study in North Cyprus, Belarus, Ukraine, Poland, India, Australia & China through this program.</p>
@@ -50,7 +53,7 @@ const Event = {
         $50 USD
       </div>
 
-      <div className="mb-3">
+      {/* <div className="mb-3">
         <h3 className="mb-0">Payment Account</h3>
         <div>
           <span className="d-block font-weight-bold">Bank Name</span>
@@ -64,34 +67,54 @@ const Event = {
         </div>
 
         <p>Please note that you must forward your receipt of payment to <span className="font-weight-bold text-dark">info@nkhangfitravel.com</span>. As well as your name, phone number & country of residence</p>
-      </div>
+      </div> */}
 
       <h3>Program Schedule</h3>
       <h4>Sierra Leone</h4>
       <ul className="no-list-style categories me-md-4">
-        <li><span className="font-weight-bold mr-3">Seminar:</span>31st May, 2021</li>
-        <li><span className="font-weight-bold mr-3">Workshop:</span>1st June, 2021</li>
-        <li><span className="font-weight-bold mr-3">Exam:</span>2nd June, 2021</li>
-        <li><span className="font-weight-bold mr-3">Work Fair:</span>3rd June, 2021</li>
-        <li><span className="font-weight-bold mr-3">Award Ceremony:</span>5th June, 2021</li>
+        <li><span className="font-weight-bold mr-3">Seminar:</span>14th June, 2021</li>
+        <li><span className="font-weight-bold mr-3">Workshop:</span>15th June, 2021</li>
+        <li><span className="font-weight-bold mr-3">Work Abroad Fair:</span>16th June, 2021</li>
+        <li><span className="font-weight-bold mr-3">Exam:</span>17th June, 2021</li>
+        <li><span className="font-weight-bold mr-3">Award Ceremony:</span>19th June, 2021</li>
       </ul>
 
       <h4>Liberia</h4>
       <ul className="no-list-style categories me-md-4">
-        <li><span className="font-weight-bold mr-3">Seminar & Workshop:</span>7th June, 2021</li>
-        <li><span className="font-weight-bold mr-3">Exam:</span>8th June, 2021</li>
-        <li><span className="font-weight-bold mr-3">Work Fair:</span>9th June, 2021</li>
-        <li><span className="font-weight-bold mr-3">Award Ceremony:</span>11th June, 2021</li>
+        <li><span className="font-weight-bold mr-3">Seminar & Workshop:</span>21th June, 2021</li>
+        <li><span className="font-weight-bold mr-3">Work Abroad Fair:</span>22nd June, 2021</li>
+        <li><span className="font-weight-bold mr-3">Exam:</span>23rd June, 2021</li>
+        <li><span className="font-weight-bold mr-3">Award Ceremony:</span>26th June, 2021</li>
       </ul>
 
 
       <h4>Guinea</h4>
       <ul className="no-list-style categories me-md-4">
-      <li><span className="font-weight-bold mr-3">Work Fair:</span>12th June, 2021</li>
-        <li><span className="font-weight-bold mr-3">Seminar & Workshop:</span>14th June, 2021</li>
-        <li><span className="font-weight-bold mr-3">Exam:</span>15th June, 2021</li>
-        <li><span className="font-weight-bold mr-3">Award Ceremony:</span>19th June, 2021</li>
+      <li><span className="font-weight-bold mr-3">Work Fair:</span>28th June, 2021</li>
+        <li><span className="font-weight-bold mr-3">Seminar & Workshop:</span>29th June, 2021</li>
+        <li><span className="font-weight-bold mr-3">Exam:</span>30th June, 2021</li>
+        <li><span className="font-weight-bold mr-3">Award Ceremony:</span>3rd July, 2021</li>
       </ul>
+
+      <hr></hr>
+
+
+      <h3>Watch our Interview with AYV Media Empire</h3>
+
+      {
+        isFirefox ?
+        <Link to={{pathname: "https://fb.watch/5iHAn1nDz-/"}} target="_blank" rel="noopener noreferrer"><span className="fas fa-link"> Link</span></Link>
+        :
+        <div>
+        <iframe src="https://www.facebook.com/plugins/video.php?&href=https%3A%2F%2Fwww.facebook.com%2FAYVSierraLeone%2Fvideos%2F145463617500853%2F"
+        title="embeded video"
+        scrolling="no"
+        frameBorder="0"
+        allowFullScreen={true}
+        />
+      </div>
+      }
+
     </>
   ),
 }

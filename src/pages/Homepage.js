@@ -209,6 +209,8 @@ function Homepage() {
       <section className="ftco-section">
         <div className="container-xl">
           <Teaser data={studyAbroadTease}/>
+
+
           <StudyAbroad data={studyAbroadObjGrid}/>
         </div>
       </section>
