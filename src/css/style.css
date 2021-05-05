@@ -35,12 +35,32 @@
 *::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
-/* 
+/*
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth; } } */
 
 /* personal styles */
+.scroll-to-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+.scroll-to-btn {
+  background: white;
+  color: black;
+  padding: 0.3em 0.8em;
+  cursor: pointer;
+}
+
+.scroll-to-btn:hover {
+  background: #e59710;
+  color: white;
+}
+
 .header-logo {
   height: 60px;
   width: 60px;
