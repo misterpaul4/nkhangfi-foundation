@@ -3,16 +3,16 @@ import bgNsp from '../images/events/nsp1.png';
 
 const eventts = [
   {
-    startdate: "May. 10, 2021",
-    enddate: "May. 24, 2021",
+    startdate: "May. 26, 2021",
+    enddate: "June. 9, 2021",
     title: "Turkish Foreign Student Entrance Exams (Y.Ö.S)",
     message: "Register for the Y.Ö.S exams to study in Turkey for as low as $150 USD - $250 USD. Examination will be conducted in Cameroon, Ivory Coast, Togo, Guinea, Liberia & Sierra Leone ",
     image: bgYos,
     link: "yos",
   },
   {
-    startdate: "May. 31, 2021",
-    enddate: "June. 19, 2021",
+    startdate: "June. 14, 2021",
+    enddate: "July. 3, 2021",
     title: "Nkhangfi Scholarship Program (NSP) 2021",
     link: "nsp",
     image: bgNsp,

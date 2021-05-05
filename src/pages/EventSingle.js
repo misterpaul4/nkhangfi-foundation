@@ -48,8 +48,6 @@ const Event = props => {
               {page.messageBottom()}
             </div>
 
-
-
             <div className="col-lg-4 sidebar pl-md-4">
               <div className="sidebar-box">
                 {page.sideContent()}
