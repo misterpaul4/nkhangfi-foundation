@@ -24,7 +24,7 @@ const Gallery = () => {
 
   const Attach = gImg => (
     <div className="gallery-img m-2">
-      <img src={gImg.image} alt={gImg.alt} className="w-100 h-100 g-img-box"></img>
+      <img src={gImg.image} alt={gImg.alt} className="h-100 g-img-box"></img>
     </div>
   );
 
