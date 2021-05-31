@@ -181,7 +181,10 @@ function Homepage() {
                     <div className="icon"><span className="flaticon-scientist"></span></div>
                     <div className="text">
                       <h2>Work abroad opportunities</h2>
-                      <p className="mb-0">Nkhangfi Foundation holds regular work fair programs for those that wish to work in Canada, Croatia, Hungary, Lithuania, Mexico, Poland, Romania & more.</p>
+                      <p className="mb-0">We assist African youth to get seasonal/
+              contract jobs at home or abroad through
+              our reputable recruitment companies in
+              Africa, Europe, Asia, UAE, and Canada. Nkhangfi Foundation also holds regular work fair programs for those that wish to work in Canada, Croatia, Hungary, Lithuania, Mexico, Poland, Romania & more</p>
                     </div>
                   </div>
                 </div>

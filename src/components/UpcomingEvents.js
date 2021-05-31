@@ -24,8 +24,8 @@ const Events = () => {
       <div className="container-xl">
         <div className="row justify-content-center mb-5">
           <div className="col-md-7 heading-section text-center">
-            <span className="subheading">events</span>
-            <h2>Nkhangfi Events</h2>
+            <span className="subheading">updates</span>
+            <h2>Nkhangfi Activities & Events</h2>
           </div>
         </div>
         <div className="row justify-content-center">

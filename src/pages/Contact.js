@@ -41,9 +41,10 @@ const Contact = () => {
           <div className="contact-FORM container">
 
             <div className="row text-center mt-2 contact-wrap py-4">
-              <h3>Reach To Us</h3>
-              <p>We're open for any suggestion or just to have a chat</p>
+              <h3>Reach Out To Us</h3>
+              <p>Get in touch with us and speak directly with one of our representatives</p>
               <div className="dbox">
+
                 <div className="text">
                   <p><span>head office:</span> Awae 0000 Yaoundé, Cameroon</p>
                 </div>

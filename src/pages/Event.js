@@ -14,9 +14,9 @@ const Events = () => {
   }, []);
 
   const heroContent = {
-    name: "events",
+    name: "activities",
     bg: "nk-events-bg",
-    theme: "events",
+    theme: "activities & events",
     parent: "home",
   };
 
