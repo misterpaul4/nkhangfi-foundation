@@ -9,7 +9,13 @@ const Events = () => {
       <Link to={`/event/${ev.link}`} className="block-20 img" style={{backgroundImage: `url(${ev.image})`}}>
       </Link>
       <div className="text">
-        <p className="meta"><i className="fa fa-calendar me-1"></i>{ev.startdate} &nbsp; - &nbsp; <i className="fa fa-calendar me-1"></i>{ev.enddate}</p>
+        <p className="meta"><i className="fa fa-calendar me-1"></i>{ev.startdate} &nbsp;
+        {
+          ev.enddate ?
+          <>- &nbsp; <i className="fa fa-calendar me-1"></i>{ev.enddate}</>
+          : ''
+        }
+        </p>
         <h3 className="heading mb-3">
           <Link to={`/event/${ev.link}`}>{ev.title}</Link>
           </h3>

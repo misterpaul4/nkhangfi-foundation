@@ -1,5 +1,6 @@
 import bgYos from '../images/events/yos1.png';
 import bgNsp from '../images/events/nsp1.png';
+import fof from '../images/gallery/16.jpeg';
 
 const eventts = [
   {
@@ -17,7 +18,14 @@ const eventts = [
     link: "nsp",
     image: bgNsp,
     message: "The Nkhangfi Scholarship Program will consist of the following events, seminar, workfair, main exams, award ceremony & workshop. Scholarships ranging from 25% to 80% will be distributed to students based on merit",
-  }
+  },
+  {
+    startdate: "March 2021",
+    title: "100% scholarship awarded to Mr Fofanah from Sierra Leone",
+    link: "100_percent_scholarship",
+    image: fof,
+    message: "Mr Fofanah was awarded 100% tuition waiver scholarship to study in Cyprus",
+  },
 ];
 
 export default eventts;

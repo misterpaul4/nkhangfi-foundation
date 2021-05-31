@@ -57,9 +57,6 @@ const Event = props => {
           </div>
         </div>
       </section>
-
-      <Form data={page}/>
-      <FAQ />
     </section>
   );
 };

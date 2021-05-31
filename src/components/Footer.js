@@ -14,11 +14,17 @@ const Footer = () => {
   const AttachEvents = (ev, index) =>{
     if(index < 3) {
       return (
-        <div className="block-21 mb-4 d-flex" key={index}>
+        <div className="block-21 mb-4 d-flex align-items-center" key={index}>
           <Link to={`/event/${ev.link}`} className="blog-img img rounded" style={{backgroundImage: `url(${ev.image})`}}></Link>
           <div className="text">
             <div className="meta">
-              <div><Link to={`/event/${ev.link}`}><i className="fa fa-calendar me-1"></i>{ev.startdate} &nbsp; - &nbsp; <i className="fa fa-calendar me-1"></i>{ev.enddate}</Link></div></div>
+              <div><Link to={`/event/${ev.link}`}><i className="fa fa-calendar me-1"></i>{ev.startdate} &nbsp;
+              {
+                ev.enddate ?
+                <>- &nbsp; <i className="fa fa-calendar me-1"></i>{ev.enddate}</>
+                : ''
+              }
+              </Link></div></div>
             <h3 className="heading"><Link to={`/event/${ev.link}`}>{ev.title}</Link></h3>
           </div>
         </div>
