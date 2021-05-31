@@ -5,6 +5,7 @@ import { yosApplicationUrl } from '../Forms';
 const isFirefox = typeof InstallTrigger !== 'undefined';
 
 const Event = {
+  extraContent: true,
   formExtrasEduc: true,
   FORMSPARK_ACTION_URL: yosApplicationUrl,
   formName: "yös application",

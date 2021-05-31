@@ -57,6 +57,16 @@ const Event = props => {
           </div>
         </div>
       </section>
+
+      {
+        page.extraContent ?
+      <>
+        <Form data={page}/>
+      <FAQ />
+        </>
+        :
+        null
+      }
     </section>
   );
 };

@@ -9,6 +9,7 @@ import '../../css/utils.css';
 const isFirefox = typeof InstallTrigger !== 'undefined';
 
 const Event = {
+  extraContent: true,
   formExtrasEduc: true,
   FORMSPARK_ACTION_URL: nspApplicationUrl,
   formName: "nkhangfi scholarship program application",

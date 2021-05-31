@@ -8,11 +8,8 @@ import '../../css/utils.css';
 import fofanah from '../../images/events/100.png';
 import Events from '../events';
 
-const isFirefox = typeof InstallTrigger !== 'undefined';
-
-
 const AttachEvents = (ev, index) =>{
-  if(index < 3) {
+  if(index < 7 && ev.link !== '100_percent_scholarship') {
     return (
       <div className="block-21 mb-4 d-flex align-items-center" key={index}>
         <Link to={`/event/${ev.link}`} className="blog-img img rounded mr-2" style={{backgroundImage: `url(${ev.image})`}}></Link>
@@ -33,6 +30,7 @@ const AttachEvents = (ev, index) =>{
 };
 
 const Event = {
+  extraContent: false,
   formExtrasEduc: true,
   FORMSPARK_ACTION_URL: nspApplicationUrl,
   formName: "nkhangfi scholarship program application",
@@ -42,7 +40,7 @@ const Event = {
   theme: 'success story',
   parent: 'events',
   image: banner,
-  title: '100% scholarship applicant',
+  title: '100% scholarship candidate',
   messageTop: "Mr Fofanah Mohamed Funkuba participated in the Nkhangfi scholarship program of 2020 in Sierra Leone. He performed extremely well in the scholarship exams conducted by the Nkhangfi Team and for that reason, he was awarded 100% scholarship to study computer engineering in Kyrenia University.",
   messageBottom: () => (
     <>
@@ -60,6 +58,7 @@ const Event = {
   sideContent: () => (
     <>
       <div>
+        <h3>More Updates</h3>
         {Events.map(AttachEvents)}
       </div>
 
@@ -70,21 +69,8 @@ const Event = {
       <iframe src="https://www.youtube.com/embed/SFUoQtE_qDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
       </iframe>
 
-      <iframe src="https://www.youtube.com/embed/_H401jGujj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      {/* {
-        isFirefox ?
-        <Link to={{pathname: "https://fb.watch/5iHAn1nDz-/"}} target="_blank" rel="noopener noreferrer"><span className="fas fa-link"> Link</span></Link>
-        :
-        <div>
-        <iframe src="https://www.facebook.com/plugins/video.php?&href=https%3A%2F%2Fwww.facebook.com%2FAYVSierraLeone%2Fvideos%2F145463617500853%2F"
-        title="embeded video"
-        scrolling="no"
-        frameBorder="0"
-        allowFullScreen={true}
-        />
-      </div>
-      } */}
-
+      <iframe src="https://www.youtube.com/embed/_H401jGujj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
     </>
   ),
 }
