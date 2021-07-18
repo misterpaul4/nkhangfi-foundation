@@ -4,6 +4,7 @@ import fof from './fofanah';
 import yosIvory from './yosIvoryCoast';
 import yosCameroon from './yosCameroon';
 import yosTogo from './yosTogo';
+import yosGuinea from './yosGuinea';
 
 
 const Events = [
@@ -12,7 +13,8 @@ const Events = [
   nsp,
   yosIvory,
   yosCameroon,
-  yosTogo
+  yosTogo,
+  yosGuinea
 ]
 
 export default Events;
