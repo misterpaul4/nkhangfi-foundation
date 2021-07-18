@@ -2,6 +2,7 @@ import bgYos from '../images/events/yos1.png';
 import bgNsp from '../images/events/nsp1.png';
 import fof from '../images/gallery/16.jpeg';
 import ivn from '../images/events/yos_ivorycoast.jpg';
+import camer from '../images/events/yos_cameroon.png';
 
 const eventts = [
   {
@@ -33,6 +34,13 @@ const eventts = [
     link: "yos_ivory_coast",
     image: ivn,
     message: "The Yos exam was succesfully conducted in Ivory Coast on May 31st, 2021",
+  },
+  {
+    startdate: "May 26, 2021",
+    title: "Yos Exam in Cameroon",
+    link: "yos_cameroon",
+    image: camer,
+    message: "The Yos exam was succesfully conducted in Cameroon on May 26th, 2021",
   },
 ];
 

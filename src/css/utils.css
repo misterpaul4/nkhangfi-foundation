@@ -1,7 +1,3 @@
 .fb-embed {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   width: fit-content;
-  /* height: fit-content; */
 }
