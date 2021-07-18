@@ -98,6 +98,10 @@ footer .footer-brand {
   background: none !important;
 }
 
+img {
+  object-fit: cover;
+}
+
 /* template styles */
 body {
   margin: 0;

@@ -1,16 +1,16 @@
-import img1 from '../../images/events/yos_cameroon.png';
-import img2 from '../../images/events/yos_cameroon2.jpg';
-import img3 from '../../images/events/yos_cameroon3.jpg';
+import img1 from '../../images/events/yos_togo.jpg';
+import img2 from '../../images/events/yos_togo2.jpg';
+import img3 from '../../images/events/yos_togo3.jpg';
 // import { nspApplicationUrl } from '../Forms';
 import { Link } from 'react-router-dom';
 import '../../css/utils.css';
-import mainImg from '../../images/events/yos_cameroon.png';
+import mainImg from '../../images/events/yos_togo.png';
 import Events from '../events';
 
 // const isFirefox = typeof InstallTrigger !== 'undefined';
 
 const AttachEvents = (ev, index) =>{
-  if(index < 7 && ev.link !== 'yos_cameroon') {
+  if(index < 7 && ev.link !== 'yos_togo') {
     return (
       <div className="block-21 mb-4 d-flex align-items-center" key={index}>
         <Link to={`/event/${ev.link}`} className="blog-img img rounded mr-2" style={{backgroundImage: `url(${ev.image})`}}></Link>
@@ -35,14 +35,14 @@ const Event = {
   // formExtrasEduc: true,
   // FORMSPARK_ACTION_URL: nspApplicationUrl,
   // formName: "nkhangfi scholarship program application",
-  pathName: 'yos_cameroon',
+  pathName: 'yos_togo',
   bg: 'nk-events-exam',
   name: 'yös exam',
-  theme: 'yös exam, cameroon',
+  theme: 'yös exam, togo',
   parent: 'events',
   image: mainImg,
-  title: 'Yös exam was conducted in Cameroon',
-  messageTop: "The Yös exam was succesfully conducted in Cameroon",
+  title: 'Yös exam was conducted in Togo',
+  messageTop: "The Yös exam was a success in Togo",
   messageBottom: () => (
     <>
     <p>We are very proud of the students that participated in the exam and we are wishing them success.</p>
@@ -65,7 +65,7 @@ const Event = {
 
       <div className="text-center">
       <h3>Examination video</h3>
-      <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F203146071633815%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true" title="fb" height="476" className="fb-embed" controls="1"></iframe>
+      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fposts%2F2863032857344513&show_text=false&width=500" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true" title="fb" height="476" className="fb-embed" controls="1"></iframe>
       </div>
     </>
   ),
