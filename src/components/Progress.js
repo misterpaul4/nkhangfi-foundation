@@ -12,7 +12,7 @@ const Progress = () => {
                 <span className="flaticon-graduation"></span>
               </div>
               <div className="text">
-                <h2 className="number"><span className="countup">952</span></h2>
+                <h2 className="number"><span className="countup">989</span></h2>
                 <span className="caption">Success Stories</span>
               </div>
             </div>
@@ -23,7 +23,7 @@ const Progress = () => {
                 <span className="flaticon-scientist"></span>
               </div>
               <div className="text">
-                <h2 className="number"><span className="countup">24</span></h2>
+                <h2 className="number"><span className="countup">35</span></h2>
                 <span className="caption">Team Members</span>
               </div>
             </div>
@@ -34,7 +34,7 @@ const Progress = () => {
                 <span className="flaticon-calendar"></span>
               </div>
               <div className="text">
-                <h2 className="number"><span className="countup">98.5</span><span>%</span></h2>
+                <h2 className="number"><span className="countup">98.9</span><span>%</span></h2>
                 <span className="caption">Business Success</span>
               </div>
             </div>
@@ -45,7 +45,7 @@ const Progress = () => {
                 <span className="flaticon-learning"></span>
               </div>
               <div className="text">
-                <h2 className="number"><span className="countup">209</span></h2>
+                <h2 className="number"><span className="countup">271</span></h2>
                 <span className="caption">Scholarships Awarded</span>
               </div>
             </div>
