@@ -5,6 +5,8 @@ import yosIvory from './yosIvoryCoast';
 import yosCameroon from './yosCameroon';
 import yosTogo from './yosTogo';
 import yosGuinea from './yosGuinea';
+import yosLiberia from './yosLiberia';
+import yosSierra from './yosSierra';
 
 
 const Events = [
@@ -14,7 +16,9 @@ const Events = [
   yosIvory,
   yosCameroon,
   yosTogo,
-  yosGuinea
+  yosGuinea,
+  yosLiberia,
+  yosSierra,
 ]
 
 export default Events;

@@ -5,6 +5,8 @@ import ivn from '../images/events/yos_ivorycoast.jpg';
 import camer from '../images/events/yos_cameroon.png';
 import tog from '../images/events/yos_togo.jpg';
 import guinea from '../images/events/yos_guinea1.jpg';
+import liberia from '../images/events/yos_liberia1.jpg';
+import sierra from '../images/events/yos_sierra1.jpg';
 
 const eventts = [
   {
@@ -57,6 +59,21 @@ const eventts = [
     link: "yos_guinea",
     image: guinea,
     message: "The Yos exam was succesfully conducted in Guinea on June 3rd, 2021",
+  },
+  {
+    startdate: "June 6, 2021",
+    title: "Yos Exam in Liberia",
+    link: "yos_liberia",
+    image: liberia,
+    message: "The Yos exam was succesfully conducted in Liberia on June 6th, 2021",
+  },
+
+  {
+    startdate: "June 9, 2021",
+    title: "Yos Exam in Sierra Leone",
+    link: "yos_sierra",
+    image: sierra,
+    message: "The Yos exam was succesfully conducted in Sierra Leone on June 9th, 2021",
   },
 ];
 
