@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Pagination from './Pagination';
 import eventts from '../utils/events';
 
 const Events = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(6);
+
+  const indexofLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexofLastPost - postsPerPage;
+
+  // const tester = [1,2,3,4,33,4,3,5,55,4,3,4,44,3,2,1,22,3,4,5,55];
+
+  const currentPosts = eventts.slice(indexOfFirstPost, indexofLastPost);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   const Attach = ev => (
     <div className="col-md-6 col-lg-4 d-flex" key={ev.link}>
     <div className="blog-entry justify-content-end">
@@ -35,7 +48,8 @@ const Events = () => {
           </div>
         </div>
         <div className="row justify-content-center">
-          {eventts.map(Attach)}
+          <Pagination postsPerPage={postsPerPage} totalPosts={eventts.length} paginate={paginate} />
+          {currentPosts.map(Attach)}
         </div>
       </div>
     </section>
