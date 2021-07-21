@@ -227,7 +227,7 @@ function Homepage() {
       </section>
 
       <Testimonial />
-      <Events />
+      <Events numPostsPerPage={3} />
       <Newsletter />
       <FAQ />
     </>

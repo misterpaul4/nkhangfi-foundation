@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom';
 import Pagination from './Pagination';
 import eventts from '../utils/events';
 
-const Events = () => {
+const Events = (numPostsPerPage = 3) => {
+
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(6);
+  const [postsPerPage] = useState(numPostsPerPage.numPostsPerPage);
 
   const indexofLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexofLastPost - postsPerPage;
-
-  // const tester = [1,2,3,4,33,4,3,5,55,4,3,4,44,3,2,1,22,3,4,5,55];
 
   const currentPosts = eventts.slice(indexOfFirstPost, indexofLastPost);
 
@@ -48,7 +47,9 @@ const Events = () => {
           </div>
         </div>
         <div className="row justify-content-center">
-          <Pagination postsPerPage={postsPerPage} totalPosts={eventts.length} paginate={paginate} />
+          <div className="d-flex justify-content-center">
+            <Pagination postsPerPage={postsPerPage} totalPosts={eventts.length} paginate={paginate} />
+          </div>
           {currentPosts.map(Attach)}
         </div>
       </div>

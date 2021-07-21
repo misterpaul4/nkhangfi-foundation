@@ -102,6 +102,24 @@ img {
   object-fit: cover;
 }
 
+
+
+.pagination button {
+  border: none;
+  border-radius: 50%;
+  background-color: initial;
+}
+
+/* .pagination button:hover {
+  background-color: #e59710;
+  color: white !important;
+}
+
+.pagination button:focus {
+  background-color: #216811;
+  color: white !important;
+} */
+
 /* template styles */
 body {
   margin: 0;
