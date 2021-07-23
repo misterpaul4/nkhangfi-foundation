@@ -24,7 +24,7 @@ const Events = () => {
     <section>
       <Hero data={heroContent} />
       <div className="mt-4">
-        <Allevent numPostsPerPage={3} />
+        <Allevent numPostsPerPage={9} />
       </div>
       <Newsletter />
     </section>
