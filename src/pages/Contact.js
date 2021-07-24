@@ -49,6 +49,10 @@ const Contact = () => {
                   <p><span>head office:</span> Awae 0000 Yaoundé, Cameroon</p>
                 </div>
 
+                <div className="text">
+                  <p><span>sierra leone office:</span> 28 Walpole street, proxy building, second floor, Sierra Leone</p>
+                </div>
+
                 <div className="text my-3">
                   <p><span>mail:</span><Link to={{pathname: "mailto: info@nkhangfitravel.com"}} target="_blank" rel="noopener noreferrer">info@nkhangfitravel.com</Link></p>
                 </div>

@@ -46,12 +46,12 @@ const Footer = () => {
               </Link>
             </h2>
             <ul className="ftco-footer-social list-unstyled mt-2">
-              <li><Link to={{pathname: "https://www.facebook.com/Nkhangfitravelandbusinesscentre"}} target="_blank" rel="noopener noreferrer" className="d-flex align-items-center justify-content-center"><span className="fab fa-facebook-f"><i className="sr-only">Facebook</i></span></Link>
+              <li><Link to={{pathname: "https://www.facebook.com/Nkhangfifoundation"}} target="_blank" rel="noopener noreferrer" className="d-flex align-items-center justify-content-center"><span className="fab fa-facebook-f"><i className="sr-only">Facebook</i></span></Link>
               </li>
 
               <li><Link to={{pathname: "https://twitter.com/nkhangfi"}} target="_blank" rel="noopener noreferrer" className="d-flex align-items-center justify-content-center"><span className="fab fa-twitter"><i className="sr-only">Twitter</i></span></Link></li>
 
-              <li><Link to={{pathname: "https://www.instagram.com/nkhangfitravel/"}} target="_blank" rel="noopener noreferrer" className="d-flex align-items-center justify-content-center"><span className="fab fa-instagram"><i className="sr-only">Instagram</i></span></Link></li>
+              <li><Link to={{pathname: "https://www.instagram.com/nkhangfi_foundation/"}} target="_blank" rel="noopener noreferrer" className="d-flex align-items-center justify-content-center"><span className="fab fa-instagram"><i className="sr-only">Instagram</i></span></Link></li>
             </ul>
           </div>
         </div>
@@ -103,7 +103,7 @@ const Footer = () => {
       <div className="container-xl">
         <div className="row">
           <div className="col-md-12 text-center">
-            <p className="mb-0">Copyright &copy; 2021 All rights reserved | Nkhangfi Travel</p>
+            <p className="mb-0">Copyright &copy; 2021 All rights reserved | Nkhangfi Travel. <a href="https://github.com/misterpaul4" target="_blank" rel="noopener noreferrer">Developer</a></p>
           </div>
         </div>
       </div>

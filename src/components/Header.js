@@ -40,9 +40,9 @@ const Header = props => {
           <div className="col-md d-flex justify-content-end align-items-center">
             <div className="social-media">
               <p className="mb-0 d-flex">
-                <Link to={{pathname: "https://www.facebook.com/Nkhangfitravelandbusinesscentre"}} target="_blank" rel="noopener noreferrer" className="d-flex align-items-center justify-content-center"><span className="fab fa-facebook-f"><i className="sr-only">Facebook</i></span></Link>
+                <Link to={{pathname: "https://www.facebook.com/Nkhangfifoundation"}} target="_blank" rel="noopener noreferrer" className="d-flex align-items-center justify-content-center"><span className="fab fa-facebook-f"><i className="sr-only">Facebook</i></span></Link>
                 <Link to={{pathname: "https://twitter.com/nkhangfi"}} target="_blank" rel="noopener noreferrer" className="d-flex align-items-center justify-content-center"><span className="fab fa-twitter"><i className="sr-only">Twitter</i></span></Link>
-                <Link to={{pathname: "https://www.instagram.com/nkhangfitravel/"}} target="_blank" rel="noopener noreferrer" className="d-flex align-items-center justify-content-center"><span className="fab fa-instagram"><i className="sr-only">Instagram</i></span></Link>
+                <Link to={{pathname: "https://www.instagram.com/nkhangfi_foundation//"}} target="_blank" rel="noopener noreferrer" className="d-flex align-items-center justify-content-center"><span className="fab fa-instagram"><i className="sr-only">Instagram</i></span></Link>
                 <Link to={{pathname: "mailto: info@nkhangfitravel.com"}} target="_blank" rel="noopener noreferrer" className="d-flex align-items-center justify-content-center"><span className="fa fa-envelope"><i className="sr-only">Email</i></span></Link>
               </p>
             </div>

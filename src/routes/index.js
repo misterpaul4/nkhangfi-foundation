@@ -18,6 +18,7 @@ import FAQ from '../pages/FAQ';
 import ScrollToTop from '../components/ScrollToTop';
 import ScrollToTopBtn from '../components/ScrollTopButton';
 import PopUp from '../components/PopUp';
+import preference from '../preference';
 import '../css/style.css';
 import '../css/flaticon.css';
 
@@ -25,7 +26,7 @@ const Routes = () => (
   <BrowserRouter>
     <ScrollToTop />
     <ScrollToTopBtn />
-    <PopUp />
+    { preference.displayPopUp ? <PopUp /> : "" }
     <Header />
     <Switch>
       <Route exact path="/" component={Homepage} />
