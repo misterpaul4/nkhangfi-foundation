@@ -8,6 +8,7 @@ import guinea from '../images/events/yos_guinea1.jpg';
 import liberia from '../images/events/yos_liberia1.jpg';
 import sierra from '../images/events/yos_sierra1.jpg';
 
+
 const eventts = [
   {
     startdate: "May 26, 2021",
@@ -26,7 +27,7 @@ const eventts = [
     message: "The Nkhangfi Scholarship Program will consist of the following events, seminar, workfair, main exams, award ceremony & workshop. Scholarships ranging from 25% to 80% will be distributed to students based on merit",
   },
   {
-    startdate: "March 2021",
+    startdate: "March 2, 2021",
     title: "100% scholarship awarded to Mr Fofanah from Sierra Leone",
     link: "100_percent_scholarship",
     image: fof,
@@ -77,4 +78,16 @@ const eventts = [
   },
 ];
 
-export default eventts;
+
+let dateObj1;
+let dateObj2;
+
+const sortEventts = eventts.sort((a,b) => {
+  dateObj1 = new Date(a.startdate);
+  dateObj2 = new Date(b.startdate);
+  if(dateObj1.valueOf() < dateObj2.valueOf()) { return 1; }
+  else if(dateObj1.valueOf() > dateObj2.valueOf()) { return -1; }
+  else return a - b;
+});
+
+export default sortEventts;
