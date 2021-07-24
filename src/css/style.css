@@ -102,6 +102,33 @@ img {
   object-fit: cover;
 }
 
+.popup-inc {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: 11;
+  height: 85vh;
+}
+
+.popup-img-gui {
+  border-radius: 0 10px 10px 0;
+  width: 100%;
+  transition: width 800ms;
+  object-fit: fill;
+}
+
+.popup-toggle-btn {
+  border: none;
+  font-size: smaller;
+  padding: 0;
+}
+
+.hide-popup {
+  width: 0;
+  object-fit: cover;
+}
+
 /* template styles */
 body {
   margin: 0;
