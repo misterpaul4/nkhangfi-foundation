@@ -1,3 +1,8 @@
+/* .gallery-img-container {
+  flex-shrink: 1;
+  flex-grow: 1;
+} */
+
 .gallery-img {
   height: 300px;
   width: auto;
@@ -13,12 +18,13 @@
   padding: 10px 3px;
   opacity: 0.2;
   transform: scale(1);
-    z-index: 10;
+  z-index: 10;
 }
 
 .g-img-box {
   transform: scale(1);
   transition: transform 0.5s;
+  max-width: 100%;
 }
 
 .g-img-box:hover {
@@ -32,3 +38,5 @@
   opacity: 0.8;
   transform: scale(1.07);
 }
+
+

@@ -34,7 +34,7 @@ const Gallery = () => {
       <Hero data={heroContent}/>
       <div className="container py-5">
         <h1 className="text-center">Gallery</h1>
-        <div className="d-flex justify-content-center flex-wrap">
+        <div className="d-flex justify-content-center flex-wrap gallery-img-container">
           {galleryImages.map(Attach)}
         </div>
       </div>
