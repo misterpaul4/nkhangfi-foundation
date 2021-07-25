@@ -47,10 +47,10 @@ const Events = (numPostsPerPage = 3) => {
           </div>
         </div>
         <div className="row justify-content-center">
+          {currentPosts.map(Attach)}
           <div className="d-flex justify-content-center">
             <Pagination postsPerPage={postsPerPage} totalPosts={eventts.length} paginate={paginate} />
           </div>
-          {currentPosts.map(Attach)}
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 const settings = {
-  displayPopUp: false,
+  displayPopUp: true,
 }
 
 export default settings;

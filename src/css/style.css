@@ -102,31 +102,44 @@ img {
   object-fit: cover;
 }
 
-.popup-inc {
+/* .popup-inc {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
   left: 0;
   z-index: 11;
   height: 85vh;
-}
+} */
 
 .popup-img-gui {
-  border-radius: 0 10px 10px 0;
+  border-radius: 10px;
   width: 100%;
-  transition: width 800ms;
   object-fit: fill;
 }
 
-.popup-toggle-btn {
-  border: none;
-  font-size: smaller;
-  padding: 0;
+.popup-modal {
+  position: relative;
 }
 
-.hide-popup {
-  width: 0;
-  object-fit: cover;
+.popup-modal button.close {
+  color:white;
+  opacity: 1;
+  border-radius: 5px;
+  background: red;
+  margin: 0;
+  padding: 2px 4px;
+  font-size: 0.9rem;
+}
+
+.popup-modal .modal-header {
+  border-bottom: 0;
+}
+
+.popup-closeBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
 }
 
 /* template styles */
