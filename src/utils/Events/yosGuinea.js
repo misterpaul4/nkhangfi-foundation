@@ -65,7 +65,9 @@ const Event = {
 
       <div className="text-center">
       <h3>Examination video</h3>
-      <iframe src="https://www.facebook.com/plugins/video.php?height=308&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F228660618736300%2F&show_text=false&width=560&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true" title="fb" height="476" className="fb-embed" controls="1"></iframe>
+      <iframe src="https://www.facebook.com/plugins/video.php?height=308&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F228660618736300%2F&show_text=false&width=560&t=0" scrolling="no" frameborder="0" allowfullscreen="true"
+      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+      allowFullScreen="true" title="fb" height="476" className="fb-embed" controls="1"></iframe>
       </div>
     </>
   ),
