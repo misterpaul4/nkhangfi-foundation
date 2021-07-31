@@ -1,0 +1,23 @@
+.spread-p {
+  height: 15em;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.spread-p::-webkit-scrollbar {
+  display: none;
+}
+
+.benefit-img {
+  background-image: url('../images/about.jpg');
+}
+
+.progress-bg {
+  background-image: url('../images/progress.jpg');
+}
+
+.interview {
+  width: 560px;
+  height: 314px;
+}
