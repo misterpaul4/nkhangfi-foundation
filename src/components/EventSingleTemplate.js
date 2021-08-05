@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
 import Events from './EventSidePanel';
+
 
 const Template = event => {
 
@@ -15,24 +17,22 @@ const Template = event => {
     photos,
   } = event.data;
 
-  const AttachVideos = (vid) => (
-    <div className="videoWrapper h-100">
-      <h3>{vid.title}</h3>
-      <iframe src={vid.link}
-      scrolling="no"
-      frameborder="0"
-      allowfullscreen="true"
-      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-      allowFullScreen="true"
-      title="embeded video"
-      webkitallowfullscreen="true"
-      mozallowfullscreen="true"
-      // height="476"
-      controls="1"
-      alt="embeded video"
-      ></iframe>
-      {/* <a href={vid.link} target="_blank" rel="noreferrer">video link</a> */}
-    </div>
+  const [isVisible, setIsVisible] = useState(false);
+  const [vidLinkIndex, setVidLinkIndex] = useState(0);
+  const handleClose = () => setIsVisible(false);
+
+  const displayVideoModal = vidIndex => {
+    setVidLinkIndex(vidIndex)
+    setIsVisible(true);
+  };
+
+  const AttachVideos = (vid, index) => (
+    <>
+      <button onClick={() => displayVideoModal(index)} className="event-video-iframe">
+        <i class="fas fa-video mr-2"></i>
+        {vid.title}
+      </button>
+    </>
   );
 
   const AttachPhotos = photo => (
@@ -71,8 +71,26 @@ const Template = event => {
             <hr></hr>
 
             { videoEmbed ?
-            <div className="text-center">
+            <div>
               {videos.map(AttachVideos)}
+              <Modal show={isVisible} onHide={handleClose} className="popup-modal">
+              <Modal.Header closeButton className="popup-closeBtn">
+              </Modal.Header>
+              <div className="event-pop-modal">
+              <iframe src={videos[vidLinkIndex].link}
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowFullScreen="true"
+                title="embeded video"
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
+                controls="1"
+                alt="embeded video"
+                ></iframe>
+              </div>
+              </Modal>
             </div>
           : null }
             </div>

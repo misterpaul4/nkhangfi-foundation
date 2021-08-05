@@ -255,11 +255,11 @@ const eventts = [
     videoEmbed: true,
     videos: [
       {
-        title: "Watch Fofanah's acknowledgement video",
+        title: "Watch Fofanah's acknowledgement video 1",
         link: "https://www.youtube.com/embed/SFUoQtE_qDE"
       },
       {
-        title: "",
+        title: "Watch Fofanah's acknowledgement video 2",
         link: "https://www.youtube.com/embed/_H401jGujj4"
       }
     ],
