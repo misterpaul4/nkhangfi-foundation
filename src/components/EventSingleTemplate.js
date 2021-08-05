@@ -55,11 +55,8 @@ const Template = event => {
            </div> :
            null
           }
-        </div>
+            <hr></hr>
 
-        <div className="col-lg-4 sidebar pl-md-4">
-          <div className="sidebar-box">
-            <div>
             { videoEmbed ?
             <div>
               {videos.map(AttachVideos)}
@@ -84,7 +81,11 @@ const Template = event => {
             </div>
           : null }
 
-            <hr></hr>
+        </div>
+
+        <div className="col-lg-4 sidebar pl-md-4">
+          <div className="sidebar-box">
+            <div>
 
               {optionalSideContent ?
                 event.data.sideContent() :
