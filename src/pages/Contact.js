@@ -69,13 +69,13 @@ const Contact = () => {
             <div className="social-media mt-5 container">
               <h3>Follow us here</h3>
               <p className="text-left">
-              <Link to={{pathname: "https://www.facebook.com/Nkhangfitravelandbusinesscentre"}} target="_blank" rel="noopener noreferrer">Facebook
+              <Link to={{pathname: "https://www.facebook.com/Nkhangfifoundation"}} target="_blank" rel="noopener noreferrer">Facebook
               </Link>
 
               <Link to={{pathname: "https://twitter.com/nkhangfi"}} className="mx-3" target="_blank" rel="noopener noreferrer">Twitter
               </Link>
 
-              <Link to={{pathname: "https://www.instagram.com/nkhangfitravel/"}} target="_blank" rel="noopener noreferrer">Instagram
+              <Link to={{pathname: "https://www.instagram.com/nkhangfi_foundation/"}} target="_blank" rel="noopener noreferrer">Instagram
               </Link>
               </p>
             </div>

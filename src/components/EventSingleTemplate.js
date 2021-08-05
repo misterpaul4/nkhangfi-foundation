@@ -28,7 +28,7 @@ const Template = event => {
 
   const AttachVideos = (vid, index) => (
     <>
-      <button onClick={() => displayVideoModal(index)} className="event-video-iframe">
+      <button onClick={() => displayVideoModal(index)} className="event-video-iframe d-block">
         <i class="fas fa-video mr-2"></i>
         {vid.title}
       </button>

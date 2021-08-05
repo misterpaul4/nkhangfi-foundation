@@ -10,8 +10,8 @@ import img9 from '../images/team/9.jpeg';
 import img10 from '../images/team/10.jpeg';
 import img11 from '../images/team/11.jpeg';
 
-const defaultFacebook = "https://www.facebook.com/Nkhangfitravelandbusinesscentre";
-const defaultInstagram = "https://www.instagram.com/nkhangfitravel/";
+const defaultFacebook = "https://www.facebook.com/Nkhangfifoundation";
+const defaultInstagram = "https://www.instagram.com/nkhangfi_foundation/";
 const defaultEmail = "info@nkhangfitravel.com";
 
 const staffs= [
