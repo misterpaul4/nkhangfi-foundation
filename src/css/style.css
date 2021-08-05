@@ -43,14 +43,13 @@
 /* personal styles */
 .event-video-iframe {
   background: none;
-  color: rgb(44, 44, 102);
+  /* color: rgb(44, 44, 102); */
   border: 0 !important;
-  padding-bottom: 3px;
 }
 
-.event-video-iframe:hover {
+/* .event-video-iframe:hover {
   color: #ffc107;
-}
+} */
 
 .event-pop-modal {
   position: relative;

@@ -60,16 +60,6 @@ const Template = event => {
         <div className="col-lg-4 sidebar pl-md-4">
           <div className="sidebar-box">
             <div>
-              {optionalSideContent ?
-                event.data.sideContent() :
-                null
-              }
-              <h3 className="mt-4">More Updates</h3>
-              <Events numOfEvents={7} />
-            </div>
-
-            <hr></hr>
-
             { videoEmbed ?
             <div>
               {videos.map(AttachVideos)}
@@ -93,6 +83,19 @@ const Template = event => {
               </Modal>
             </div>
           : null }
+
+            <hr></hr>
+
+              {optionalSideContent ?
+                event.data.sideContent() :
+                null
+              }
+              <h3 className="mt-4">More Updates</h3>
+              <Events numOfEvents={7} />
+            </div>
+
+
+
             </div>
           </div>
         </div>
