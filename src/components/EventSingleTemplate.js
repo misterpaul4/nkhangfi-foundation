@@ -60,7 +60,7 @@ const Template = event => {
             { videoEmbed ?
             <div>
               {videos.map(AttachVideos)}
-              <Modal show={isVisible} onHide={handleClose} className="popup-modal">
+              <Modal show={isVisible} onHide={handleClose} className="popup-modal" aria-labelledby="contained-modal-title-vcenter" centered>
               <Modal.Header closeButton className="popup-closeBtn">
               </Modal.Header>
               <div className="event-pop-modal">
