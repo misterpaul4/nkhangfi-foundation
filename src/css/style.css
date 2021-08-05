@@ -41,6 +41,11 @@
     scroll-behavior: smooth; } } */
 
 /* personal styles */
+/*
+.videoWrapper  {
+  height: 500px;
+} */
+
 .scroll-to-top {
   position: fixed;
   bottom: 15px;
@@ -9471,7 +9476,7 @@ textarea.form-control {
       color: #216811; }
   .ftco-footer .ftco-footer-widget h2, .ftco-footer .ftco-footer-widget .h2 {
     color: #111111;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     font-size: 18px;
     font-weight: 500;
     font-family: "Roboto", Arial, sans-serif; }
@@ -10236,7 +10241,7 @@ textarea.form-control {
   color: #216811; }
 
 .sidebar-box {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   padding: 10px;
   font-size: 15px;
   width: 100%; }

@@ -18,7 +18,7 @@ const Events = (numPostsPerPage = 3) => {
   const Attach = ev => (
     <div className="col-md-6 col-lg-4 d-flex" key={ev.link}>
     <div className="blog-entry justify-content-end">
-      <Link to={`/event/${ev.link}`} className="block-20 img" style={{backgroundImage: `url(${ev.image})`}}>
+      <Link to={`/event/${ev.link}`} className="block-20 img" style={{backgroundImage: `url(${ev.image.source})`}}>
       </Link>
       <div className="text">
         <p className="meta"><i className="fa fa-calendar me-1"></i>{ev.startdate} &nbsp;

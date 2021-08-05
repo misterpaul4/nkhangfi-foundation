@@ -1,7 +1,8 @@
 import React from 'react';
 import logo from '../images/logo.png';
 import { Link } from 'react-router-dom';
-import Events from '../utils/events';
+// import Events from '../utils/events';
+import Events from './EventSidePanel';
 
 const Footer = () => {
   const handleFaqClick = () => {
@@ -9,27 +10,6 @@ const Footer = () => {
     if (FAQEle) {
       FAQEle.scrollIntoView();
     };
-  };
-
-  const AttachEvents = (ev, index) =>{
-    if(index < 3) {
-      return (
-        <div className="block-21 mb-4 d-flex align-items-center" key={index}>
-          <Link to={`/event/${ev.link}`} className="blog-img img rounded" style={{backgroundImage: `url(${ev.image})`}}></Link>
-          <div className="text">
-            <div className="meta">
-              <div><Link to={`/event/${ev.link}`}><i className="fa fa-calendar me-1"></i>{ev.startdate} &nbsp;
-              {
-                ev.enddate ?
-                <>- &nbsp; <i className="fa fa-calendar me-1"></i>{ev.enddate}</>
-                : ''
-              }
-              </Link></div></div>
-            <h3 className="heading"><Link to={`/event/${ev.link}`}>{ev.title}</Link></h3>
-          </div>
-        </div>
-      );
-    }
   };
 
   return (
@@ -76,7 +56,8 @@ const Footer = () => {
         <div className="col-md-6 col-lg">
           <div className="ftco-footer-widget mb-4">
             <h2 className="ftco-heading-2">Events</h2>
-            {Events.map(AttachEvents)}
+            {/* {Events.map(AttachEvents)} */}
+            <Events numOfEvents={3} />
           </div>
         </div>
 

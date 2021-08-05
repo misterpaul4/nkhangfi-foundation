@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Events from '../utils/events';
+import Events from './EventSidePanel';
 
 const Template = event => {
 
@@ -9,40 +8,15 @@ const Template = event => {
     messageTop,
     messageBottom,
     image,
-    link,
     videoEmbed,
     videos,
     optionalSideContent,
-    sideContent,
     additionalPhotos,
     photos,
   } = event.data;
 
-  console.log(link);
-
-  const AttachEvents = (ev, index) =>{
-    if(index < 7 && ev.link !== link ) {
-      return (
-        <div className="block-21 mb-4 d-flex align-items-center" key={index}>
-          <Link to={`/event/${ev.link}`} className="blog-img img rounded mr-2" style={{backgroundImage: `url(${ev.image})`}}></Link>
-          <div className="text">
-            <div className="meta">
-              <div><Link to={`/event/${ev.link}`}><i className="fa fa-calendar me-1"></i>{ev.startdate} &nbsp;
-              {
-                ev.enddate ?
-                <>- &nbsp; <i className="fa fa-calendar me-1"></i>{ev.enddate}</>
-                : ''
-              }
-              </Link></div></div>
-            <h3 className="heading"><Link to={`/event/${ev.link}`}>{ev.title}</Link></h3>
-          </div>
-        </div>
-      );
-    }
-  };
-
   const AttachVideos = (vid) => (
-    <>
+    <div className="videoWrapper h-100">
       <h3>{vid.title}</h3>
       <iframe src={vid.link}
       scrolling="no"
@@ -51,12 +25,14 @@ const Template = event => {
       allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
       allowFullScreen="true"
       title="embeded video"
-      height="476"
-      className="fb-embed"
+      webkitallowfullscreen="true"
+      mozallowfullscreen="true"
+      // height="476"
       controls="1"
       alt="embeded video"
       ></iframe>
-    </>
+      {/* <a href={vid.link} target="_blank" rel="noreferrer">video link</a> */}
+    </div>
   );
 
   const AttachPhotos = photo => (
@@ -71,10 +47,10 @@ const Template = event => {
         <div className="col-lg-8 blog-single">
           <h2 className="mb-3 text-capitalize">{title}</h2>
           <p>{messageTop}</p>
-          <p><img src={image} alt="event" className="img-fluid"></img></p>
+          <p><img src={image.source} alt={image.source.alt} className="img-fluid"></img></p>
           {messageBottom()}
           {additionalPhotos ?
-           <div className="row sm-images justify-content-center">
+           <div className="row sm-images">
               {photos.map(AttachPhotos)}
            </div> :
            null
@@ -85,11 +61,11 @@ const Template = event => {
           <div className="sidebar-box">
             <div>
               {optionalSideContent ?
-                sideContent() :
+                event.data.sideContent() :
                 null
               }
               <h3 className="mt-4">More Updates</h3>
-              {Events.map(AttachEvents)}
+              <Events numOfEvents={7} />
             </div>
 
             <hr></hr>
