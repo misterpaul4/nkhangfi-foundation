@@ -1,6 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Events from '../utils/events';
+import React, { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import Events from './EventSidePanel';
+
 
 const Template = event => {
 
@@ -9,53 +10,28 @@ const Template = event => {
     messageTop,
     messageBottom,
     image,
-    link,
     videoEmbed,
     videos,
     optionalSideContent,
-    sideContent,
     additionalPhotos,
     photos,
   } = event.data;
 
-  console.log(link);
+  const [isVisible, setIsVisible] = useState(false);
+  const [vidLinkIndex, setVidLinkIndex] = useState(0);
+  const handleClose = () => setIsVisible(false);
 
-  const AttachEvents = (ev, index) =>{
-    if(index < 7 && ev.link !== link ) {
-      return (
-        <div className="block-21 mb-4 d-flex align-items-center" key={index}>
-          <Link to={`/event/${ev.link}`} className="blog-img img rounded mr-2" style={{backgroundImage: `url(${ev.image})`}}></Link>
-          <div className="text">
-            <div className="meta">
-              <div><Link to={`/event/${ev.link}`}><i className="fa fa-calendar me-1"></i>{ev.startdate} &nbsp;
-              {
-                ev.enddate ?
-                <>- &nbsp; <i className="fa fa-calendar me-1"></i>{ev.enddate}</>
-                : ''
-              }
-              </Link></div></div>
-            <h3 className="heading"><Link to={`/event/${ev.link}`}>{ev.title}</Link></h3>
-          </div>
-        </div>
-      );
-    }
+  const displayVideoModal = vidIndex => {
+    setVidLinkIndex(vidIndex)
+    setIsVisible(true);
   };
 
-  const AttachVideos = (vid) => (
+  const AttachVideos = (vid, index) => (
     <>
-      <h3>{vid.title}</h3>
-      <iframe src={vid.link}
-      scrolling="no"
-      frameborder="0"
-      allowfullscreen="true"
-      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-      allowFullScreen="true"
-      title="embeded video"
-      height="476"
-      className="fb-embed"
-      controls="1"
-      alt="embeded video"
-      ></iframe>
+      <button onClick={() => displayVideoModal(index)} className="event-video-iframe d-block">
+        <i class="fas fa-video mr-2"></i>
+        {vid.title}
+      </button>
     </>
   );
 
@@ -71,34 +47,56 @@ const Template = event => {
         <div className="col-lg-8 blog-single">
           <h2 className="mb-3 text-capitalize">{title}</h2>
           <p>{messageTop}</p>
-          <p><img src={image} alt="event" className="img-fluid"></img></p>
+          <p><img src={image.source} alt={image.source.alt} className="img-fluid"></img></p>
           {messageBottom()}
           {additionalPhotos ?
-           <div className="row sm-images justify-content-center">
+           <div className="row sm-images">
               {photos.map(AttachPhotos)}
            </div> :
            null
           }
+            <hr></hr>
+
+            { videoEmbed ?
+            <div>
+              {videos.map(AttachVideos)}
+              <Modal show={isVisible} onHide={handleClose} className="popup-modal" aria-labelledby="contained-modal-title-vcenter" centered>
+              <Modal.Header closeButton className="popup-closeBtn">
+              </Modal.Header>
+              <div className="event-pop-modal">
+              <iframe src={videos[vidLinkIndex].link}
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowFullScreen="true"
+                title="embeded video"
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
+                controls="1"
+                alt="embeded video"
+                ></iframe>
+              </div>
+              </Modal>
+            </div>
+          : null }
+
         </div>
 
         <div className="col-lg-4 sidebar pl-md-4">
           <div className="sidebar-box">
             <div>
+
               {optionalSideContent ?
-                sideContent() :
+                event.data.sideContent() :
                 null
               }
               <h3 className="mt-4">More Updates</h3>
-              {Events.map(AttachEvents)}
+              <Events numOfEvents={7} />
             </div>
 
-            <hr></hr>
 
-            { videoEmbed ?
-            <div className="text-center">
-              {videos.map(AttachVideos)}
-            </div>
-          : null }
+
             </div>
           </div>
         </div>

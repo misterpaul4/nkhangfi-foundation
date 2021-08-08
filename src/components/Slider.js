@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom';
 import '../css/slider.css';
 
 const Slider = props => {
-  const services = props.data;
+  const slides = props.data;
 
   const Attach = service => {
     const { icon, title, message, actionLink, action } = service;
 
+
+    // <div className="col-xl-4 col-lg-5 col-md-6" key={title}>
+
     return (
-      <div className="col-xl-4 col-lg-5 col-md-6" key={title}>
+      <div key={title} className="col-xl-4 col-lg-5 col-md-6">
         <div className="courses">
           <div className="d-flex">
             <div className="icon"><span className={icon}></span></div>
@@ -33,7 +36,7 @@ const Slider = props => {
 
   return (
     <div className="row justify-content-center align-items-start">
-        {services.map(Attach)}
+        {slides.map(Attach)}
     </div>
   );
 };

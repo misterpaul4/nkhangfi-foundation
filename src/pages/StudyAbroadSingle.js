@@ -75,8 +75,8 @@ const StudyDestination = () => {
                 }
 
                 {/* tuition */}
-                <h5>Tuition</h5>
-                <span>Minimum tuition fee <strong className="text-danger">{page.tuition}</strong></span>
+                {/* <h5>Tuition</h5>
+                <span>Minimum tuition fee <strong className="text-danger">{page.tuition}</strong></span> */}
 
               </div>
 

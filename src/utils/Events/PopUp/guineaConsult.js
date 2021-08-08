@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import photo from '../../../images/events/guinea_consult.jpeg';
+import photo from '../../../images/events/nkhangfi_guinea_flier.png';
 import Modal from 'react-bootstrap/Modal';
 import preference from '../../../preference';
 
@@ -16,7 +16,7 @@ const Pop = () => {
   return (
     <>
       {
-    <Modal show={isVisible} onHide={handleClose} className="popup-modal">
+    <Modal show={isVisible} onHide={handleClose} className="popup-modal" backdrop="static">
       <Modal.Header closeButton className="popup-closeBtn">
       </Modal.Header>
       <img src={photo} alt="guinea" className="h-100 popup-img-gui" />
