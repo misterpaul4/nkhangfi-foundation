@@ -84,7 +84,7 @@ const Footer = () => {
       <div className="container-xl">
         <div className="row">
           <div className="col-md-12 text-center">
-            <p className="mb-0">Copyright &copy; 2021 All rights reserved | Nkhangfi Travel. <a href="https://github.com/misterpaul4" target="_blank" rel="noopener noreferrer">Developer</a></p>
+            <p className="mb-0">Copyright &copy; 2021 All rights reserved | Nkhangfi Travel. <a href="https://github.com/misterpaul4/nkhangfi-foundation" target="_blank" rel="noopener noreferrer">Developer</a></p>
           </div>
         </div>
       </div>

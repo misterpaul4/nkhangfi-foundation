@@ -1,7 +1,7 @@
 {
-  "name": "website-react",
+  "name": "nkhangfi-foundation-website",
   "version": "0.1.0",
-  "homepage": "https://nkhangfitravel.com",
+  "homepage": "https://nkhangfifoundation.com",
   "private": true,
   "dependencies": {
     "@formspark/use-formspark": "^0.1.27",
