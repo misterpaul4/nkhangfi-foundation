@@ -1,6 +1,6 @@
 const settings = {
   displayPopUp: true,
-  popUpDelaytime: 10,
+  popUpDelaytime: 15,
 }
 
 // time in seconds

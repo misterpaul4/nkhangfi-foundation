@@ -150,12 +150,12 @@ img {
 
 .popup-modal button.close {
   color:white;
-  opacity: 1;
-  border-radius: 5px;
-  background: red;
+  opacity: 0.75;
+  border-radius: 50%;
+  background: rgba(29, 6, 6);
   margin: 0;
-  padding: 2px 4px;
-  font-size: 0.9rem;
+  padding: 5px 10px;
+  font-size: 1.5rem;
 }
 
 .popup-modal .modal-header {
@@ -169,6 +169,14 @@ img {
   border: none;
   z-index: 15;
 }
+
+.close:not(:disabled):not(.disabled):hover {
+  opacity: 1;
+}
+
+/* .popup-modal button.close {
+  transform: rotate(45deg);
+} */
 
 /* template styles */
 body {
