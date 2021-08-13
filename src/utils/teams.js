@@ -12,7 +12,7 @@ import img11 from '../images/team/11.jpeg';
 
 const defaultFacebook = "https://www.facebook.com/Nkhangfifoundation";
 const defaultInstagram = "https://www.instagram.com/nkhangfi_foundation/";
-const defaultEmail = "info@nkhangfitravel.com";
+const defaultEmail = "info@nkhangfifoundation.com";
 
 const staffs= [
   {
@@ -20,7 +20,7 @@ const staffs= [
     title: "founder of nkhangfi foundation & director general of nkhangfi travel",
     facebook: defaultFacebook,
     instagram: defaultInstagram,
-    email: "estelle@nkhangfitravel.com",
+    email: "estelle@nkhangfifoundation.com",
     image: img1,
   },
   {
@@ -28,7 +28,7 @@ const staffs= [
     title: "CO-FOUNDER & VICE-PRESIDENT, NKHANGFI FOUNDATION SENIOR ADVISOR, NKHANGFI TRAVEL",
     facebook: "https://www.facebook.com/nweke.favour.98",
     instagram: "https://www.instagram.com/i_am_neche_/",
-    email: "neche@nkhangfitravel.com",
+    email: "neche@nkhangfifoundation.com",
     image: img2,
   },
   // {
@@ -36,7 +36,7 @@ const staffs= [
   //   title: "PERSONAL ASSISTANT TO CEO, NKHANGFI TRAVEL",
   //   facebook: defaultFacebook,
   //   instagram: defaultInstagram,
-  //   email: "elevenus@nkhangfitravel.com",
+  //   email: "elevenus@nkhangfifoundation.com",
   //   image: none,
   // },
   {
@@ -44,7 +44,7 @@ const staffs= [
     title: "DIRECTEUR D'AGENCE NKHANGFI TRAVEL, DOUALA",
     facebook: defaultFacebook,
     instagram: defaultInstagram,
-    email: "eryc@nkhangfitravel.com",
+    email: "eryc@nkhangfifoundation.com",
     image: img10,
   },
   {
@@ -68,7 +68,7 @@ const staffs= [
     title: "DIRECTEUR DES AFFAIRES FINANCIÈRES NKHANGFI TRAVEL INTERNATIONAL",
     facebook: defaultFacebook,
     instagram: defaultInstagram,
-    email: "michel@nkhangfitravel.com",
+    email: "michel@nkhangfifoundation.com",
     image: img6,
   },
   {
@@ -76,7 +76,7 @@ const staffs= [
     title: "DIRECTEUR DES RELATIONS INTERNATIONAUX NKHANGFI TRAVEL INTERNATIONAL",
     facebook: defaultFacebook,
     instagram: defaultInstagram,
-    email: "patrick.kondjo@nkhangfitravel.com",
+    email: "patrick.kondjo@nkhangfifoundation.com",
     image: img5,
   },
   {
@@ -84,7 +84,7 @@ const staffs= [
     title: "CUSTOMER SERVICE MANAGER & TICKETING AGENT NKHANGFI TRAVEL",
     facebook: defaultFacebook,
     instagram: defaultInstagram,
-    email: "felicite@nkhangfitravel.com",
+    email: "felicite@nkhangfifoundation.com",
     image: img11,
   },
   {

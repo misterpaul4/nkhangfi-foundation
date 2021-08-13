@@ -52,7 +52,7 @@ const Newsletter = () => {
       // unsuccesful
       updatePostMailState({
         messageHead: 'Not Subscribed!!!',
-        messageBody: `Please try again or send us an email directly at info@nkhangfitravel.com.`,
+        messageBody: `Please try again or send us an email directly at info@nkhangfifoundation.com.`,
       });
 
       setShow(true);

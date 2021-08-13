@@ -73,7 +73,7 @@ const Footer = () => {
                 </li>
 
 
-                <li><Link to={{pathname: "mailto: info@nkhangfitravel.com"}} target="_blank" rel="noopener noreferrer"><span className="icon fa fa-paper-plane"></span><span className="text">info@nkhangfitravel.com</span></Link></li>
+                <li><Link to={{pathname: "mailto: info@nkhangfifoundation.com"}} target="_blank" rel="noopener noreferrer"><span className="icon fa fa-paper-plane"></span><span className="text">info@nkhangfifoundation.com</span></Link></li>
               </ul>
             </div>
           </div>

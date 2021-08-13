@@ -97,7 +97,7 @@ const ContactForm = props => {
 
   const formFailure = {
     messageHead: "Not Delivered!!!",
-    messageBody: `Please try again or send us an email directly at info@nkhangfitravel.com.`
+    messageBody: `Please try again or send us an email directly at info@nkhangfifoundation.com.`
   }
 
 

@@ -54,7 +54,7 @@ const Contact = () => {
                 </div>
 
                 <div className="text my-3">
-                  <p><span>mail:</span><Link to={{pathname: "mailto: info@nkhangfitravel.com"}} target="_blank" rel="noopener noreferrer">info@nkhangfitravel.com</Link></p>
+                  <p><span>mail:</span><Link to={{pathname: "mailto: info@nkhangfifoundation.com"}} target="_blank" rel="noopener noreferrer">info@nkhangfifoundation.com</Link></p>
                 </div>
 
                 <div className="text">
