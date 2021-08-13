@@ -308,8 +308,22 @@ const eventts = [
     videoEmbed: true,
     videos: [
       {
-        title: "Interview with one of the participants",
-        link: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F959477568201178%2F&show_text=false&width=226&t=0"
+        title: "Examination Day",
+        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fposts%2F2864405960540536&show_text=false&width=500",
+        height: "250",
+        width: "500"
+      },
+      {
+        title: "Interview with one of the candidates",
+        link: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F959477568201178%2F&show_text=false&width=226&t=0",
+        height: "476",
+        width: "226"
+      },
+      {
+        title: "Message from our partner in Abidjan",
+        link: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F160289102731613%2F&show_text=false&width=226&t=0",
+        height: "476",
+        width: "226"
       },
     ],
     messageTop: "The Yös exam was a huge success in Ivory Coast thanks to our partners at Rights Consultancy Agency (RCA)",
@@ -451,7 +465,9 @@ const eventts = [
     videos: [
       {
         title: "Examination video",
-        link: "https://www.facebook.com/plugins/video.php?height=308&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F228660618736300%2F&show_text=false&width=560&t=0"
+        link: "https://www.facebook.com/plugins/video.php?height=308&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F228660618736300%2F&show_text=false&width=560&t=0",
+        height: "308",
+        width: "560"
       },
     ],
     messageTop: "The Yös exam was succesfully conducted in Guinea thanks to dearest partner DIAMO HOLDINGS",
@@ -494,8 +510,34 @@ const eventts = [
     videoEmbed: true,
     videos: [
       {
-        title: "Examination video",
-        link: "https://www.facebook.com/plugins/video.php?height=308&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F228660618736300%2F&show_text=false&width=560&t=0"
+        title: "Examination video 1",
+        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fposts%2F2868109316836867&show_text=false&width=500",
+        height: "888",
+        width: "500"
+      },
+      {
+        title: "Examination video 2",
+        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fposts%2F2868126570168475&show_text=false&width=500",
+        height: "888",
+        width: "500"
+      },
+      {
+        title: "Zoom call from our partner in turkey",
+        link: "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F778001462914836%2F&show_text=false&width=560&t=0",
+        height: "314",
+        width: "560"
+      },
+      {
+        title: "Interview with some of the candidates",
+        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fposts%2F2868225186825280&show_text=false&width=500",
+        height: "888",
+        width: "500"
+      },
+      {
+        title: "Message from our partner(Royal Destiny)",
+        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fposts%2F2868301463484319&show_text=false&width=500",
+        height: "888",
+        width: "500"
       },
     ],
     messageTop: "The Yös exam was successfully conducted in Liberia thanks to our dearest partner Royal Destiny Multipurpose Consultancy",
@@ -538,13 +580,23 @@ const eventts = [
     videoEmbed: true,
     videos: [
       {
-        title: "Examination video",
-        link: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F216698156789762%2F&show_text=false&width=267&t=0"
+        title: "Zoom call from our partner in Turkey",
+        link: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F303323281498318%2F&show_text=false&width=267&t=0",
+        height: "476",
+        width: "267"
       },
       {
-        title: "Vote of thanks from the students",
-        link: "https://www.facebook.com/plugins/video.php?height=308&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F991681731660421%2F&show_text=false&width=560&t=0"
-      }
+        title: "Examination video 1",
+        link: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F151402493642475%2F&show_text=false&width=267&t=0",
+        height: "476",
+        width: "267"
+      },
+      {
+        title: "Examination video 2",
+        link: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F314663343550905%2F&show_text=false&width=267&t=0",
+        height: "476",
+        width: "267"
+      },
     ],
     messageTop: "The Yös exam was successfully conducted in Sierra Leone thanks to the Nkhangfi team",
     messageBottom: () => (
