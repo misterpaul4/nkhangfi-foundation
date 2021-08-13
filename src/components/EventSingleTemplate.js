@@ -19,6 +19,7 @@ const Template = event => {
 
   const [isVisible, setIsVisible] = useState(false);
   const [vidLinkIndex, setVidLinkIndex] = useState(0);
+
   const handleClose = () => setIsVisible(false);
 
   const displayVideoModal = vidIndex => {
@@ -58,12 +59,12 @@ const Template = event => {
             <hr></hr>
 
             { videoEmbed ?
-            <div>
+            <div className="video-modal-container">
               {videos.map(AttachVideos)}
               <Modal show={isVisible} onHide={handleClose} className="popup-modal" aria-labelledby="contained-modal-title-vcenter" centered>
               <Modal.Header closeButton className="popup-closeBtn">
               </Modal.Header>
-              <div className="event-pop-modal">
+              <div className="iframe-container h-100">
               <iframe src={videos[vidLinkIndex].link}
                 scrolling="no"
                 frameborder="0"
@@ -75,8 +76,11 @@ const Template = event => {
                 mozallowfullscreen="true"
                 controls="1"
                 alt="embeded video"
+                height={videos[vidLinkIndex].height ? videos[vidLinkIndex].height : "476"}
+                width={videos[vidLinkIndex].width ? videos[vidLinkIndex].width : "267"}
                 ></iframe>
-              </div>
+                </div>
+                {/* <div className="bg-light"><a href={videos[vidLinkIndex].link}>link</a></div> */}
               </Modal>
             </div>
           : null }

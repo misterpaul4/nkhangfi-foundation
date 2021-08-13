@@ -97,8 +97,10 @@ const eventts = [
     ),
     videos: [
       {
-        title: "Interview with AYV Media Empire",
-        link: "https://www.facebook.com/plugins/video.php?&href=https%3A%2F%2Fwww.facebook.com%2FAYVSierraLeone%2Fvideos%2F145463617500853%2F"
+        title: "Sensitisation Workshop on the YOS Exam and the Nkhangfi Scholarship program in Sierraleone",
+        link: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F369600741074227%2F&show_text=false&width=267&t=0",
+        height: "476",
+        width: "267"
       }
     ],
     messageTop: "The Turkish entrance examination is organized by some of the Universities in Turkey to select students who wish to study in Turkey for as low as $150 USD to $250 USD. This exam will be conducted by the University representative and the Nkhangfi Team. In most cases, the exam has 80 questions. Most of the 45 exam questions are so-called IQ questions (general ability questions, intelligence questions). The remaining 35 questions are maths questions. You can compare the maths in the YÖS exam with the math questions in grade 10 high school.",
@@ -201,8 +203,10 @@ const eventts = [
   ),
   videos: [
     {
-      title: "Interview with AYV Media Empire",
-      link: "https://www.facebook.com/plugins/video.php?&href=https%3A%2F%2Fwww.facebook.com%2FAYVSierraLeone%2Fvideos%2F145463617500853%2F"
+      title: "Sensitisation Workshop on the YOS Exam and the Nkhangfi Scholarship program in Sierraleone",
+      link: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F369600741074227%2F&show_text=false&width=267&t=0",
+      height: "476",
+      width: "267"
     }
   ],
   messageTop: "The Nkhangfi Scholarship Program is a project of the Nkhangfi Foundation. It will consist of the following events, seminar, workfair, main exams, award ceremony & workshop. Scholarships ranging from 25% to 100% will be distributed to students based on merit.",
@@ -348,8 +352,16 @@ const eventts = [
     videoEmbed: true,
     videos: [
       {
-        title: "Examination video",
-        link: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F203146071633815%2F&show_text=false&width=267&t=0"
+        title: "Examination video 1",
+        link: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F855149451746810%2F&show_text=false&width=267&t=0",
+      },
+      {
+        title: "Examination video 2",
+        link: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F477006060074662%2F&show_text=false&width=267&t=0",
+      },
+      {
+        title: "Examination video 3",
+        link: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fvideos%2F203146071633815%2F&show_text=false&width=267&t=0",
       },
     ],
     messageTop: "The Yös exam was succesfully conducted in Cameroon",
@@ -392,8 +404,10 @@ const eventts = [
     videoEmbed: true,
     videos: [
       {
-        title: "Examination video",
-        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fposts%2F2863032857344513&show_text=false&width=500"
+        title: "Examination Day",
+        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FNkhangfifoundation%2Fposts%2F2863032857344513&show_text=false&width=500",
+        height: "250",
+        width: "500"
       },
     ],
     messageTop: "The Yös exam was a success in Togo",

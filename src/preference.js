@@ -1,5 +1,5 @@
 const settings = {
-  displayPopUp: true,
+  displayPopUp: false,
   popUpDelaytime: 15,
 }
 
