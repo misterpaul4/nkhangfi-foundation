@@ -27,7 +27,7 @@ const Nav = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-home" to={"/"}>Home</Link></li>
             <li className="nav-item">
-              <Dropdown drop={"top"} className="nav-link">
+              <Dropdown className="nav-link">
                 <Dropdown.Toggle id="dropdown-basic" className="nav-link nav-services nav-dropdown text-capitalize b-0 p-0 pt-1">
                   Nkhangfi Travel
                 </Dropdown.Toggle>
@@ -47,7 +47,7 @@ const Nav = () => {
             {/* <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-travel" to={"/services/overview"}>Nkhangfi Travel</Link></li> */}
             {/* <li className="nav-item" onClick={toggleMenu}><Link className="nav-link nav-study" to={"/503"}>Study Abroad</Link></li> */}
             <li className="nav-item">
-              <Dropdown drop={"top"} className="nav-link">
+              <Dropdown className="nav-link">
                 <Dropdown.Toggle id="dropdown-basic" className="nav-link nav-services nav-dropdown text-capitalize b-0 p-0 pt-1">
                   Study Abroad
                 </Dropdown.Toggle>

@@ -33,8 +33,8 @@ const Template = event => {
   const AttachVideos = (vid, index) => {
       if (vid.link.includes("youtube")) {
         return(
-            <button onClick={() => displayVideoModal(index)} className="event-video-iframe d-block">
-              <i class="fas fa-video mr-2"></i>
+            <button onClick={() => displayVideoModal(index)} className="event-video-iframe d-block" key={index}>
+              <i className="fas fa-video mr-2"></i>
               {vid.title}
             </button>
           )
@@ -47,15 +47,16 @@ const Template = event => {
             className="event-video-iframe d-block"
             data-toggle="tooltip"
             title="You will be re-directed to Facebook"
-            ><i class="fab fa-facebook mr-2"></i>
+            key={index}
+            ><i className="fab fa-facebook mr-2"></i>
             {vid.title}
             </Link>
           )
       }
   };
 
-  const AttachPhotos = photo => (
-    <img src={photo.source} alt={photo.alt} className="col-sm-3" />
+  const AttachPhotos = (photo, index) => (
+    <img src={photo.source} alt={photo.alt} className="col-sm-3" key={index} />
   );
 
   return (
