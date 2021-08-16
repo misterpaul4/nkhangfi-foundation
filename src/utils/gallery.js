@@ -33,7 +33,19 @@ import img31 from '../images/events/lauchinSierraLeone/4.jpeg';
 import img32 from '../images/events/lauchinSierraLeone/5.jpeg';
 import img33 from '../images/events/lauchinSierraLeone/7.jpeg';
 
+import img34 from '../images/events/nspSierraLeone2021/1.jpg';
+
+import img35 from '../images/events/nspLiberia2021/1.jpg';
+
 const images = [
+  {
+    image: img35,
+    alt: "Quick photo with some of the Nkhangfi scholarship program Liberia candidates",
+  },
+  {
+    image: img34,
+    alt: "Quick photo with some of the Nkhangfi scholarship program Sierra Leone candidates",
+  },
   {
     image: img33,
     alt: "Nkhangfi foundation members posing with some of the students",

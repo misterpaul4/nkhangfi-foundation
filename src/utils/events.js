@@ -39,11 +39,18 @@ import img18 from '../images/events/lauchinSierraLeone/3.jpeg';
 import img19 from '../images/events/lauchinSierraLeone/4.jpeg';
 import img20 from '../images/events/lauchinSierraLeone/5.jpeg';
 import img21 from '../images/events/lauchinSierraLeone/7.jpeg';
+
 import img22 from '../images/events/nspSierraLeone2021/1.jpg';
 import img23 from '../images/events/nspSierraLeone2021/2.jpg';
 import img24 from '../images/events/nspSierraLeone2021/3.jpg';
 import img25 from '../images/events/nspSierraLeone2021/4.jpg';
 import img26 from '../images/events/nspSierraLeone2021/5.jpg';
+
+import img27 from '../images/events/nspLiberia2021/1.jpg';
+import img28 from '../images/events/nspLiberia2021/2.jpg';
+import img29 from '../images/events/nspLiberia2021/3.jpg';
+import img30 from '../images/events/nspLiberia2021/4.jpg';
+import img31 from '../images/events/nspLiberia2021/5.jpg';
 
 
 const eventts = [
@@ -705,7 +712,7 @@ const eventts = [
         alt: "NSP applicants in sierra leone"
       },
     ],
-    bg: 'nk-nsp-bg',
+    bg: 'nk-nsp-sl-bg',
     optionalSideContent: false,
     videoEmbed: true,
     videos: [
@@ -726,6 +733,59 @@ const eventts = [
     messageBottom: () => (
       <>
     <p>The events were conducted without problems and the students were very well coordinated during the exams and the various presentations. We want to specially congratulate the students who participated in the exams and were subsequently awarded scholarship.</p>
+      </>
+    ),
+    extraContent: false,
+  },
+  {
+    startdate: "June 22, 2021",
+    enddate: "June 24, 2021",
+    title: 'Nkhangfi Scholarship Program in Liberia',
+    link: "nkhangfi_scholarship_program_liberia_2021",
+    image: {
+      source: img27,
+      alt: "nkhangfi scholarship program Liberia candidates"
+    },
+    message: "Nkhangfi Scholarship program was a success in Liberia thanks to the Nkhangfi Foundation team & our partner Mr. Varney of Royal Destiny Multipurpose Consultancy, and his team.",
+    parent: 'events',
+    theme: 'Nkhangfi Scholarship program liberia',
+    additionalPhotos: true,
+    name: 'nsp',
+    photos: [
+      {
+        source: img28,
+        alt: "Madam Estelle addressing the students"
+      },
+      {
+        source: img29,
+        alt: "Mr Paul addressing the students"
+      },
+      {
+        source: img30,
+        alt: "Madam Favour addressing the students"
+      },
+      {
+        source: img31,
+        alt: "Liberia candidates post examination"
+      },
+    ],
+    bg: 'nk-nsp-lib-bg',
+    optionalSideContent: false,
+    videoEmbed: true,
+    videos: [
+      {
+        title: "Presentation video 1",
+        link: "https://fb.watch/7qGPO55tfL/",
+      },
+      {
+        title: "Presentation video 2",
+        link: "https://fb.watch/7qGXWMcZaf/",
+      },
+    ],
+    messageTop: "The Nkhangfi scholarship program was a success in Liberia thanks to our partners at Royal Destiny. The seminar and workshop were held in Paynesville for 2 days. It featured a Seminar where we presented the various study abroad packages, a Workshop for candidates interested in working abroad, and the scholarship exams.",
+    messageBottom: () => (
+      <>
+    <p>We want to specially congratulate the students who participated in the exams and we wish them success.</p>
       </>
     ),
     extraContent: false,
