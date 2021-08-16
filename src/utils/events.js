@@ -39,7 +39,12 @@ import img18 from '../images/events/lauchinSierraLeone/3.jpeg';
 import img19 from '../images/events/lauchinSierraLeone/4.jpeg';
 import img20 from '../images/events/lauchinSierraLeone/5.jpeg';
 import img21 from '../images/events/lauchinSierraLeone/7.jpeg';
-// import img22 from '../images/events/lauchinSierraLeone/7.jpeg';
+import img22 from '../images/events/nspSierraLeone2021/1.jpg';
+import img23 from '../images/events/nspSierraLeone2021/2.jpg';
+import img24 from '../images/events/nspSierraLeone2021/3.jpg';
+import img25 from '../images/events/nspSierraLeone2021/4.jpg';
+import img26 from '../images/events/nspSierraLeone2021/5.jpg';
+
 
 const eventts = [
   {
@@ -664,6 +669,63 @@ const eventts = [
     messageBottom: () => (
       <>
     <p>The event was also attended by students who participated in the Nkhangfi Scholarship Program which was held a few days before the day of the launching as well as some candidates of the YÖS program. Students who were exceptional in the scholarship exams were awarded scholarships and were presented with their certificates. Everyone left happy and the event was a massive success. We want to thank everyone that participated in the event and we are wishing them all the best in their educational pursuits overseas.</p>
+      </>
+    ),
+    extraContent: false,
+  },
+  {
+    startdate: "June 14, 2021",
+    enddate: "June 19, 2021",
+    title: 'Nkhangfi Scholarship Program in Sierra Leone',
+    link: "nkhangfi_scholarship_program_sierra_leone_2021",
+    image: {
+      source: img22,
+      alt: "nkhangfi scholarship program Sierra Leone candidates"
+    },
+    message: "Nkhangfi Scholarship program was a success in Sierra Leone thanks to the Nkhangfi Foundation team.",
+    parent: 'events',
+    theme: 'Nkhangfi Scholarship program sierra leone',
+    additionalPhotos: true,
+    name: 'nsp',
+    photos: [
+      {
+        source: img23,
+        alt: "Mr Kamara talking about Belarus to the students"
+      },
+      {
+        source: img24,
+        alt: "Mr Paul talking about Poland studies"
+      },
+      {
+        source: img25,
+        alt: "NSP applicants in sierra leone"
+      },
+      {
+        source: img26,
+        alt: "NSP applicants in sierra leone"
+      },
+    ],
+    bg: 'nk-nsp-bg',
+    optionalSideContent: false,
+    videoEmbed: true,
+    videos: [
+      {
+        title: "Youth entrepreneurship talk presented by Mr. Nicholas",
+        link: "https://fb.watch/7qDmd9Na4h/",
+      },
+      {
+        title: "Scholarship examination video 1",
+        link: "https://fb.watch/7qDzQdYwXu/",
+      },
+      {
+        title: "Scholarship examination video 2",
+        link: "https://fb.watch/7qDCvZ82w3/",
+      },
+    ],
+    messageTop: "The Nkhangfi scholarship program was a huge success thanks to the Nkhangfi Foundation team. It featured a seminar on youth entrepreneurship and presentation of the various scholarship packages, a workshop for candidates interested in work abroad opportunities, scholarship exams as well as an award ceremony.",
+    messageBottom: () => (
+      <>
+    <p>The events were conducted without problems and the students were very well coordinated during the exams and the various presentations. We want to specially congratulate the students who participated in the exams and were subsequently awarded scholarship.</p>
       </>
     ),
     extraContent: false,
