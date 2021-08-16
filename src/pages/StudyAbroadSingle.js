@@ -74,10 +74,6 @@ const StudyDestination = () => {
                   null
                 }
 
-                {/* tuition */}
-                {/* <h5>Tuition</h5>
-                <span>Minimum tuition fee <strong className="text-danger">{page.tuition}</strong></span> */}
-
               </div>
 
               <div className="col-lg-5 sidebar pl-md-4">

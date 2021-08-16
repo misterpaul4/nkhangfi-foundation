@@ -33,6 +33,13 @@ import img12 from '../images/events/yos_liberia3.jpg';
 import img14 from '../images/events/yos_sierra2.jpg';
 import img15 from '../images/events/yos_sierra3.jpg';
 import { yosApplicationUrl, nspApplicationUrl } from './Forms';
+import img16 from '../images/events/lauchinSierraLeone/2.jpeg';
+import img17 from '../images/events/lauchinSierraLeone/1.jpeg';
+import img18 from '../images/events/lauchinSierraLeone/3.jpeg';
+import img19 from '../images/events/lauchinSierraLeone/4.jpeg';
+import img20 from '../images/events/lauchinSierraLeone/5.jpeg';
+import img21 from '../images/events/lauchinSierraLeone/7.jpeg';
+// import img22 from '../images/events/lauchinSierraLeone/7.jpeg';
 
 const eventts = [
   {
@@ -235,6 +242,7 @@ const eventts = [
       },
     parent: 'events',
     theme: 'success story',
+    name: 'appreciation',
     message: "Mr Fofanah was awarded 100% tuition waiver scholarship to study in Cyprus",
     additionalPhotos: true,
     photos: [
@@ -600,6 +608,62 @@ const eventts = [
     messageBottom: () => (
       <>
     <p>We are very proud of the students that participated in the exam and we are wishing them success.</p>
+      </>
+    ),
+    extraContent: false,
+  },
+  {
+    startdate: "June 19, 2021",
+    title: 'Nkhangfi Foundation Launching & Scholarship award ceremony',
+    link: "nkhangfi_foundation_lauch_sierra_leone_and_award_ceremony",
+    image: {
+      source: img16,
+      alt: "students awarded scholarship certificates"
+    },
+    message: "The official launching of Nkhangfi Foundation in Sierra Leone and scholarship award for candidates that participated in the Nkhangfi Scholarship Program in Sierra Leone",
+    parent: 'events',
+    theme: 'Nkhangfi Foundation launching & award ceremony',
+    additionalPhotos: true,
+    name: 'ceremony',
+    photos: [
+      {
+        source: img17,
+        alt: "student holding their scholarship award certificates"
+      },
+      {
+        source: img18,
+        alt: "Nkhangfi foundation members & partners"
+      },
+      {
+        source: img19,
+        alt: "happy students with their certificates"
+      },
+      {
+        source: img20,
+        alt: "Nkhangfi foundation members & partners"
+      },
+      {
+        source: img21,
+        alt: "Nkhangfi foundation members posing with some of the students"
+      },
+    ],
+    bg: 'nk-ceremony-award-sl-bg',
+    optionalSideContent: false,
+    videoEmbed: true,
+    videos: [
+      {
+        title: "Congratulatory message from one of the Nkhangfi Foundation members",
+        link: "https://www.youtube.com/embed/0DgaZrvSKbE",
+      },
+      {
+        title: "Students receiving their scholarship award",
+        link: "https://www.youtube.com/embed/PprK3SjRjQk",
+      },
+    ],
+    messageTop: "The official launching of  Nkhangfi Foundation in Sierra Leone in attendance with some governmental officers & their various representatives.",
+    messageBottom: () => (
+      <>
+    <p>The event was also attended by students who participated in the Nkhangfi Scholarship Program which was held a few days before the day of the launching as well as some candidates of the YÖS program. Students who were exceptional in the scholarship exams were awarded scholarships and were presented with their certificates. Everyone left happy and the event was a massive success. We want to thank everyone that participated in the event and we are wishing them all the best in their educational pursuits overseas.</p>
       </>
     ),
     extraContent: false,

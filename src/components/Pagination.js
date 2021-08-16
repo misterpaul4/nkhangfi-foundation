@@ -17,7 +17,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
 
   return (
     <nav>
-      <ul className="pagination">
+      <ul className="pagination mt-2">
         <li className="mr-2" onClick={() => pageClicked(1)}>
           <button className="page-link text-dark">&laquo;</button>
         </li>

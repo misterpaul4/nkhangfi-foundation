@@ -26,8 +26,38 @@ import img25 from '../images/gallery/25.jpeg';
 import img26 from '../images/gallery/26.jpeg';
 import img27 from '../images/gallery/27.jpg';
 
+import img28 from '../images/events/lauchinSierraLeone/2.jpeg';
+import img29 from '../images/events/lauchinSierraLeone/1.jpeg';
+import img30 from '../images/events/lauchinSierraLeone/3.jpeg';
+import img31 from '../images/events/lauchinSierraLeone/4.jpeg';
+import img32 from '../images/events/lauchinSierraLeone/5.jpeg';
+import img33 from '../images/events/lauchinSierraLeone/7.jpeg';
 
 const images = [
+  {
+    image: img33,
+    alt: "Nkhangfi foundation members posing with some of the students",
+  },
+  {
+    image: img32,
+    alt: "Nkhangfi foundation members & partners",
+  },
+  {
+    image: img31,
+    alt: "happy students with their certificates",
+  },
+  {
+    image: img30,
+    alt: "Nkhangfi foundation members & partners",
+  },
+  {
+    image: img29,
+    alt: "student holding their scholarship award certificates",
+  },
+  {
+    image: img28,
+    alt: "students awarded scholarship certificates",
+  },
   {
     image: img27,
     alt: "Satisfied student arrives Turkey to continue her studies thanks to Nkhangfi Foundation",

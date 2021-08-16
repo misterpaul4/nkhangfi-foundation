@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import '../../css/style.css';
 import '../../css/hero.css';
 
@@ -16,8 +16,8 @@ const Hero = () => {
               <p className="mb-4">"It looks impossible until you take a step. The path might look difficult, but start the journey & you will become all that you ever dreamt of becoming."</p>
               <p>- Neche</p>
           		<p>
-                <Link to={{pathname: "/event/nspSpring2021"}} className="btn btn-primary p-4 py-3 m-1">scholarship program (NSP)<span className="fas fa-long-arrow-alt-right"></span></Link>
-                <Link to={{pathname: "/event/yosSpring2021"}} className="btn btn-white p-4 py-3 m-1">Y.Ö.S Turkey <span className="fas fa-long-arrow-alt-right"></span></Link>
+                {/* <Link to={{pathname: "/event/nspSpring2021"}} className="btn btn-primary p-4 py-3 m-1">scholarship program (NSP)<span className="fas fa-long-arrow-alt-right"></span></Link> */}
+                {/* <Link to={{pathname: "/event/yosSpring2021"}} className="btn btn-white p-4 py-3 m-1">Y.Ö.S Turkey <span className="fas fa-long-arrow-alt-right"></span></Link> */}
               </p>
             </div>
         	</div>
