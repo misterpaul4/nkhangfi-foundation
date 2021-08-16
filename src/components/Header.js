@@ -12,7 +12,7 @@ const Header = props => {
           <div className="col-md col-lg-5 d-flex align-items-center">
             <img src={logo} alt="logo" className="header-logo"/>
             <Link to={'/'} className="navbar-brand align-items-center">
-            Nkhangfi Foundation <span>building lives, shaping destiny</span>
+            Nkhangfi Foundation <span>building lives, shaping futures</span>
             </Link>
           </div>
 

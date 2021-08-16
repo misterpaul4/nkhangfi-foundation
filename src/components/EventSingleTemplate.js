@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import Events from './EventSidePanel';
 
@@ -22,19 +23,36 @@ const Template = event => {
 
   const handleClose = () => setIsVisible(false);
 
+  // const ACCEPTED_EMBED_VIDEOS = ["youtube"];
+
   const displayVideoModal = vidIndex => {
     setVidLinkIndex(vidIndex)
     setIsVisible(true);
   };
 
-  const AttachVideos = (vid, index) => (
-    <>
-      <button onClick={() => displayVideoModal(index)} className="event-video-iframe d-block">
-        <i class="fas fa-video mr-2"></i>
-        {vid.title}
-      </button>
-    </>
-  );
+  const AttachVideos = (vid, index) => {
+      if (vid.link.includes("youtube")) {
+        return(
+            <button onClick={() => displayVideoModal(index)} className="event-video-iframe d-block">
+              <i class="fas fa-video mr-2"></i>
+              {vid.title}
+            </button>
+          )
+      } else {
+        return(
+            <Link
+            to={{pathname: vid.link}}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="event-video-iframe d-block"
+            data-toggle="tooltip"
+            title="You will be re-directed to Facebook"
+            ><i class="fab fa-facebook mr-2"></i>
+            {vid.title}
+            </Link>
+          )
+      }
+  };
 
   const AttachPhotos = photo => (
     <img src={photo.source} alt={photo.alt} className="col-sm-3" />
@@ -59,30 +77,36 @@ const Template = event => {
             <hr></hr>
 
             { videoEmbed ?
-            <div className="video-modal-container">
+
+              <div className="video-modal-container">
               {videos.map(AttachVideos)}
-              <Modal show={isVisible} onHide={handleClose} className="popup-modal" aria-labelledby="contained-modal-title-vcenter" centered>
+              <Modal
+              show={isVisible}
+              onHide={handleClose}
+              className="popup-modal"
+              aria-labelledby="contained-modal-title-vcenter"
+              size="lg"
+              backdrop="static"
+              centered
+              >
               <Modal.Header closeButton className="popup-closeBtn">
               </Modal.Header>
-              <div className="iframe-container h-100">
-              <iframe src={videos[vidLinkIndex].link}
-                scrolling="no"
-                frameborder="0"
-                allowfullscreen="true"
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                allowFullScreen="true"
-                title="embeded video"
-                webkitallowfullscreen="true"
-                mozallowfullscreen="true"
-                controls="1"
-                alt="embeded video"
-                height={videos[vidLinkIndex].height ? videos[vidLinkIndex].height : "476"}
-                width={videos[vidLinkIndex].width ? videos[vidLinkIndex].width : "267"}
-                ></iframe>
+              <div className="iframe-video-container embed-responsive embed-responsive-16by9">
+                <iframe src={videos[vidLinkIndex].link}
+                  scrolling="no"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  title="embeded video"
+                  allowFullScreen="true"
+                  webkitallowfullscreen="true"
+                  mozallowfullscreen="true"
+                  controls="1"
+                  alt="embeded video"
+                  className="embed-responsive-item"
+                  ></iframe>
                 </div>
-                {/* <div className="bg-light"><a href={videos[vidLinkIndex].link}>link</a></div> */}
               </Modal>
-            </div>
+              </div>
+
           : null }
 
         </div>
