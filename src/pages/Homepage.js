@@ -103,7 +103,7 @@ function Homepage() {
        <p>Nkhangfi Travel with main branch in Yaounde, Cameroon specializes in providing a comprehensive range of travel, cultural, training, consultancy & other business services</p>
       </>
     ),
-    actionLink: "/503",
+    // actionLink: "/503",
   }
 
   const travelServiceSlide = [
@@ -209,22 +209,22 @@ function Homepage() {
       <Progress />
 
       {/* NSP */}
-      <section className="ftco-section">
+      {/* <section className="ftco-section">
         <div className="container-xl">
           <Teaser data={studyAbroadTease}/>
 
 
           <StudyAbroad data={studyAbroadObjGrid}/>
         </div>
-      </section>
+      </section> */}
 
       {/* travel services */}
-      <section className="ftco-section courses-section ftco-no-pb">
+      {/* <section className="ftco-section courses-section ftco-no-pb">
         <div className="container">
           <Teaser data={travelServiceTease}/>
           <Slider data={travelServiceSlide}/>
         </div>
-      </section>
+      </section> */}
 
       <Testimonial />
       <Events numPostsPerPage={3} />
