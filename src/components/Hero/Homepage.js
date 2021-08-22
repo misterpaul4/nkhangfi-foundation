@@ -1,5 +1,6 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
+import Quote from '../Quotes';
 import '../../css/style.css';
 import '../../css/hero.css';
 
@@ -13,8 +14,9 @@ const Hero = () => {
             <div className="text mt-5 pt-5 container hp-hero-content" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
               <span className="subheading">Welcome to Nkhangfi Foundation</span>
           		<h1 className="mb-4">Give Your Child An Opportunity</h1>
-              <p className="mb-4">"It looks impossible until you take a step. The path might look difficult, but start the journey & you will become all that you ever dreamt of becoming."</p>
-              <p>- Neche</p>
+              <Quote />
+              {/* <p className="mb-4">{Quote.text}</p> */}
+              {/* <p>{Quote.author}</p> */}
           		<p>
                 {/* <Link to={{pathname: "/event/nspSpring2021"}} className="btn btn-primary p-4 py-3 m-1">scholarship program (NSP)<span className="fas fa-long-arrow-alt-right"></span></Link> */}
                 {/* <Link to={{pathname: "/event/yosSpring2021"}} className="btn btn-white p-4 py-3 m-1">Y.Ö.S Turkey <span className="fas fa-long-arrow-alt-right"></span></Link> */}
