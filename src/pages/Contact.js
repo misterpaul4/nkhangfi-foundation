@@ -53,15 +53,17 @@ const Contact = () => {
                 </div>
 
                 <div className="text">
-                  <p><span>sierra leone office:</span> 28 Walpole street, proxy building, second floor, Sierra Leone</p>
+                  <p><span>sierra leone office:</span> 28 Walpole street, Roxy building, second floor, Sierra Leone</p>
                 </div>
 
                 <div className="text my-3">
-                  <p><span>mail:</span><Link to={{pathname: "mailto: info@nkhangfifoundation.com"}} target="_blank" rel="noopener noreferrer">info@nkhangfifoundation.com</Link></p>
+                  <p><span>mail:</span><Link to={{pathname: "mailto: info@nkhangfifoundation.com"}} target="_blank" rel="noopener noreferrer">info@nkhangfifoundation.com</Link> <br />
+                  <Link to={{pathname: "mailto: info@nkhangfitravel.com"}} target="_blank" rel="noopener noreferrer">info@nkhangfitravel.com</Link>
+                  </p>
                 </div>
 
                 <div className="text">
-                  <p><span>phone:</span> +23233313797, +905338245235</p>
+                  <p><span>phone:</span> +23233313797, +905338245235, +353899760743</p>
                 </div>
 
               </div>

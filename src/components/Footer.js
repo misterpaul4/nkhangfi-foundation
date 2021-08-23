@@ -22,7 +22,7 @@ const Footer = () => {
               <img src={logo} alt="logo" className="header-logo"></img>
               <Link to={"/"} className="navbar-brand align-items-center footer-brand">
                 nkhangfi <br></br> Foundation
-                <span>Building Lives, Shaping Destiny</span>
+                <span>Building Lives, Shaping Futures</span>
               </Link>
             </h2>
             <ul className="ftco-footer-social list-unstyled mt-2">
