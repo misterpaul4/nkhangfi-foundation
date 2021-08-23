@@ -6,6 +6,8 @@ import Form from '../components/ContactForm';
 import { contactForm } from '../utils/Forms';
 import Newsletter from '../components/Newsletter';
 import '../css/contact.css';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const Contact = () => {
   useEffect(() => {
@@ -31,6 +33,7 @@ const Contact = () => {
 
   return (
     <section>
+      <Header />
       <Hero data={heroContent}/>
 
       <div>
@@ -85,6 +88,7 @@ const Contact = () => {
       </div>
 
       <Newsletter />
+      <Footer />
     </section>
   );
 }

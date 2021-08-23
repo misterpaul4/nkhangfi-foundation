@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import Hero from '../components/Hero/Homepage';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const NkhangfiTravel = () => {
   useEffect(() => {
@@ -9,8 +11,10 @@ const NkhangfiTravel = () => {
 
   return (
     <section>
+      <Header />
       <Hero />
 
+      <Footer />
     </section>
   );
 };

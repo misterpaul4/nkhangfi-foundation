@@ -4,6 +4,8 @@ import Hero from '../components/Hero/Others';
 import galleryImages from '../utils/gallery';
 import Newsletter from '../components/Newsletter';
 import Testimonial from '../components/Testimonial';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import '../css/gallery.css';
 
 const Gallery = () => {
@@ -31,6 +33,7 @@ const Gallery = () => {
 
   return (
     <section>
+      <Header />
       <Hero data={heroContent}/>
       <div className="container py-5">
         <h1 className="text-center">Gallery</h1>
@@ -41,6 +44,7 @@ const Gallery = () => {
 
       <Newsletter />
       <Testimonial />
+      <Footer />
     </section>
   );
 };

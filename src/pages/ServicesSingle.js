@@ -8,6 +8,8 @@ import Newsletter from '../components/Newsletter';
 import Form from '../components/ContactForm';
 // import { setActive, removeActive } from '../utils/activeLink';
 import { contactForm } from '../utils/Forms';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import '../css/services.css';
 
 const Service = () => {
@@ -35,6 +37,7 @@ const Service = () => {
 
   return (
     <section>
+      <Header />
       <Hero data={page}/>
 
       <div className="ftco-section">
@@ -51,6 +54,7 @@ const Service = () => {
       <Form data={formData}/>
       <Newsletter />
       <Testimonial />
+      <Footer />
     </section>
   );
 };

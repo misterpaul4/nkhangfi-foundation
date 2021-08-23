@@ -6,6 +6,8 @@ import events from '../utils/events';
 import Form from '../components/ContactForm';
 import FAQ from '../components/FAQ';
 import EventTemplate from '../components/EventSingleTemplate';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const Event = props => {
   const getPageFromprops = props.location.event;
@@ -37,6 +39,7 @@ const Event = props => {
 
   return (
     <section>
+      <Header />
       <Hero data={page}/>
       <EventTemplate data={page} />
 
@@ -49,6 +52,7 @@ const Event = props => {
         :
         null
       }
+      <Footer />
     </section>
   );
 };

@@ -6,6 +6,8 @@ import destinations from '../utils/Study';
 import Form from '../components/ContactForm';
 import { studyAbroadFormUrl } from '../utils/Forms';
 import Progress from '../components/Progress';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const StudyDestination = () => {
   useEffect(() => {
@@ -39,6 +41,7 @@ const StudyDestination = () => {
 
   return (
     <section>
+      <Header />
       <Hero data={page} />
 
       <section className="ftco-section">
@@ -87,6 +90,7 @@ const StudyDestination = () => {
 
 <Form data={formData} />
       </section>
+      <Footer />
     </section>
   );
 };

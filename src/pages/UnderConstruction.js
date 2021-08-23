@@ -3,6 +3,8 @@ import Hero from '../components/Hero/Others';
 import Newsletter from '../components/Newsletter';
 import Form from '../components/ContactForm';
 import { contactForm } from '../utils/Forms';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const UnderConstruction = () => {
   useEffect(() => {
@@ -25,6 +27,7 @@ const UnderConstruction = () => {
 
   return (
     <section>
+      <Header />
       <Hero data={heroData} />
       <div className="text-center container p-5 border">
         <h1><i className="fas fa-tools mr-2"></i>We are currently working on this page</h1>
@@ -33,6 +36,7 @@ const UnderConstruction = () => {
 
       <Form data={formData}/>
       <Newsletter />
+      <Footer />
     </section>
   );
 };

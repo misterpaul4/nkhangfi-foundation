@@ -12,6 +12,8 @@ import Testimonial from '../components/Testimonial';
 import Events from '../components/UpcomingEvents';
 import Newsletter from '../components/Newsletter';
 import FAQ from '../components/FAQ';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function Homepage() {
   useEffect(() => {
@@ -50,103 +52,104 @@ function Homepage() {
     ],
   };
 
-  const studyAbroadObjGrid = [
-  {
-    icon: "flaticon-design",
-    title: "study in australia",
-    key: "australia"
-  },
-  {
-    icon: "flaticon-paint-palette",
-    title: "study in belarus",
-    key: "belarus"
-  },
-  {
-    icon: "flaticon-computer-science",
-    title: "study in china",
-    key: "china"
-  },
-  {
-    icon: "flaticon-magnifying-glass",
-    title: "study in cyprus",
-    key: "cyprus"
-  },
-  {
-    icon: "flaticon-engineer",
-    title: "study in poland",
-    key: "poland"
-  },
-  {
-    icon: "flaticon-dumbbell",
-    title: "study in ukraine",
-    key: "ukraine"
-  }
-  ];
+  // const studyAbroadObjGrid = [
+  // {
+  //   icon: "flaticon-design",
+  //   title: "study in australia",
+  //   key: "australia"
+  // },
+  // {
+  //   icon: "flaticon-paint-palette",
+  //   title: "study in belarus",
+  //   key: "belarus"
+  // },
+  // {
+  //   icon: "flaticon-computer-science",
+  //   title: "study in china",
+  //   key: "china"
+  // },
+  // {
+  //   icon: "flaticon-magnifying-glass",
+  //   title: "study in cyprus",
+  //   key: "cyprus"
+  // },
+  // {
+  //   icon: "flaticon-engineer",
+  //   title: "study in poland",
+  //   key: "poland"
+  // },
+  // {
+  //   icon: "flaticon-dumbbell",
+  //   title: "study in ukraine",
+  //   key: "ukraine"
+  // }
+  // ];
 
-  const studyAbroadTease = {
-    title: "nkhangfi scholarship program (nsp)",
-    catchphrase: "Study Abroad For Less",
-    message: () => (
-      <>
-        <p>a program brought by Nkhangfi foundation to help african students who dream to study aborad to achieve such dream through providing affordable tuition fee and tuition fee wavier. Students who participate in the Nkhangfi scholarship program stands a chance to get a 25%, 50%,65%,70%, 80% and 100% tuition wavier scholarship to study in Belarus, Northern Cyprus, Poland, Australia, China and Ukraine.
-        </p>
-      </>
-    ),
-    actionLink: "/event/nsp",
-  };
+  // const studyAbroadTease = {
+  //   title: "nkhangfi scholarship program (nsp)",
+  //   catchphrase: "Study Abroad For Less",
+  //   message: () => (
+  //     <>
+  //       <p>a program brought by Nkhangfi foundation to help african students who dream to study aborad to achieve such dream through providing affordable tuition fee and tuition fee wavier. Students who participate in the Nkhangfi scholarship program stands a chance to get a 25%, 50%,65%,70%, 80% and 100% tuition wavier scholarship to study in Belarus, Northern Cyprus, Poland, Australia, China and Ukraine.
+  //       </p>
+  //     </>
+  //   ),
+  //   actionLink: "/event/nsp",
+  // };
 
-  const travelServiceTease = {
-    title: "nkhangfi Travel",
-    catchphrase: "Explore Some Of The Nkhangfi Travel Services",
-    message: () => (
-      <>
-       <p>Nkhangfi Travel with main branch in Yaounde, Cameroon specializes in providing a comprehensive range of travel, cultural, training, consultancy & other business services</p>
-      </>
-    ),
-    // actionLink: "/503",
-  }
+  // const travelServiceTease = {
+  //   title: "nkhangfi Travel",
+  //   catchphrase: "Explore Some Of The Nkhangfi Travel Services",
+  //   message: () => (
+  //     <>
+  //      <p>Nkhangfi Travel with main branch in Yaounde, Cameroon specializes in providing a comprehensive range of travel, cultural, training, consultancy & other business services</p>
+  //     </>
+  //   ),
+  //   // actionLink: "/503",
+  // }
 
-  const travelServiceSlide = [
-    {
-      icon: "fab fa-cc-visa",
-      title: "visa assitance",
-      message: "We provide professional support for your visas. We also provide electronic visas to countries that accepts e-visas. We can assist you in providing all the required documents as these are the challenges most clients face",
-      actionLink: "/services/visa",
-      action: "learn more",
-    },
-    {
-      icon: "fas fa-plane-departure",
-      title: "flight reservation & booking",
-      message: "Getting affordable air tickets is not a matter of luck. It is challenging and for that purpose, we assist our students in finding the best deals at reasonable rates.",
-    },
-    {
-      icon: "fas fa-umbrella-beach",
-      title: "tour packages",
-      message: "Our tour packages include some exotic and adventurous places. These packages will include visa processing and tours(boat cruise, historical places, city tours etc) for couples, singles and groups.",
-      actionLink: "/services/tours",
-      action: "check it out",
-    },
-    {
-      icon: "fas fa-plane-departure",
-      title: "work & travel programs",
-      message: "The Nkhangfi Team regularly holds work fair programs for those who wish to work in Canada, Crotia, Hungary, Lithuania, Mexico, Poland and Romania. We help you secure your work visa and necessary travel documents.",
-    },
-    {
-      icon: "fas fa-hotel",
-      title: "hotel reservation & airport pickUp",
-      message: "With thousands of hotels worldwide, our clients are guaranteed to get the best of relaxation. Our hotel reservations are reliable and cost efficient. We also arrange airport pickups & transfers to your desired destination.",
-    },
-    {
-      icon: "fas fa-language",
-      title: "translation services",
-      message: "We have a team of professional linguist that can provide linguistically fluent and technically accurate documentation translations. We can deliver unrivaled translation efficiency regardless of your document formats",
-      // actionLink: "/services/translate",
-      // action: "get started",
-    }
-  ]
+  // const travelServiceSlide = [
+  //   {
+  //     icon: "fab fa-cc-visa",
+  //     title: "visa assitance",
+  //     message: "We provide professional support for your visas. We also provide electronic visas to countries that accepts e-visas. We can assist you in providing all the required documents as these are the challenges most clients face",
+  //     actionLink: "/services/visa",
+  //     action: "learn more",
+  //   },
+  //   {
+  //     icon: "fas fa-plane-departure",
+  //     title: "flight reservation & booking",
+  //     message: "Getting affordable air tickets is not a matter of luck. It is challenging and for that purpose, we assist our students in finding the best deals at reasonable rates.",
+  //   },
+  //   {
+  //     icon: "fas fa-umbrella-beach",
+  //     title: "tour packages",
+  //     message: "Our tour packages include some exotic and adventurous places. These packages will include visa processing and tours(boat cruise, historical places, city tours etc) for couples, singles and groups.",
+  //     actionLink: "/services/tours",
+  //     action: "check it out",
+  //   },
+  //   {
+  //     icon: "fas fa-plane-departure",
+  //     title: "work & travel programs",
+  //     message: "The Nkhangfi Team regularly holds work fair programs for those who wish to work in Canada, Crotia, Hungary, Lithuania, Mexico, Poland and Romania. We help you secure your work visa and necessary travel documents.",
+  //   },
+  //   {
+  //     icon: "fas fa-hotel",
+  //     title: "hotel reservation & airport pickUp",
+  //     message: "With thousands of hotels worldwide, our clients are guaranteed to get the best of relaxation. Our hotel reservations are reliable and cost efficient. We also arrange airport pickups & transfers to your desired destination.",
+  //   },
+  //   {
+  //     icon: "fas fa-language",
+  //     title: "translation services",
+  //     message: "We have a team of professional linguist that can provide linguistically fluent and technically accurate documentation translations. We can deliver unrivaled translation efficiency regardless of your document formats",
+  //     // actionLink: "/services/translate",
+  //     // action: "get started",
+  //   }
+  // ]
 
   return (
     <>
+      <Header />
       <Hero />
       <About data={aboutObj} />
 
@@ -230,6 +233,7 @@ function Homepage() {
       <Events numPostsPerPage={3} />
       <Newsletter />
       <FAQ />
+      <Footer />
     </>
   );
 }

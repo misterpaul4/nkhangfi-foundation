@@ -7,6 +7,8 @@ import Newsletter from '../components/Newsletter';
 import { contactForm } from '../utils/Forms';
 import Form from '../components/ContactForm';
 import Progress from '../components/Progress';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const Team = () => {
   useEffect(() => {
@@ -50,6 +52,7 @@ const Team = () => {
 
   return (
     <section>
+      <Header />
       <Hero data={heroContent}/>
 
       <section className="ftco-section">
@@ -63,6 +66,7 @@ const Team = () => {
     <Progress />
     <Newsletter />
     <Form data={formData}/>
+    <Footer />
     </section>
   );
 }

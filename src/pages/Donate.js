@@ -1,5 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero/Others';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const Donate = () => {
   const heroContent = {
@@ -11,6 +13,7 @@ const Donate = () => {
 
   return (
     <div>
+      <Header />
       <Hero data={heroContent} />
 
       <div className="py-5 d-flex flex-column justify-content-center">
@@ -26,6 +29,7 @@ const Donate = () => {
           <span>540110110000766</span>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
