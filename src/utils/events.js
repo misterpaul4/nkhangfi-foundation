@@ -32,7 +32,7 @@ import img11 from '../images/events/yos_liberia2.jpg';
 import img12 from '../images/events/yos_liberia3.jpg';
 import img14 from '../images/events/yos_sierra2.jpg';
 import img15 from '../images/events/yos_sierra3.jpg';
-import { yosApplicationUrl, nspApplicationUrl } from './Forms';
+import { yosApplicationUrl, nspApplicationUrl, nspGuinea2021 } from './Forms';
 import img16 from '../images/events/lauchinSierraLeone/2.jpeg';
 import img17 from '../images/events/lauchinSierraLeone/1.jpeg';
 import img18 from '../images/events/lauchinSierraLeone/3.jpeg';
@@ -51,6 +51,12 @@ import img28 from '../images/events/nspLiberia2021/2.jpg';
 import img29 from '../images/events/nspLiberia2021/3.jpg';
 import img30 from '../images/events/nspLiberia2021/4.jpg';
 import img31 from '../images/events/nspLiberia2021/5.jpg';
+
+import img32 from '../images/events/nspGuinea2021/flier.png';
+import img33 from '../images/events/nspGuinea2021/2.png';
+import img34 from '../images/events/nspGuinea2021/3.png';
+
+import BootstrapForm from '../components/BootstrapForm';
 
 
 const eventts = [
@@ -787,6 +793,86 @@ const eventts = [
       <>
     <p>We want to specially congratulate the students who participated in the exams and we wish them success.</p>
       </>
+    ),
+    extraContent: false,
+  },
+  {
+    startdate: "September 04, 2021",
+    title: 'Nkhangfi Scholarship Program Guinée',
+    link: "nkhangfi_scholarship_program_guinea_2021",
+    image: {
+      source: img32,
+      alt: "nkhangfi team at a press conference"
+    },
+    message: "Nkhangfi Scholarship will commence in Guinée at dans le grand chapiteaux de l'esplanade du palais du peuple.",
+    parent: 'events',
+    theme: 'Nkhangfi Scholarship program guinée',
+    additionalPhotos: true,
+    name: 'nsp',
+    photos: [
+      {
+        source: img33,
+        alt: "Madam Estelle addressing the press"
+      },
+      {
+        source: img34,
+        alt: "Press conference"
+      },
+    ],
+    bg: 'nsp-guinea-bg-2021',
+    optionalSideContent: true,
+    sideContent: () => (
+      <>
+      <div>
+        <h3>Program Date</h3>
+        September 04, 2021
+      </div>
+
+        <div>
+          <h3>Application Deadline</h3>
+          September 04, 2021
+        </div>
+
+        <div>
+          <h3>Venue</h3>
+          Guinée at dans le grand chapiteaux de l'esplanade du palais du peuple.
+        </div>
+      </>
+    ),
+    videoEmbed: true,
+    videos: [
+      {
+        title: "Promo video",
+        link: "https://www.youtube.com/embed/P1TYMILqCLI",
+      },
+    ],
+    messageTop: "Participez à la Foire de Bourse, Salon de l'Entrepreneuriat et du Travail à l'étranger et lutte contré l'Immigration Clandestine.",
+    messageBottom: () => (
+      <>
+    <p>
+      <strong>Date: 04 Septembre 2021 <br></br></strong>
+      <strong>Lieu: Grand Chapiteaux de l'Esplanade du Palais du  Peuple. <br></br></strong>
+ Programme organisé  par la Fondation Nkhangfi  en collaboration avec Soguicar Voyages Sarl Guinée.
+Soyez parmis ceux qui vont obtenir les bourses d'études  en Pologne, Chypre du Nord, Portugal, Inde, Ukraine, Chine, Biélorussie, Canada, Irelande, etc.</p>
+
+    <p>
+    <strong>Infolines:</strong> 666 70 41 60 /620907171 /621224364 / 622 59 15 68 /
+    626046818 / 623 14 40 55 /
+    666299900 / 620 45 20 06 /
+    628 59 41 60 / 624 03 56 87
+    </p>
+
+    <p>
+    <strong>Sponsors:</strong> Lorando Bio, Alliance Recruitment & Training Agency, Emirates Air, Tunisair, Turkish Airlines bien d'autres...*
+    </p>
+
+    {/* form section */}
+    <div className="bg-light">
+    <BootstrapForm data={{
+      formName: "Application"
+    }} />
+    </div>
+    </>
     ),
     extraContent: false,
   },

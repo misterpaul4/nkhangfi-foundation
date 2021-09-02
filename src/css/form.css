@@ -5,6 +5,10 @@
 	flex: 1;
 }
 
+.bt-form h3 {
+	color: #216811;
+}
+
 #country {
 	height: inherit;
 }

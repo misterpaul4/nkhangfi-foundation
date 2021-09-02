@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import countries from '../utils/countries';
+import countries from '../utils/nationalities';
 import '../css/form.css';
 
 const ContactForm = props => {

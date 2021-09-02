@@ -75,11 +75,11 @@ const Template = event => {
            </div> :
            null
           }
-            <hr></hr>
+          <hr />
 
             { videoEmbed ?
 
-              <div className="video-modal-container">
+              <div className="video-modal-container mt-2">
               {videos.map(AttachVideos)}
               <Modal
               show={isVisible}
@@ -109,6 +109,8 @@ const Template = event => {
               </div>
 
           : null }
+            {/* <hr></hr> */}
+          {/* <div><Link><i class="fas fa-angle-double-right mr-2"></i>Link to next event</Link></div> */}
 
         </div>
 
