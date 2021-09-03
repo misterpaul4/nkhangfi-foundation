@@ -1,5 +1,4 @@
 import bgYos from '../images/events/yos_banner.png';
-import { Link } from 'react-router-dom';
 import yos1 from '../images/events/yos_sierra.png';
 import yos2 from '../images/events/yos_liberia.png';
 import yos3 from '../images/events/yos_togo.png';
@@ -33,7 +32,7 @@ import img11 from '../images/events/yos_liberia2.jpg';
 import img12 from '../images/events/yos_liberia3.jpg';
 import img14 from '../images/events/yos_sierra2.jpg';
 import img15 from '../images/events/yos_sierra3.jpg';
-import { yosApplicationUrl, nspApplicationUrl, nspGuinea2021 } from './Forms';
+import { yosApplicationUrl, nspApplicationUrl } from './Forms';
 import img16 from '../images/events/lauchinSierraLeone/2.jpeg';
 import img17 from '../images/events/lauchinSierraLeone/1.jpeg';
 import img18 from '../images/events/lauchinSierraLeone/3.jpeg';

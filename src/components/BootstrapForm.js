@@ -42,7 +42,7 @@ const Form = props => {
         <input
           name="highschool transcript" type="hidden"
           role="uploadcare-uploader"
-          data-public-key="65ff5cf3971550d38006"
+          data-public-key="64c0a64485b8950cc40d"
           className="form-control"
           id="inputHighschoolTranscript"
           multiple></input>
@@ -76,7 +76,7 @@ const Form = props => {
         <input
           name="undergraduate transcript" type="hidden"
           role="uploadcare-uploader"
-          data-public-key="65ff5cf3971550d38006"
+          data-public-key="64c0a64485b8950cc40d"
           className="form-control"
           id="inputUndergraduateTranscript"
           multiple></input>
@@ -109,7 +109,7 @@ const Form = props => {
         <input
           name="master transcript" type="hidden"
           role="uploadcare-uploader"
-          data-public-key="65ff5cf3971550d38006"
+          data-public-key="64c0a64485b8950cc40d"
           className="form-control"
           id="inputMasterTranscript"
           multiple></input>
@@ -294,7 +294,7 @@ const Form = props => {
                       name="UG-others"
                       type="hidden"
                       role="uploadcare-uploader"
-                      data-public-key="65ff5cf3971550d38006"
+                      data-public-key="64c0a64485b8950cc40d"
                       className="form-control"
                       id="inputOther"
                       multiple></input>
@@ -419,7 +419,7 @@ const Form = props => {
                       name="UG-others"
                       type="hidden"
                       role="uploadcare-uploader"
-                      data-public-key="65ff5cf3971550d38006"
+                      data-public-key="64c0a64485b8950cc40d"
                       className="form-control"
                       id="inputOther"
                       multiple></input>
