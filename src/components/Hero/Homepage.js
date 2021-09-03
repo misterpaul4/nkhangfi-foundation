@@ -20,8 +20,8 @@ const Hero = () => {
               <Link to={{pathname: "/event/nkhangfi_scholarship_program_guinea_2021"}} className="btn btn-primary p-4 py-3 m-1">Programme de bourses Nkhangfi Guinée
                 <img src={arrow} alt="arrow gif" className="arrow-gif ml-2"></img>
               </Link>
-                {/* <Link to={{pathname: "/event/nspSpring2021"}} className="btn btn-primary p-4 py-3 m-1">Programme de bourses Nkhangfi<span className="fas fa-long-arrow-alt-right"></span></Link> */}
-                {/* <Link to={{pathname: "/event/yosSpring2021"}} className="btn btn-white p-4 py-3 m-1">Y.Ö.S Turkey <span className="fas fa-long-arrow-alt-right"></span></Link> */}
+                {/* <Link to={{pathname: "nkhangfi_scholarship_program_guinea_application"}} className="btn btn-white p-4 py-3 m-1">Application Form <span className="fas fa-long-arrow-alt-right"></span></Link> */}
+                {/* <button className="btn btn-white p-4 py-3 m-1">Application Form</button> */}
               </p>
             </div>
         	</div>

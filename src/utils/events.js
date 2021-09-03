@@ -1,4 +1,5 @@
 import bgYos from '../images/events/yos_banner.png';
+import { Link } from 'react-router-dom';
 import yos1 from '../images/events/yos_sierra.png';
 import yos2 from '../images/events/yos_liberia.png';
 import yos3 from '../images/events/yos_togo.png';
@@ -867,7 +868,7 @@ Soyez parmis ceux qui vont obtenir les bourses d'études  en Pologne, Chypre du 
     </p>
 
     {/* form section */}
-    <div className="bg-light">
+    <div>
     <BootstrapForm data={{
       formName: "Application"
     }} />

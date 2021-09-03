@@ -18,6 +18,7 @@ import ScrollToTopBtn from '../components/ScrollTopButton';
 import PopUp from '../components/PopUp';
 import preference from '../preference';
 import NotFound from '../pages/NotFound';
+// import ApplicatoinForm from '../pages/ApplicationForm';
 import '../css/style.css';
 import '../css/flaticon.css';
 
@@ -28,6 +29,7 @@ const Routes = () => (
     { preference.displayPopUp ? <PopUp /> : "" }
     <Switch>
       <Route exact path="/" component={Homepage} />
+      {/* <Route exact path="/nkhangfi_scholarship_program_guinea_application" component={ApplicatoinForm} /> */}
       <Route exact path="/donate" component={Donate} />
       <Route exact path="/services/overview" component={NkhangfiTravel} />
       <Route exact path="/studyAbroad/overview" component={StudyAbroad} />

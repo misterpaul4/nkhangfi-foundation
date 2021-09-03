@@ -118,8 +118,14 @@ const Form = props => {
   );
 
   return (
-      <form className="my-5 bt-form">
-      <h3 className="mb-4 text-center">{formName} Form</h3>
+    <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div className="modal-content">
+        <div className="modal-header bt-form-header-conainer">
+        <h4 className="modal-title" id="exampleModalLongTitle">{formName} Form</h4>
+        </div>
+
+        <div className="modal-body">
+        <form>
       <h5 className="mt-2">Personal Information</h5>
 
       <div className="form-row">
@@ -430,6 +436,9 @@ const Form = props => {
         <button type="submit" className="btn btn-primary" id="application-form-submit">Submit</button>
       </div>
     </form>
+        </div>
+      </div>
+    </div>
   )
 }
 
