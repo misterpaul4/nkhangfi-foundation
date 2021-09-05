@@ -856,10 +856,7 @@ const eventts = [
 Soyez parmis ceux qui vont obtenir les bourses d'études  en Pologne, Chypre du Nord, Portugal, Inde, Ukraine, Chine, Biélorussie, Canada, Irelande, etc.</p>
 
     <p>
-    <strong>Infolines:</strong> 666 70 41 60 /620907171 /621224364 / 622 59 15 68 /
-    626046818 / 623 14 40 55 /
-    666299900 / 620 45 20 06 /
-    628 59 41 60 / 624 03 56 87
+    <strong>Infolines:</strong> 624 03 56 87
     </p>
 
     <p>
