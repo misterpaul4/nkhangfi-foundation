@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Alert = () => {
+const Alert = prop => {
 
   return(
   <div className="alert position-fixed alert-dismissible fade py-2" id="appStatus" role="alert">

@@ -19,13 +19,11 @@ import PopUp from '../components/PopUp';
 import preference from '../preference';
 import NotFound from '../pages/NotFound';
 // import ApplicatoinForm from '../pages/ApplicationForm';
-import Alert from '../components/Alert';
 import '../css/style.css';
 import '../css/flaticon.css';
 
 const Routes = () => (
   <BrowserRouter>
-    <Alert />
     <ScrollToTop />
     <ScrollToTopBtn />
     { preference.displayPopUp ? <PopUp /> : "" }

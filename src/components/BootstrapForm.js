@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 // import countries from '../utils/countries';
 import courses from '../utils/courses';
 import nationalities from '../utils/nationalities';
+import loader from '../images/loading.gif';
+import Alert from './Alert';
 import '../css/form.css';
 
 const Form = props => {
@@ -25,15 +27,6 @@ const Form = props => {
   const [course, updatecourse] = useState("");
   const [studyFirstChoiceCountry, updatestudyFirstChoiceCountry] = useState("");
   const [studySecondChoiceCountry, updatestudySecondChoiceCountry] = useState("");
-  // const [studentPhoto, updatestudentPhoto] = useState("");
-  // const [studentPassport, updatestudentPassport] = useState("");
-  // const [highSchoolDiploma, updatehighSchoolDiploma] = useState("");
-  // const [highSchoolTranscript, updatehighSchoolTranscript] = useState("");
-  // const [undergraduateDiploma, updateundergraduateDiploma] = useState("");
-  // const [undergraduateTranscript, updateundergraduateTranscript] = useState("");
-  // const [mastersDiploma, updatemastersDiploma] = useState("");
-  // const [mastersTranscript, updatemastersTranscript] = useState("");
-  // const [otherStudentDocs, updateotherStudentDocs] = useState("");
   const [workFirstChoiceCountry, updateworkFirstChoiceCountry] = useState("");
   const [workSecondChoiceCountry, updateworkSecondChoiceCountry] = useState("");
   const [workerHighestDegree, updateworkerHighestDegree] = useState("");
@@ -47,9 +40,6 @@ const Form = props => {
   const [felonyReason, updatefelonyReason] = useState("");
   const [travelledCountryList, updatetravelledCountryList] = useState("");
   const [applicationType, updateApplicationType] = useState("");
-  // const [workerPhoto, updateworkerPhoto] = useState("");
-  // const [workerPassport, updateworkerPassport] = useState("");
-  // const [workerAdditionalDocs, updateworkerAdditionalDocs] = useState("");
 
   const studyCountries = [
     "Belarus",
@@ -181,62 +171,48 @@ const Form = props => {
     </>
   );
 
-  const genericFormData = {fullname, surname, fatherName, motherName, email, telephone, dob, nationality, gender, maritalStatus, emergencyContact, address, applicationType}
+  // const genericFormData = {fullname, surname, fatherName, motherName, email, telephone, dob, nationality, gender, maritalStatus, emergencyContact, address, applicationType}
 
-  let formData;
+  let formData = {};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const highSchoolDiplome = document.getElementById('inputHighschoolDiploma');
-    const highSchoolTranscript = document.getElementById('inputHighschoolTranscript');
-    const undergraduateDiplome = document.getElementById('inputUndergraduateDiploma');
-    const undergraduateTranscript = document.getElementById('inputUndergraduateTranscript');
-    const mastersDiploma = document.getElementById('inputMasterDiploma');
-    const mastersTranscript = document.getElementById('inputMasterTranscript');
-    const studentPhoto = document.getElementById('studentPhoto');
-    const studentPassport = document.getElementById('studentPassport');
-    const studentAdditionalDocuments = document.getElementById('studentAdditionalDocs');
-    const workerPhoto = document.getElementById('workerPhoto');
-    const workerPassport = document.getElementById('workerPassport');
-    const workerAdditionalDocs = document.getElementById('workerAdditionalDocs');
 
-    const studiesFormData = {admissionType, course, studyFirstChoiceCountry, studySecondChoiceCountry,
-    highSchoolDiplome: highSchoolDiplome.value,
-    highSchoolTranscript: highSchoolTranscript.value,
-    undergraduateDiplome: undergraduateDiplome.value,
-    undergraduateTranscript: undergraduateTranscript.value,
-    mastersDiploma: mastersDiploma.value,
-    mastersTranscript: mastersTranscript.value,
-    studentPhoto: studentPhoto.value,
-    studentPassport: studentPassport.value,
-    studentAdditionalDocuments: studentAdditionalDocuments.value,
-    };
+    const loadingGif = document.querySelector('.loading-gif');
+    const appForm = document.getElementById('application-form-react');
 
-    const workFormData = {workFirstChoiceCountry, workSecondChoiceCountry, workerHighestDegree, jobExperience, spokenLanguages, visadenial, visaDenialReason, repatration, repatrationReason, felony, felonyReason, travelledCountryList,
-    workerPhoto: workerPhoto.value,
-    workerPassport: workerPassport.value,
-    workerAdditionalDocs: workerAdditionalDocs.value,
-    };
+    loadingGif.classList.remove('d-none');
+    appForm.classList.add('unclickable');
 
-    formData = { ...genericFormData, ...studiesFormData, ...workFormData }
 
-    await fetch(submissionLink, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(formData),
-    }).then(() => {
-      // succesful
-      console.log("form sent");
-    }).catch(Err => {
-      // unsuccesful
-      console.log("form NOT sent!!!");
-    });
+    const FD = new FormData(appForm);
+
+    // get form data as key-value pairs
+    for(var pair of FD.entries()) {
+      formData[pair[0]] = pair[1];
+    }
+
+    // await fetch(submissionLink, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Accept: "application/json",
+    //   },
+    //   body: JSON.stringify(formData),
+    // }).then(() => {
+    //   // succesful
+    //   console.log("form sent");
+    // }).catch(Err => {
+    //   // unsuccesful
+    //   console.log("form NOT sent!!!");
+    // });
   };
 
   return (
+    <>
+    <Alert />
+    <img src={loader} alt="loading gif" className="position-fixed d-none loading-gif">
+    </img>
     <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
       <div className="modal-content">
         <div className="modal-header bt-form-header-conainer">
@@ -324,12 +300,12 @@ const Form = props => {
 
       <h5 className="mt-2">What are you applying for?</h5>
       <input onChange={(e) => updateApplicationType(e.target.value)} checked={applicationType === "studies"}
-      type="radio" value="studies" name="Have you ever been denied visa?" /> Studies
+      type="radio" value="studies" name="application type" /> Studies
       <input onChange={(e) => updateApplicationType(e.target.value)} checked={applicationType === "work"}
-      type="radio" value="work" name="Have you ever been denied visa?" className="ml-3" /> Work
+      type="radio" value="work" name="application type" className="ml-3" /> Work
       <div id="accordion">
         {/* studeies */}
-        <div className={applicationType === "studies" ? "card m-0" : "d-none"}>
+        <div className={applicationType === "studies" ? "card m-0" : "unclickable"}>
         <div className="card-header" id="headingOne">
             <h5 className="mb-0">
               <button type="button" className="btn btn-link text-dark text-small" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -338,7 +314,7 @@ const Form = props => {
             </h5>
           </div>
 
-          <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+          <div id="collapseOne" className={applicationType === "studies" ? "collapse show" : "collapse"} aria-labelledby="headingOne" data-parent="#accordion">
             <div className="card-body">
               <div className="form-row">
 								<div className="form-group col-md-3">
@@ -448,7 +424,7 @@ const Form = props => {
           </div>
         </div>
         {/* work */}
-        <div className={applicationType === "work" ? "card m-0" : "d-none"}>
+        <div className={applicationType === "work" ? "card m-0" : "unclickable"}>
         <div className="card-header" id="headingTwo">
             <h5 className="mb-0">
               <button type="button" className="btn btn-link text-dark text-small" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -457,7 +433,7 @@ const Form = props => {
             </h5>
           </div>
 
-          <div id="collapseTwo" className="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div id="collapseTwo" className={applicationType === "work" ? "collapse show" : "collapse"} aria-labelledby="headingTwo" data-parent="#accordion">
             <div className="card-body">
               <div className="form-row">
 
@@ -607,6 +583,7 @@ const Form = props => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
