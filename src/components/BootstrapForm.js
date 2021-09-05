@@ -25,15 +25,15 @@ const Form = props => {
   const [course, updatecourse] = useState("");
   const [studyFirstChoiceCountry, updatestudyFirstChoiceCountry] = useState("");
   const [studySecondChoiceCountry, updatestudySecondChoiceCountry] = useState("");
-  const [studentPhoto, updatestudentPhoto] = useState("");
-  const [studentPassport, updatestudentPassport] = useState("");
-  const [highSchoolDiploma, updatehighSchoolDiploma] = useState("");
-  const [highSchoolTranscript, updatehighSchoolTranscript] = useState("");
-  const [undergraduateDiploma, updateundergraduateDiploma] = useState("");
-  const [undergraduateTranscript, updateundergraduateTranscript] = useState("");
-  const [mastersDiploma, updatemastersDiploma] = useState("");
-  const [mastersTranscript, updatemastersTranscript] = useState("");
-  const [otherStudentDocs, updateotherStudentDocs] = useState("");
+  // const [studentPhoto, updatestudentPhoto] = useState("");
+  // const [studentPassport, updatestudentPassport] = useState("");
+  // const [highSchoolDiploma, updatehighSchoolDiploma] = useState("");
+  // const [highSchoolTranscript, updatehighSchoolTranscript] = useState("");
+  // const [undergraduateDiploma, updateundergraduateDiploma] = useState("");
+  // const [undergraduateTranscript, updateundergraduateTranscript] = useState("");
+  // const [mastersDiploma, updatemastersDiploma] = useState("");
+  // const [mastersTranscript, updatemastersTranscript] = useState("");
+  // const [otherStudentDocs, updateotherStudentDocs] = useState("");
   const [workFirstChoiceCountry, updateworkFirstChoiceCountry] = useState("");
   const [workSecondChoiceCountry, updateworkSecondChoiceCountry] = useState("");
   const [workerHighestDegree, updateworkerHighestDegree] = useState("");
@@ -46,9 +46,10 @@ const Form = props => {
   const [felony, updatefelony] = useState("");
   const [felonyReason, updatefelonyReason] = useState("");
   const [travelledCountryList, updatetravelledCountryList] = useState("");
-  const [workerPhoto, updateworkerPhoto] = useState("");
-  const [workerPassport, updateworkerPassport] = useState("");
-  const [workerAdditionalDocs, updateworkerAdditionalDocs] = useState("");
+  const [applicationType, updateApplicationType] = useState("");
+  // const [workerPhoto, updateworkerPhoto] = useState("");
+  // const [workerPassport, updateworkerPassport] = useState("");
+  // const [workerAdditionalDocs, updateworkerAdditionalDocs] = useState("");
 
   const studyCountries = [
     "Belarus",
@@ -81,7 +82,7 @@ const Form = props => {
         >*High School Diploma <i className="fa fa-info-circle" aria-hidden="true"></i></label>
         <input
           name="highschool diploma"
-          onChange={(e) => updatehighSchoolDiploma(e.target.value)} value={highSchoolDiploma}
+          // onChange={(e) => updatehighSchoolDiploma(e.target.value)} value={highSchoolDiploma}
           type="hidden"
           role="uploadcare-uploader"
           data-public-key="64c0a64485b8950cc40d"
@@ -99,7 +100,7 @@ const Form = props => {
         >*High School Transcript <i className="fa fa-info-circle" aria-hidden="true"></i></label>
         <input
           name="highschool transcript" type="hidden"
-          onChange={(e) => updatehighSchoolTranscript(e.target.value)} value={highSchoolTranscript}
+          // onChange={(e) => updatehighSchoolTranscript(e.target.value)} value={highSchoolTranscript}
           role="uploadcare-uploader"
           data-public-key="64c0a64485b8950cc40d"
           className="form-control"
@@ -118,7 +119,7 @@ const Form = props => {
         >*Undergraduate Diploma</label>
         <input
           name="undergraduate diploma"
-          onChange={(e) => updateundergraduateDiploma(e.target.value)} value={undergraduateDiploma}
+          // onChange={(e) => updateundergraduateDiploma(e.target.value)} value={undergraduateDiploma}
           type="hidden"
           role="uploadcare-uploader"
           data-public-key="64c0a64485b8950cc40d"
@@ -135,7 +136,7 @@ const Form = props => {
         >*Undergraduate Transcript</label>
         <input
           name="undergraduate transcript" type="hidden"
-          onChange={(e) => updateundergraduateTranscript(e.target.value)} value={undergraduateTranscript}
+          // onChange={(e) => updateundergraduateTranscript(e.target.value)} value={undergraduateTranscript}
           role="uploadcare-uploader"
           data-public-key="64c0a64485b8950cc40d"
           className="form-control"
@@ -153,7 +154,7 @@ const Form = props => {
         >*Master's Diploma</label>
         <input
           name="master diploma"
-          onChange={(e) => updatemastersDiploma(e.target.value)} value={mastersDiploma}
+          // onChange={(e) => updatemastersDiploma(e.target.value)} value={mastersDiploma}
           type="hidden"
           role="uploadcare-uploader"
           data-public-key="64c0a64485b8950cc40d"
@@ -170,7 +171,7 @@ const Form = props => {
         >*Master's Transcript</label>
         <input
           name="master transcript" type="hidden"
-          onChange={(e) => updatemastersTranscript(e.target.value)} value={mastersTranscript}
+          // onChange={(e) => updatemastersTranscript(e.target.value)} value={mastersTranscript}
           role="uploadcare-uploader"
           data-public-key="64c0a64485b8950cc40d"
           className="form-control"
@@ -180,13 +181,44 @@ const Form = props => {
     </>
   );
 
-  const genericFormData = {fullname, surname, fatherName, motherName, email, telephone, dob, nationality, gender, maritalStatus, emergencyContact, address}
-  const studiesFormData = {admissionType, course, studyFirstChoiceCountry, studySecondChoiceCountry, studentPhoto, studentPassport, highSchoolDiploma, highSchoolTranscript, undergraduateDiploma, undergraduateTranscript, mastersDiploma, mastersTranscript, otherStudentDocs};
-  const workFormData = {workFirstChoiceCountry, workSecondChoiceCountry, workerHighestDegree, jobExperience, spokenLanguages, visadenial, visaDenialReason, repatration, repatrationReason, felony, felonyReason, travelledCountryList, workerPassport, workerPhoto, workerAdditionalDocs};
-  const formData = {...genericFormData, ...studiesFormData, ...workFormData};
+  const genericFormData = {fullname, surname, fatherName, motherName, email, telephone, dob, nationality, gender, maritalStatus, emergencyContact, address, applicationType}
+
+  let formData;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const highSchoolDiplome = document.getElementById('inputHighschoolDiploma');
+    const highSchoolTranscript = document.getElementById('inputHighschoolTranscript');
+    const undergraduateDiplome = document.getElementById('inputUndergraduateDiploma');
+    const undergraduateTranscript = document.getElementById('inputUndergraduateTranscript');
+    const mastersDiploma = document.getElementById('inputMasterDiploma');
+    const mastersTranscript = document.getElementById('inputMasterTranscript');
+    const studentPhoto = document.getElementById('studentPhoto');
+    const studentPassport = document.getElementById('studentPassport');
+    const studentAdditionalDocuments = document.getElementById('studentAdditionalDocs');
+    const workerPhoto = document.getElementById('workerPhoto');
+    const workerPassport = document.getElementById('workerPassport');
+    const workerAdditionalDocs = document.getElementById('workerAdditionalDocs');
+
+    const studiesFormData = {admissionType, course, studyFirstChoiceCountry, studySecondChoiceCountry,
+    highSchoolDiplome: highSchoolDiplome.value,
+    highSchoolTranscript: highSchoolTranscript.value,
+    undergraduateDiplome: undergraduateDiplome.value,
+    undergraduateTranscript: undergraduateTranscript.value,
+    mastersDiploma: mastersDiploma.value,
+    mastersTranscript: mastersTranscript.value,
+    studentPhoto: studentPhoto.value,
+    studentPassport: studentPassport.value,
+    studentAdditionalDocuments: studentAdditionalDocuments.value,
+    };
+
+    const workFormData = {workFirstChoiceCountry, workSecondChoiceCountry, workerHighestDegree, jobExperience, spokenLanguages, visadenial, visaDenialReason, repatration, repatrationReason, felony, felonyReason, travelledCountryList,
+    workerPhoto: workerPhoto.value,
+    workerPassport: workerPassport.value,
+    workerAdditionalDocs: workerAdditionalDocs.value,
+    };
+
+    formData = { ...genericFormData, ...studiesFormData, ...workFormData }
 
     await fetch(submissionLink, {
       method: "POST",
@@ -212,7 +244,7 @@ const Form = props => {
         </div>
 
         <div className="modal-body">
-        <form>
+        <form id="application-form-react">
       <h5 className="mt-2">Personal Information</h5>
 
       <div className="form-row">
@@ -291,9 +323,13 @@ const Form = props => {
       </div>
 
       <h5 className="mt-2">What are you applying for?</h5>
+      <input onChange={(e) => updateApplicationType(e.target.value)} checked={applicationType === "studies"}
+      type="radio" value="studies" name="Have you ever been denied visa?" /> Studies
+      <input onChange={(e) => updateApplicationType(e.target.value)} checked={applicationType === "work"}
+      type="radio" value="work" name="Have you ever been denied visa?" className="ml-3" /> Work
       <div id="accordion">
         {/* studeies */}
-        <div className="card m-0">
+        <div className={applicationType === "studies" ? "card m-0" : "d-none"}>
         <div className="card-header" id="headingOne">
             <h5 className="mb-0">
               <button type="button" className="btn btn-link text-dark text-small" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -302,7 +338,7 @@ const Form = props => {
             </h5>
           </div>
 
-          <div id="collapseOne" className="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
             <div className="card-body">
               <div className="form-row">
 								<div className="form-group col-md-3">
@@ -361,36 +397,31 @@ const Form = props => {
 
               <h5 className="mt-2"><small>Upload Documents</small></h5>
               <div className="mb-2">
-                  <small>
-                    <em>
-                      The maximum single file size is <strong>10MB</strong>
-                      </em>
-                  </small>
 
                   <div className="form-row mt-2">
                   <div className="form-group col-md-6">
-                    <label htmlFor="inputPhoto">Photo</label>
+                    <label htmlFor="studentPhoto">Photo</label>
                     <input
                       name="student photo"
-                      onChange={(e) => updatestudentPhoto(e.target.value)} value={studentPhoto}
+                      // onChange={(e) => updatestudentPhoto(e.target.value)} value={studentPhoto}
                       type="hidden"
                       role="uploadcare-uploader"
                       data-public-key="64c0a64485b8950cc40d"
                       className="form-control"
-                      id="inputPhoto">
+                      id="studentPhoto">
                       </input>
                   </div>
 
                   <div className="form-group col-md-6">
-                    <label htmlFor="inputPassport">Passport or ID</label>
+                    <label htmlFor="studentPassport">Passport or ID</label>
                     <input
                       name="student passport"
-                      onChange={(e) => updatestudentPassport(e.target.value)} value={studentPassport}
+                      // onChange={(e) => updatestudentPassport(e.target.value)} value={studentPassport}
                       type="hidden"
                       role="uploadcare-uploader"
                       data-public-key="64c0a64485b8950cc40d"
                       className="form-control"
-                      id="inputPassport">
+                      id="studentPassport">
                       </input>
                   </div>
 
@@ -399,15 +430,15 @@ const Form = props => {
                   {program === "phd" ? AttachPhD() : null}
 
                   <div className="form-group col-md-6">
-                    <label htmlFor="inputOther">*Other</label>
+                    <label htmlFor="studentAdditionalDocs">*Other</label>
                     <input
                       name="student additional documents"
-                      onChange={(e) => updateotherStudentDocs(e.target.value)} value={otherStudentDocs}
+                      // onChange={(e) => updateotherStudentDocs(e.target.value)} value={otherStudentDocs}
                       type="hidden"
                       role="uploadcare-uploader"
                       data-public-key="64c0a64485b8950cc40d"
                       className="form-control"
-                      id="inputOther"
+                      id="studentAdditionalDocs"
                       multiple></input>
                   </div>
                   </div>
@@ -417,7 +448,7 @@ const Form = props => {
           </div>
         </div>
         {/* work */}
-        <div className="card m-0">
+        <div className={applicationType === "work" ? "card m-0" : "d-none"}>
         <div className="card-header" id="headingTwo">
             <h5 className="mb-0">
               <button type="button" className="btn btn-link text-dark text-small" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -426,7 +457,7 @@ const Form = props => {
             </h5>
           </div>
 
-          <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div id="collapseTwo" className="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
             <div className="card-body">
               <div className="form-row">
 
@@ -518,49 +549,47 @@ const Form = props => {
 
               <h5 className="mt-2"><small>Upload Documents</small></h5>
               <div className="mb-2">
-                  <small>
-                    <em>
-                      The maximum single file size is <strong>10MB</strong>
-                      </em>
-                  </small>
 
                   <div className="form-row mt-2">
                   <div className="form-group col-md-6">
-                    <label htmlFor="inputPhoto">Photo</label>
+                    <label htmlFor="workerPhoto">Photo</label>
                     <input
                       name="worker photo"
-                      onChange={(e) => updateworkerPhoto(e.target.value)} value={workerPhoto}
+                      // onChange={(e) => updateworkerPhoto(e.target.value)} value={workerPhoto}
                       type="hidden"
                       role="uploadcare-uploader"
                       data-public-key="64c0a64485b8950cc40d"
                       className="form-control"
+                      id="workerPhoto"
                       >
                       </input>
                   </div>
 
                   <div className="form-group col-md-6">
-                    <label htmlFor="inputPassport">Passport or ID</label>
+                    <label htmlFor="workerPassport">Passport or ID</label>
                     <input
                       name="worker passport"
-                      onChange={(e) => updateworkerPassport(e.target.value)} value={workerPassport}
+                      // onChange={(e) => updateworkerPassport(e.target.value)} value={workerPassport}
                       type="hidden"
                       role="uploadcare-uploader"
                       data-public-key="64c0a64485b8950cc40d"
                       className="form-control"
+                      id="workerPassport"
                       >
                       </input>
                   </div>
 
 
                   <div className="form-group col-md-6">
-                    <label htmlFor="inputOther">*Additional Documents</label>
+                    <label htmlFor="workerAdditionalDocs">*Additional Documents</label>
                     <input
                       name="worker additional documents"
-                      onChange={(e) => updateworkerAdditionalDocs(e.target.value)} value={workerAdditionalDocs}
+                      // onChange={(e) => updateworkerAdditionalDocs(e.target.value)} value={workerAdditionalDocs}
                       type="hidden"
                       role="uploadcare-uploader"
                       data-public-key="64c0a64485b8950cc40d"
                       className="form-control"
+                      id="workerAdditionalDocs"
                       multiple></input>
                   </div>
                   </div>
@@ -572,7 +601,7 @@ const Form = props => {
       </div>
 
       <div className="mt-2">
-        <button type="submit" className="btn btn-primary" id="application-form-submit" onClick={handleSubmit}>Submit</button>
+        <button type="submit" className="btn btn-primary mt-2" id="application-form-submit" onClick={handleSubmit}>Submit</button>
       </div>
     </form>
         </div>
