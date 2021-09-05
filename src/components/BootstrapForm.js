@@ -6,7 +6,7 @@ import nationalities from '../utils/nationalities';
 import '../css/form.css';
 
 const Form = props => {
-  const { formName } = props.data;
+  const { formName, submissionLink } = props.data;
 
   const [program, updateProgram] = useState("");
   const [fullname, updateFullname] = useState("");
@@ -49,7 +49,6 @@ const Form = props => {
   const [workerPhoto, updateworkerPhoto] = useState("");
   const [workerPassport, updateworkerPassport] = useState("");
   const [workerAdditionalDocs, updateworkerAdditionalDocs] = useState("");
-
 
   const studyCountries = [
     "Belarus",
@@ -180,6 +179,30 @@ const Form = props => {
       </div>
     </>
   );
+
+  const genericFormData = {fullname, surname, fatherName, motherName, email, telephone, dob, nationality, gender, maritalStatus, emergencyContact, address}
+  const studiesFormData = {admissionType, course, studyFirstChoiceCountry, studySecondChoiceCountry, studentPhoto, studentPassport, highSchoolDiploma, highSchoolTranscript, undergraduateDiploma, undergraduateTranscript, mastersDiploma, mastersTranscript, otherStudentDocs};
+  const workFormData = {workFirstChoiceCountry, workSecondChoiceCountry, workerHighestDegree, jobExperience, spokenLanguages, visadenial, visaDenialReason, repatration, repatrationReason, felony, felonyReason, travelledCountryList, workerPassport, workerPhoto, workerAdditionalDocs};
+  const formData = {...genericFormData, ...studiesFormData, ...workFormData};
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    await fetch(submissionLink, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(formData),
+    }).then(() => {
+      // succesful
+      console.log("form sent");
+    }).catch(Err => {
+      // unsuccesful
+      console.log("form NOT sent!!!");
+    });
+  };
 
   return (
     <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -457,9 +480,9 @@ const Form = props => {
               <div className="form-row">
                 <div className="form-group col-md-12">
                 <label htmlFor="visa-denial">Have you ever been denied visa?</label><br></br>
-                <input onChange={(e) => updatevisadenial(e.target.value)} checked={visadenial}
+                <input onChange={(e) => updatevisadenial(e.target.value)} checked={visadenial === "yes"}
                 type="radio" value="yes" name="Have you ever been denied visa?" /> Yes<br></br>
-                <input onChange={(e) => updatevisadenial(e.target.value)} checked={visadenial}
+                <input onChange={(e) => updatevisadenial(e.target.value)} checked={visadenial === "no"}
                 type="radio" value="no" name="Have you ever been denied visa?" /> No
                   <textarea onChange={(e) => updatevisaDenialReason(e.target.value)} value={visaDenialReason}
                   name="reason i was denied visa" className="form-control" placeholder="if yes, state reasons" />
@@ -467,9 +490,9 @@ const Form = props => {
 
                 <div className="form-group col-md-12">
                 <label>Have you ever been repatriated from a country?</label><br></br>
-                <input onChange={(e) => updaterepatration(e.target.value)} checked={repatration}
+                <input onChange={(e) => updaterepatration(e.target.value)} checked={repatration === "yes"}
                 type="radio" value="yes" name="Have you ever been repatriated from a country" /> Yes<br></br>
-                <input onChange={(e) => updaterepatration(e.target.value)} checked={repatration}
+                <input onChange={(e) => updaterepatration(e.target.value)} checked={repatration === "no"}
                 type="radio" value="no" name="Have you ever been repatriated from a country" /> No
                   <textarea onChange={(e) => updaterepatrationReason(e.target.value)} value={repatrationReason}
                   name="reason i was repatriated" className="form-control" placeholder="if yes, state reasons" />
@@ -477,9 +500,9 @@ const Form = props => {
 
               <div className="form-group col-md-12">
                 <label>Have you ever committed a felony at home or abroad?</label><br></br>
-                <input onChange={(e) => updatefelony(e.target.value)} checked={felony}
+                <input onChange={(e) => updatefelony(e.target.value)} checked={felony === "yes"}
                 type="radio" value="yes" name="Have you ever committed a felony at home or abroad" /> Yes<br></br>
-                <input onChange={(e) => updatefelony(e.target.value)} checked={felony}
+                <input onChange={(e) => updatefelony(e.target.value)} checked={felony === "no"}
                 type="radio" value="no" name="Have you ever committed a felony at home or abroad" /> No
                   <textarea onChange={(e) => updatefelonyReason(e.target.value)} value={felonyReason}
                   name="reason i commited a felony" className="form-control" placeholder="if yes, state reasons" />
@@ -549,7 +572,7 @@ const Form = props => {
       </div>
 
       <div className="mt-2">
-        <button type="submit" className="btn btn-primary" id="application-form-submit">Submit</button>
+        <button type="submit" className="btn btn-primary" id="application-form-submit" onClick={handleSubmit}>Submit</button>
       </div>
     </form>
         </div>

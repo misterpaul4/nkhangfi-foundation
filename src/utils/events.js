@@ -32,7 +32,7 @@ import img11 from '../images/events/yos_liberia2.jpg';
 import img12 from '../images/events/yos_liberia3.jpg';
 import img14 from '../images/events/yos_sierra2.jpg';
 import img15 from '../images/events/yos_sierra3.jpg';
-import { yosApplicationUrl, nspApplicationUrl } from './Forms';
+import { yosApplicationUrl, nspApplicationUrl, nspGuinea2021 } from './Forms';
 import img16 from '../images/events/lauchinSierraLeone/2.jpeg';
 import img17 from '../images/events/lauchinSierraLeone/1.jpeg';
 import img18 from '../images/events/lauchinSierraLeone/3.jpeg';
@@ -866,7 +866,8 @@ Soyez parmis ceux qui vont obtenir les bourses d'études  en Pologne, Chypre du 
     {/* form section */}
     <div>
     <BootstrapForm data={{
-      formName: "Application"
+      formName: "Application",
+      submissionLink: nspGuinea2021
     }} />
     </div>
     </>
