@@ -82,11 +82,11 @@
   height: max-content !important;
 } */
 input:invalid {
-  box-shadow: 0 0 5px 1px red;
+  box-shadow: 0 0 5px 1px red !important;
 }
 
 input:focus:invalid {
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 .scroll-to-top {

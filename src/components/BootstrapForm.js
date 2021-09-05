@@ -11,10 +11,15 @@ const Form = props => {
   const { formName, submissionLink } = props.data;
 
   const [program, updateProgram] = useState("");
-  const [fullname, updateFullname] = useState("");
-  const [surname, updatesurname] = useState("");
-  const [fatherName, updatefatherName] = useState("");
-  const [motherName, updatemotherName] = useState("");
+  // const [fullname, updateFullname] = useState("");
+  // const [surname, updatesurname] = useState("");
+  // const [fatherName, updatefatherName] = useState("");
+  // const [motherName, updatemotherName] = useState("");
+  const [alertProp, updateAlertProp] = useState({
+    alertClassName: "",
+    message: "",
+  });
+
   const [email, updateemail] = useState("");
   const [telephone, updatetelephone] = useState("");
   const [dob, updatedob] = useState("");
@@ -171,9 +176,8 @@ const Form = props => {
     </>
   );
 
-  // const genericFormData = {fullname, surname, fatherName, motherName, email, telephone, dob, nationality, gender, maritalStatus, emergencyContact, address, applicationType}
-
   let formData = {};
+  const AlertClassDefault = "alert position-fixed alert-dismissible fade py-2";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -192,25 +196,57 @@ const Form = props => {
       formData[pair[0]] = pair[1];
     }
 
-    // await fetch(submissionLink, {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     Accept: "application/json",
-    //   },
-    //   body: JSON.stringify(formData),
-    // }).then(() => {
-    //   // succesful
-    //   console.log("form sent");
-    // }).catch(Err => {
-    //   // unsuccesful
-    //   console.log("form NOT sent!!!");
-    // });
+    await fetch(submissionLink, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(formData),
+    }).then(() => {
+      // succesful
+      loadingGif.classList.add('d-none');
+      updateAlertProp({
+        alertClassName: `${AlertClassDefault} alert-success show`,
+        message: "Your application have been submitted successfully",
+      });
+
+    setTimeout(() => {
+      appForm.classList.remove('unclickable');
+      updateAlertProp({
+        alertClassName: AlertClassDefault,
+        message: "",
+      });
+      appForm.reset();
+    }, 3000);
+
+    }).catch(Err => {
+      // unsuccesful
+      loadingGif.classList.add('d-none');
+      updateAlertProp({
+        alertClassName: `${AlertClassDefault} alert-danger show`,
+        message: "There seems to be a problem. Try again",
+      });
+
+      setTimeout(() => {
+        appForm.classList.remove('unclickable');
+        updateAlertProp({
+          alertClassName: AlertClassDefault,
+          message: "",
+        });
+      }, 3000);
+
+    });
   };
+
 
   return (
     <>
-    <Alert />
+    <Alert data={
+      {alertPropClass: alertProp.alertClassName,
+       message: alertProp.message,
+      }
+    } />
     <img src={loader} alt="loading gif" className="position-fixed d-none loading-gif">
     </img>
     <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -226,22 +262,30 @@ const Form = props => {
       <div className="form-row">
         <div className="form-group col-md-6">
           <label htmlFor="stdName">Name</label>
-          <input onChange={(e) => updateFullname(e.target.value)} value={fullname} type="text" name="name" className="form-control" id="stdName" placeholder="Name" required></input>
+          <input
+          // onChange={(e) => updateFullname(e.target.value)} value={fullname}
+          type="text" name="name" className="form-control" id="stdName" placeholder="Name" required></input>
         </div>
 
         <div className="form-group col-md-6">
           <label htmlFor="stdSurname">Surname</label>
-          <input onChange={(e) => updatesurname(e.target.value)} value={surname} type="text" name="surname" className="form-control" id="stdSurname" placeholder="Surname" required></input>
+          <input
+          // onChange={(e) => updatesurname(e.target.value)} value={surname}
+          type="text" name="surname" className="form-control" id="stdSurname" placeholder="Surname" required></input>
         </div>
 
         <div className="form-group col-md-6">
           <label htmlFor="stdFatherName">Father's Name</label>
-          <input onChange={(e) => updatefatherName(e.target.value)} value={fatherName} type="text" name="father name" className="form-control" id="stdFatherName" placeholder="Father's Name"></input>
+          <input
+          // onChange={(e) => updatefatherName(e.target.value)} value={fatherName}
+          type="text" name="father name" className="form-control" id="stdFatherName" placeholder="Father's Name"></input>
         </div>
 
         <div className="form-group col-md-6">
           <label htmlFor="stdMotherName">Mother's Name</label>
-          <input onChange={(e) => updatemotherName(e.target.value)} value={motherName} type="text" name="mother name" className="form-control" id="stdMotherName" placeholder="Mother's Name"></input>
+          <input
+          // onChange={(e) => updatemotherName(e.target.value)} value={motherName}
+          type="text" name="mother name" className="form-control" id="stdMotherName" placeholder="Mother's Name"></input>
         </div>
 
         <div className="form-group col-md-6">
