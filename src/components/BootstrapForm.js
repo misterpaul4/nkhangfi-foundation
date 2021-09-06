@@ -375,11 +375,11 @@ const Form = props => {
         </div>
 
         <div className="form-group col-md-3">
-          <label htmlFor="inputGender">Genre</label>
+          <label htmlFor="inputGender">Sexe</label>
           <select onChange={(e) => updategender(e.target.value)} value={gender} name="gender" id="inputGender" className="form-control">
             <option defaultValue>Sélectionnez...</option>
-            <option value="male">Mâle</option>
-            <option value="female">Femelle</option>
+            <option value="male">Homme</option>
+            <option value="female">Femme</option>
           </select>
         </div>
 
@@ -403,7 +403,7 @@ const Form = props => {
         </div>
       </div>
 
-      <h5 className="mt-2">Pour quoi postulez-vous?</h5>
+      <h5 className="mt-2">Pourquoi postulez-vous?</h5>
       <input onChange={(e) => updateApplicationType(e.target.value)} checked={applicationType === "studies"}
       type="radio" value="studies" name="application type" /> Études
       <input onChange={(e) => updateApplicationType(e.target.value)} checked={applicationType === "work"}
