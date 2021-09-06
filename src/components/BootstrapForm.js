@@ -74,7 +74,7 @@ const Form = props => {
         data-toggle="tooltip"
         data-placement="top"
         title="If you are from West Africa (e.g Nigeria, Sierra Leone), upload your WAEC/WASSCE/NECO or NABTEB"
-        >*High School Diploma <i className="fa fa-info-circle" aria-hidden="true"></i></label>
+        >*Baccalauréat <i className="fa fa-info-circle" aria-hidden="true"></i></label>
         <input
           name="highschool diploma"
           // onChange={(e) => updatehighSchoolDiploma(e.target.value)} value={highSchoolDiploma}
@@ -92,7 +92,7 @@ const Form = props => {
         data-toggle="tooltip"
         data-placement="top"
         title="Not required for West African students"
-        >*High School Transcript <i className="fa fa-info-circle" aria-hidden="true"></i></label>
+        >*Relevé de notes du secondaire <i className="fa fa-info-circle" aria-hidden="true"></i></label>
         <input
           name="highschool transcript" type="hidden"
           // onChange={(e) => updatehighSchoolTranscript(e.target.value)} value={highSchoolTranscript}
@@ -111,7 +111,7 @@ const Form = props => {
         <label htmlFor="inputUndergraduateDiploma"
         data-toggle="tooltip"
         data-placement="top"
-        >*Undergraduate Diploma</label>
+        >*Diplôme de premier cycle</label>
         <input
           name="undergraduate diploma"
           // onChange={(e) => updateundergraduateDiploma(e.target.value)} value={undergraduateDiploma}
@@ -128,7 +128,7 @@ const Form = props => {
         <label htmlFor="inputUndergraduateTranscript"
         data-toggle="tooltip"
         data-placement="top"
-        >*Undergraduate Transcript</label>
+        >*Relevé de notes de premier cycle</label>
         <input
           name="undergraduate transcript" type="hidden"
           // onChange={(e) => updateundergraduateTranscript(e.target.value)} value={undergraduateTranscript}
@@ -146,7 +146,7 @@ const Form = props => {
     {AttachMasters()}
     <div className="form-group col-md-6">
         <label htmlFor="inputMasterDiploma"
-        >*Master's Diploma</label>
+        >*Diplôme de Master</label>
         <input
           name="master diploma"
           // onChange={(e) => updatemastersDiploma(e.target.value)} value={mastersDiploma}
@@ -163,7 +163,7 @@ const Form = props => {
         <label htmlFor="inputMasterTranscript"
         data-toggle="tooltip"
         data-placement="top"
-        >*Master's Transcript</label>
+        >*Relevé de notes de maîtrise</label>
         <input
           name="master transcript" type="hidden"
           // onChange={(e) => updatemastersTranscript(e.target.value)} value={mastersTranscript}
@@ -182,51 +182,70 @@ const Form = props => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const loadingGif = document.querySelector('.loading-gif');
-    const appForm = document.getElementById('application-form-react');
+    // const displayWarning = (errorMessage, inp) => {
+    //   updateAlertProp({
+    //     alertClassName: `${AlertClassDefault} alert-warning show`,
+    //     message: errorMessage,
+    //   });
 
-    loadingGif.classList.remove('d-none');
-    appForm.classList.add('unclickable');
+    //   setTimeout(() => {
+    //     inp.focus();
+    //     updateAlertProp({
+    //       alertClassName: AlertClassDefault,
+    //       message: "",
+    //     });
+    //   }, 3000);
+    // };
+
+    // const validateEmail= () => {
+    //   const emailDOM = document.getElementById('inputEmail4');
+    //   if (!emailDOM.checkValidity()) {
+    //     // NOT VALID
+    //     displayWarning("Invalid email address", emailDOM);
+    //     return false;
+    //   }
+
+    //   return true;
+    // };
+
+    // const validateEmail = () => {
+    //   const emailDOM = document.getElementById('inputEmail4');
+    //   if (!Validator.isEmail(email)) {
+    //     displayWarning("Invalid email address", emailDOM);
+    //     return false
+    //   }
+
+    //   return true;
+    // }
+
+      const loadingGif = document.querySelector('.loading-gif');
+      const appForm = document.getElementById('application-form-react');
+
+      loadingGif.classList.remove('d-none');
+      appForm.classList.add('unclickable');
 
 
-    const FD = new FormData(appForm);
+      const FD = new FormData(appForm);
 
-    // get form data as key-value pairs
-    for(var pair of FD.entries()) {
-      formData[pair[0]] = pair[1];
-    }
+      // get form data as key-value pairs
+      for(var pair of FD.entries()) {
+        formData[pair[0]] = pair[1];
+      }
 
-    await fetch(submissionLink, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(formData),
-    }).then(() => {
-      // succesful
-      loadingGif.classList.add('d-none');
-      updateAlertProp({
-        alertClassName: `${AlertClassDefault} alert-success show`,
-        message: "Your application have been submitted successfully",
-      });
-
-    setTimeout(() => {
-      appForm.classList.remove('unclickable');
-      updateAlertProp({
-        alertClassName: AlertClassDefault,
-        message: "",
-      });
-      appForm.reset();
-    }, 3000);
-
-    }).catch(Err => {
-      // unsuccesful
-      loadingGif.classList.add('d-none');
-      updateAlertProp({
-        alertClassName: `${AlertClassDefault} alert-danger show`,
-        message: "There seems to be a problem. Try again",
-      });
+      await fetch(submissionLink, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      }).then(() => {
+        // succesful
+        loadingGif.classList.add('d-none');
+        updateAlertProp({
+          alertClassName: `${AlertClassDefault} alert-success show`,
+          message: "Votre candidature a été soumise avec succès",
+        });
 
       setTimeout(() => {
         appForm.classList.remove('unclickable');
@@ -234,9 +253,51 @@ const Form = props => {
           alertClassName: AlertClassDefault,
           message: "",
         });
+        appForm.reset();
+        updateemail(" ");
+        updatetelephone(" ");
+        updatedob(" ");
+        updatenationality(" ");
+        updategender(" ");
+        updatemaritalStatus(" ");
+        updateemergencyContact(" ");
+        updateaddress(" ");
+        updateadmissionType(" ");
+        updatecourse(" ");
+        updatestudyFirstChoiceCountry(" ");
+        updatestudySecondChoiceCountry(" ");
+        updateworkFirstChoiceCountry(" ");
+        updateworkSecondChoiceCountry(" ");
+        updateworkerHighestDegree(" ");
+        updatejobExperience(" ");
+        updatespokenLanguages(" ");
+        updatevisadenial(" ");
+        updatevisaDenialReason(" ");
+        updaterepatration(" ");
+        updaterepatrationReason(" ");
+        updatefelony(" ");
+        updatefelonyReason(" ");
+        updatetravelledCountryList(" ");
+        updateApplicationType(" ");
       }, 3000);
 
-    });
+      }).catch(Err => {
+        // unsuccesful
+        loadingGif.classList.add('d-none');
+        updateAlertProp({
+          alertClassName: `${AlertClassDefault} alert-danger show`,
+          message: "Il semble y avoir un problème. Réessayer",
+        });
+
+        setTimeout(() => {
+          appForm.classList.remove('unclickable');
+          updateAlertProp({
+            alertClassName: AlertClassDefault,
+            message: "",
+          });
+        }, 3000);
+
+      });
   };
 
 
@@ -257,56 +318,56 @@ const Form = props => {
 
         <div className="modal-body">
         <form id="application-form-react">
-      <h5 className="mt-2">Personal Information</h5>
+      <h5 className="mt-2">Informations personnelles</h5>
 
       <div className="form-row">
         <div className="form-group col-md-6">
-          <label htmlFor="stdName">Name</label>
+          <label htmlFor="stdName">Nom</label>
           <input
           // onChange={(e) => updateFullname(e.target.value)} value={fullname}
-          type="text" name="name" className="form-control" id="stdName" placeholder="Name" required></input>
+          type="text" name="name" className="form-control" id="stdName" placeholder="Nom"></input>
         </div>
 
         <div className="form-group col-md-6">
-          <label htmlFor="stdSurname">Surname</label>
+          <label htmlFor="stdSurname">Nom de famille</label>
           <input
           // onChange={(e) => updatesurname(e.target.value)} value={surname}
-          type="text" name="surname" className="form-control" id="stdSurname" placeholder="Surname" required></input>
+          type="text" name="surname" className="form-control" id="stdSurname" placeholder="Nom de famille"></input>
         </div>
 
         <div className="form-group col-md-6">
-          <label htmlFor="stdFatherName">Father's Name</label>
+          <label htmlFor="stdFatherName">Le nom du père</label>
           <input
           // onChange={(e) => updatefatherName(e.target.value)} value={fatherName}
-          type="text" name="father name" className="form-control" id="stdFatherName" placeholder="Father's Name"></input>
+          type="text" name="father name" className="form-control" id="stdFatherName" placeholder="Le nom du père"></input>
         </div>
 
         <div className="form-group col-md-6">
-          <label htmlFor="stdMotherName">Mother's Name</label>
+          <label htmlFor="stdMotherName">Le nom de la mère</label>
           <input
           // onChange={(e) => updatemotherName(e.target.value)} value={motherName}
-          type="text" name="mother name" className="form-control" id="stdMotherName" placeholder="Mother's Name"></input>
+          type="text" name="mother name" className="form-control" id="stdMotherName" placeholder="Le nom de la mère"></input>
         </div>
 
         <div className="form-group col-md-6">
-          <label htmlFor="inputEmail4">Email</label>
-          <input onChange={(e) => updateemail(e.target.value)} value={email} type="email" name="email address" className="form-control" id="inputEmail4" placeholder="Email" required></input>
+          <label htmlFor="inputEmail4">E-mail</label>
+          <input onChange={(e) => updateemail(e.target.value)} value={email} type="email" name="email address" className="form-control" id="inputEmail4" placeholder="E-mail"></input>
         </div>
 
         <div className="form-group col-md-6">
-          <label htmlFor="inputTelephone">Phone Number</label>
-          <input onChange={(e) => updatetelephone(e.target.value)} value={telephone} type="tel" name="phone number" className="form-control" id="inputTelephone" placeholder="Phone Number" required></input>
+          <label htmlFor="inputTelephone">Numéro de téléphone</label>
+          <input onChange={(e) => updatetelephone(e.target.value)} value={telephone} type="tel" name="phone number" className="form-control" id="inputTelephone" placeholder="Numéro de téléphone"></input>
         </div>
       </div>
 
       <div className="form-row">
         <div className="form-group col-md-3">
-          <label htmlFor="inputDOB">Date of Birth</label>
-          <input onChange={(e) => updatedob(e.target.value)} value={dob} type="date" name="date of birth" className="form-control" id="inputDOB" placeholder="D.O.B"></input>
+          <label htmlFor="inputDOB">Date de naissance</label>
+          <input onChange={(e) => updatedob(e.target.value)} value={dob} type="date" name="date of birth" className="form-control" id="inputDOB" placeholder="Date de naissance"></input>
         </div>
 
         <div className="form-group col-md-3">
-          <label htmlFor="inputNationality">Nationality</label>
+          <label htmlFor="inputNationality">Nationalité</label>
           <select onChange={(e) => updatenationality(e.target.value)} value={nationality} name="nationality" id="inputNationality" className="form-control">
             <option>Choose...</option>
             {nationalities.map(AttachOptions)}
@@ -314,46 +375,46 @@ const Form = props => {
         </div>
 
         <div className="form-group col-md-3">
-          <label htmlFor="inputGender">Gender</label>
+          <label htmlFor="inputGender">Genre</label>
           <select onChange={(e) => updategender(e.target.value)} value={gender} name="gender" id="inputGender" className="form-control">
-            <option defaultValue>Select Gender...</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
+            <option defaultValue>Sélectionnez...</option>
+            <option value="male">Mâle</option>
+            <option value="female">Femelle</option>
           </select>
         </div>
 
         <div className="form-group col-md-3">
-          <label htmlFor="inputMaritalStatus">Marital Status</label>
+          <label htmlFor="inputMaritalStatus">État civil</label>
           <select onChange={(e) => updatemaritalStatus(e.target.value)} value={maritalStatus} name="marital status" id="inputMaritalStatus" className="form-control">
-            <option defaultValue>Choose...</option>
-            <option value="single">Single</option>
-            <option value="married">Married</option>
+            <option defaultValue>Sélectionner...</option>
+            <option value="single">Célibataire</option>
+            <option value="married">Marié</option>
           </select>
         </div>
 
         <div className="form-group col-md-6">
-          <label htmlFor="emergencyContact">Emergency Contact</label>
-          <input onChange={(e) => updateemergencyContact(e.target.value)} value={emergencyContact} type="tel" name="emergency contact" className="form-control" id="emergencyContact" placeholder="Emergency Number"></input>
+          <label htmlFor="emergencyContact">Personne à contacter en cas d'urgence</label>
+          <input onChange={(e) => updateemergencyContact(e.target.value)} value={emergencyContact} type="tel" name="emergency contact" className="form-control" id="emergencyContact" placeholder="Personne à contacter en cas d'urgence"></input>
         </div>
 
         <div className="form-group col-md-12">
-          <label htmlFor="inputAddress">Address</label>
+          <label htmlFor="inputAddress">Adresse</label>
           <input onChange={(e) => updateaddress(e.target.value)} value={address} name="address" type="text" className="form-control" id="inputAddress" placeholder="12 Main Street..."></input>
         </div>
       </div>
 
-      <h5 className="mt-2">What are you applying for?</h5>
+      <h5 className="mt-2">Pour quoi postulez-vous?</h5>
       <input onChange={(e) => updateApplicationType(e.target.value)} checked={applicationType === "studies"}
-      type="radio" value="studies" name="application type" /> Studies
+      type="radio" value="studies" name="application type" /> Études
       <input onChange={(e) => updateApplicationType(e.target.value)} checked={applicationType === "work"}
-      type="radio" value="work" name="application type" className="ml-3" /> Work
+      type="radio" value="work" name="application type" className="ml-3" /> Travail
       <div id="accordion">
         {/* studeies */}
         <div className={applicationType === "studies" ? "card m-0" : "unclickable"}>
         <div className="card-header" id="headingOne">
             <h5 className="mb-0">
               <button type="button" className="btn btn-link text-dark text-small" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                Studies
+              Études
               </button>
             </h5>
           </div>
@@ -362,13 +423,13 @@ const Form = props => {
             <div className="card-body">
               <div className="form-row">
 								<div className="form-group col-md-3">
-									<label htmlFor="inputProgramLevel">Program Level</label>
+									<label htmlFor="inputProgramLevel">Niveau du programme</label>
                   <select name="program" id="inputProgramLevel" className="form-control" onChange={(e) => updateProgram(e.target.value)} value={program}>
-                    <option defaultValue>Select Level...</option>
-                    <option value="undergraduate">Undergraduate</option>
-                    <option value="masters">Masters</option>
-                    <option value="phd">PhD</option>
-                    <option value="vocational">Vocational School (2 years)</option>
+                    <option defaultValue>Sélectionner...</option>
+                    <option value="undergraduate">Premier cycle</option>
+                    <option value="masters">Maîtrise</option>
+                    <option value="phd">Doctorat</option>
+                    <option value="vocational">Ecole professionnelle (2 ans)</option>
                   </select>
                 </div>
 
@@ -377,17 +438,17 @@ const Form = props => {
 									data-toggle="tooltip"
 									data-placement="top"
 									title="Select 'Transfer' if you are currently admitted in a University and wish to continue from your current year. Select 'Direct' for a fresh admission"
-									>Direct/Transfer <i className="fa fa-info-circle" aria-hidden="true"></i></label>
+									>Direct/Transfert <i className="fa fa-info-circle" aria-hidden="true"></i></label>
 									<select onChange={(e) => updateadmissionType(e.target.value)} value={admissionType} name="admission type" id="inputAdmissionType" className="form-control">
-										<option defaultValue>Select Type...</option>
+										<option defaultValue>Sélectionner...</option>
 										<option value="direct">Direct</option>
-										<option value="transfer">Transfer</option>
+										<option value="transfer">Transfert</option>
 									</select>
 								</div>
 
                 <div className="form-group col-md-5">
-									<label htmlFor="inputProgram">Select Program</label>
-									<input onChange={(e) => updatecourse(e.target.value)} value={course} name="course" list="programOptions" id="inputProgram" className="form-control" placeholder="e.g Business Administration"/>
+									<label htmlFor="inputProgram">Que veux-tu étudier</label>
+									<input onChange={(e) => updatecourse(e.target.value)} value={course} name="course" list="programOptions" id="inputProgram" className="form-control" placeholder="par exemple, administration des affaires"/>
 									<datalist id="programOptions">
                     {courses.map(AttachOptions)}
 									</datalist>
@@ -396,26 +457,26 @@ const Form = props => {
 
               <div className="form-row">
                 <div className="form-group col-md-12">
-                  <span>Country of choice</span><br />
+                  <span>Pays de choix</span><br />
                   <div className="col-md-4">
-                  <label htmlFor="inputNationality">1st choice</label>
+                  <label htmlFor="inputNationality">1er choix</label>
                   <select onChange={(e) => updatestudyFirstChoiceCountry(e.target.value)} value={studyFirstChoiceCountry} name="studies country 1" className="form-control">
-                    <option>Choose...</option>
+                    <option>Sélectionner...</option>
                     {studyCountries.map(AttachOptions)}
                   </select>
                   </div>
 
                   <div className="col-md-4">
-                  <label htmlFor="inputNationality">2nd choice</label>
+                  <label htmlFor="inputNationality">2ème choix</label>
                   <select onChange={(e) => updatestudySecondChoiceCountry(e.target.value)} value={studySecondChoiceCountry} name="studies country 2" id="inputNationality" className="form-control">
-                    <option>Choose...</option>
+                    <option>Sélectionner...</option>
                     {studyCountries.map(AttachOptions)}
                   </select>
                   </div>
                 </div>
               </div>
 
-              <h5 className="mt-2"><small>Upload Documents</small></h5>
+              <h5 className="mt-2"><small>Télécharger des documents</small></h5>
               <div className="mb-2">
 
                   <div className="form-row mt-2">
@@ -433,7 +494,7 @@ const Form = props => {
                   </div>
 
                   <div className="form-group col-md-6">
-                    <label htmlFor="studentPassport">Passport or ID</label>
+                    <label htmlFor="studentPassport">Passeport ou carte d'identité</label>
                     <input
                       name="student passport"
                       // onChange={(e) => updatestudentPassport(e.target.value)} value={studentPassport}
@@ -450,7 +511,7 @@ const Form = props => {
                   {program === "phd" ? AttachPhD() : null}
 
                   <div className="form-group col-md-6">
-                    <label htmlFor="studentAdditionalDocs">*Other</label>
+                    <label htmlFor="studentAdditionalDocs">*Autres documents</label>
                     <input
                       name="student additional documents"
                       // onChange={(e) => updateotherStudentDocs(e.target.value)} value={otherStudentDocs}
@@ -472,7 +533,7 @@ const Form = props => {
         <div className="card-header" id="headingTwo">
             <h5 className="mb-0">
               <button type="button" className="btn btn-link text-dark text-small" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Work
+              Travail
               </button>
             </h5>
           </div>
@@ -482,92 +543,92 @@ const Form = props => {
               <div className="form-row">
 
               <div className="form-group col-md-12">
-                <span>Country of choice</span><br />
+                <span>Pays de choix</span><br />
                 <div className="col-md-4">
-                <label htmlFor="inputNationality">1st choice</label>
+                <label htmlFor="inputNationality">1er choix</label>
                 <select onChange={(e) => updateworkFirstChoiceCountry(e.target.value)} value={workFirstChoiceCountry}
                 name="work country 1" id="inputNationality" className="form-control">
-                  <option>Choose...</option>
+                  <option>Sélectionner...</option>
                   {workCountries.map(AttachOptions)}
                 </select>
                 </div>
 
                 <div className="col-md-4">
-                <label htmlFor="inputNationality">2nd choice</label>
+                <label htmlFor="inputNationality">2ème choix</label>
                 <select onChange={(e) => updateworkSecondChoiceCountry(e.target.value)} value={workSecondChoiceCountry}
                 name="work country 2" id="inputNationality" className="form-control">
-                  <option>Choose...</option>
+                  <option>Sélectionner...</option>
                   {workCountries.map(AttachOptions)}
                 </select>
                 </div>
               </div>
 
               <div className="form-group col-md-5">
-									<label htmlFor="inputProgramLevel">Highest Degree</label>
+									<label htmlFor="inputProgramLevel">Plus haut degré</label>
                   <select onChange={(e) => updateworkerHighestDegree(e.target.value)} value={workerHighestDegree}
                   name="highest degree" id="inputProgramLevel" className="form-control">
-                    <option defaultValue>Select...</option>
-                    <option value="highschool">Highschool Diploma</option>
-                    <option value="undergraduate">Undergraduate Degree</option>
-                    <option value="masters">Masters Degree</option>
-                    <option value="phd">PhD Degree</option>
+                    <option defaultValue>Sélectionner...</option>
+                    <option value="highschool">Baccalauréat</option>
+                    <option value="undergraduate">Diplôme de premier cycle</option>
+                    <option value="masters">Une maîtrise</option>
+                    <option value="phd">Doctorat</option>
                   </select>
                 </div>
 
                 <div className="form-group col-md-12">
-									<label htmlFor="job-experience">List your previous job experiences if you have any</label>
+									<label htmlFor="job-experience">Faites la liste de vos expériences professionnelles précédentes si vous en avez</label>
 									<input onChange={(e) => updatejobExperience(e.target.value)} value={jobExperience}
-                  name="job experience" id="job-experience" className="form-control" placeholder="e.g plumber, waiter..."/>
+                  name="job experience" id="job-experience" className="form-control" placeholder="par exemple plombier, serveur..."/>
 								</div>
 
                 <div className="form-group col-md-12">
-									<label htmlFor="inputProgram">Spoken Languages</label>
+									<label htmlFor="inputProgram">Langues parlées</label>
 									<input onChange={(e) => updatespokenLanguages(e.target.value)} value={spokenLanguages}
-                  name="spoken languages" id="inputProgram" className="form-control" placeholder="e.g french, english..."/>
+                  name="spoken languages" id="inputProgram" className="form-control" placeholder="par exemple français, anglais..."/>
 								</div>
               </div>
 
-              <h5 className="mt-2"><small>Travel History</small></h5>
+              <h5 className="mt-2"><small>Histoire de voyage</small></h5>
               <div className="form-row">
                 <div className="form-group col-md-12">
-                <label htmlFor="visa-denial">Have you ever been denied visa?</label><br></br>
+                <label htmlFor="visa-denial">Vous a-t-on déjà refusé un visa?</label><br></br>
                 <input onChange={(e) => updatevisadenial(e.target.value)} checked={visadenial === "yes"}
-                type="radio" value="yes" name="Have you ever been denied visa?" /> Yes<br></br>
+                type="radio" value="yes" name="Have you ever been denied visa?" /> Oui<br></br>
                 <input onChange={(e) => updatevisadenial(e.target.value)} checked={visadenial === "no"}
-                type="radio" value="no" name="Have you ever been denied visa?" /> No
+                type="radio" value="no" name="Have you ever been denied visa?" /> Non
                   <textarea onChange={(e) => updatevisaDenialReason(e.target.value)} value={visaDenialReason}
-                  name="reason i was denied visa" className="form-control" placeholder="if yes, state reasons" />
+                  name="reason i was denied visa" className="form-control" placeholder="si oui, motiver" />
               </div>
 
                 <div className="form-group col-md-12">
-                <label>Have you ever been repatriated from a country?</label><br></br>
+                <label>Avez-vous déjà été expulsé d'un pays?</label><br></br>
                 <input onChange={(e) => updaterepatration(e.target.value)} checked={repatration === "yes"}
-                type="radio" value="yes" name="Have you ever been repatriated from a country" /> Yes<br></br>
+                type="radio" value="yes" name="Have you ever been repatriated from a country" /> Oui<br></br>
                 <input onChange={(e) => updaterepatration(e.target.value)} checked={repatration === "no"}
-                type="radio" value="no" name="Have you ever been repatriated from a country" /> No
+                type="radio" value="no" name="Have you ever been repatriated from a country" /> Non
                   <textarea onChange={(e) => updaterepatrationReason(e.target.value)} value={repatrationReason}
-                  name="reason i was repatriated" className="form-control" placeholder="if yes, state reasons" />
+                  name="reason i was repatriated" className="form-control" placeholder="si oui, motiver" />
               </div>
 
               <div className="form-group col-md-12">
-                <label>Have you ever committed a felony at home or abroad?</label><br></br>
+                <label>Avez-vous déjà commis un crime dans votre pays ou à l'étranger?</label><br></br>
                 <input onChange={(e) => updatefelony(e.target.value)} checked={felony === "yes"}
-                type="radio" value="yes" name="Have you ever committed a felony at home or abroad" /> Yes<br></br>
+                type="radio" value="yes" name="Have you ever committed a felony at home or abroad" /> Oui<br></br>
                 <input onChange={(e) => updatefelony(e.target.value)} checked={felony === "no"}
-                type="radio" value="no" name="Have you ever committed a felony at home or abroad" /> No
+                type="radio" value="no" name="Have you ever committed a felony at home or abroad" /> Non
                   <textarea onChange={(e) => updatefelonyReason(e.target.value)} value={felonyReason}
-                  name="reason i commited a felony" className="form-control" placeholder="if yes, state reasons" />
+                  name="reason i commited a felony" className="form-control" placeholder="si oui, motiver" />
               </div>
 
               <div className="form-group col-md-12">
-									<label htmlFor="inputProgram">Country(s) you have travelled to within the last 24 months:</label>
+									<label htmlFor="inputProgram">Pays dans lesquels vous avez voyagé au cours des 24 derniers mois:</label>
                   <input onChange={(e) => updatetravelledCountryList(e.target.value)} value={travelledCountryList}
-                  name="countries you have travelled to within the last 24 months" id="inputProgram" className="form-control" placeholder="e.g Liberia, France..."/>
+                  name="countries you have travelled to within the last 24 months" id="inputProgram" className="form-control" placeholder="ex. Libéria, France..."/>
 								</div>
               </div>
 
 
-              <h5 className="mt-2"><small>Upload Documents</small></h5>
+              <h5 className="mt-2"><small>Télécharger des documents</small></h5>
               <div className="mb-2">
 
                   <div className="form-row mt-2">
@@ -581,12 +642,13 @@ const Form = props => {
                       data-public-key="64c0a64485b8950cc40d"
                       className="form-control"
                       id="workerPhoto"
+                      multiple
                       >
                       </input>
                   </div>
 
                   <div className="form-group col-md-6">
-                    <label htmlFor="workerPassport">Passport or ID</label>
+                    <label htmlFor="workerPassport">Passeport ou carte d'identité</label>
                     <input
                       name="worker passport"
                       // onChange={(e) => updateworkerPassport(e.target.value)} value={workerPassport}
@@ -595,13 +657,14 @@ const Form = props => {
                       data-public-key="64c0a64485b8950cc40d"
                       className="form-control"
                       id="workerPassport"
+                      multiple
                       >
                       </input>
                   </div>
 
 
                   <div className="form-group col-md-6">
-                    <label htmlFor="workerAdditionalDocs">*Additional Documents</label>
+                    <label htmlFor="workerAdditionalDocs">*Documents supplémentaires</label>
                     <input
                       name="worker additional documents"
                       // onChange={(e) => updateworkerAdditionalDocs(e.target.value)} value={workerAdditionalDocs}
@@ -621,7 +684,7 @@ const Form = props => {
       </div>
 
       <div className="mt-2">
-        <button type="submit" className="btn btn-primary mt-2" id="application-form-submit" onClick={handleSubmit}>Submit</button>
+        <button type="submit" className="btn btn-primary mt-2" id="application-form-submit" onClick={handleSubmit}>Soumettre</button>
       </div>
     </form>
         </div>
