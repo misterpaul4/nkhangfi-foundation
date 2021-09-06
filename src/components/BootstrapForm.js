@@ -82,6 +82,8 @@ const Form = props => {
           role="uploadcare-uploader"
           data-public-key="64c0a64485b8950cc40d"
           className="form-control"
+          data-multiple="true"
+          data-multiple-min="1"
           id="inputHighschoolDiploma"
           multiple
           ></input>
@@ -98,6 +100,8 @@ const Form = props => {
           // onChange={(e) => updatehighSchoolTranscript(e.target.value)} value={highSchoolTranscript}
           role="uploadcare-uploader"
           data-public-key="64c0a64485b8950cc40d"
+          data-multiple="true"
+          data-multiple-min="1"
           className="form-control"
           id="inputHighschoolTranscript"
           multiple></input>
@@ -118,6 +122,8 @@ const Form = props => {
           type="hidden"
           role="uploadcare-uploader"
           data-public-key="64c0a64485b8950cc40d"
+          data-multiple="true"
+          data-multiple-min="1"
           className="form-control"
           id="inputUndergraduateDiploma"
           multiple
@@ -134,6 +140,8 @@ const Form = props => {
           // onChange={(e) => updateundergraduateTranscript(e.target.value)} value={undergraduateTranscript}
           role="uploadcare-uploader"
           data-public-key="64c0a64485b8950cc40d"
+          data-multiple="true"
+          data-multiple-min="1"
           className="form-control"
           id="inputUndergraduateTranscript"
           multiple></input>
@@ -153,6 +161,8 @@ const Form = props => {
           type="hidden"
           role="uploadcare-uploader"
           data-public-key="64c0a64485b8950cc40d"
+          data-multiple="true"
+          data-multiple-min="1"
           className="form-control"
           id="inputMasterDiploma"
           multiple
@@ -169,6 +179,8 @@ const Form = props => {
           // onChange={(e) => updatemastersTranscript(e.target.value)} value={mastersTranscript}
           role="uploadcare-uploader"
           data-public-key="64c0a64485b8950cc40d"
+          data-multiple="true"
+          data-multiple-min="1"
           className="form-control"
           id="inputMasterTranscript"
           multiple></input>
@@ -422,7 +434,7 @@ const Form = props => {
           <div id="collapseOne" className={applicationType === "studies" ? "collapse show" : "collapse"} aria-labelledby="headingOne" data-parent="#accordion">
             <div className="card-body">
               <div className="form-row">
-								<div className="form-group col-md-3">
+								<div className="form-group col-md-4">
 									<label htmlFor="inputProgramLevel">Niveau du programme</label>
                   <select name="program" id="inputProgramLevel" className="form-control" onChange={(e) => updateProgram(e.target.value)} value={program}>
                     <option defaultValue>Sélectionner...</option>
@@ -500,6 +512,8 @@ const Form = props => {
                       // onChange={(e) => updatestudentPassport(e.target.value)} value={studentPassport}
                       type="hidden"
                       role="uploadcare-uploader"
+                      data-multiple="true"
+                      data-multiple-min="1"
                       data-public-key="64c0a64485b8950cc40d"
                       className="form-control"
                       id="studentPassport">
@@ -517,6 +531,8 @@ const Form = props => {
                       // onChange={(e) => updateotherStudentDocs(e.target.value)} value={otherStudentDocs}
                       type="hidden"
                       role="uploadcare-uploader"
+                      data-multiple="true"
+                      data-multiple-min="1"
                       data-public-key="64c0a64485b8950cc40d"
                       className="form-control"
                       id="studentAdditionalDocs"
@@ -656,6 +672,8 @@ const Form = props => {
                       role="uploadcare-uploader"
                       data-public-key="64c0a64485b8950cc40d"
                       className="form-control"
+                      data-multiple="true"
+                      data-multiple-min="1"
                       id="workerPassport"
                       multiple
                       >
@@ -672,6 +690,8 @@ const Form = props => {
                       role="uploadcare-uploader"
                       data-public-key="64c0a64485b8950cc40d"
                       className="form-control"
+                      data-multiple="true"
+                      data-multiple-min="1"
                       id="workerAdditionalDocs"
                       multiple></input>
                   </div>
