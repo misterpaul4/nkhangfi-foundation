@@ -55,6 +55,8 @@ import img31 from '../images/events/nspLiberia2021/5.jpg';
 import img32 from '../images/events/nspGuinea2021/flier.png';
 import img33 from '../images/events/nspGuinea2021/2.png';
 import img34 from '../images/events/nspGuinea2021/3.png';
+import img35 from '../images/events/nspGuinea2021/1.png';
+
 
 import BootstrapForm from '../components/BootstrapForm';
 
@@ -817,6 +819,10 @@ const eventts = [
       {
         source: img34,
         alt: "Press conference"
+      },
+      {
+        source: img35,
+        alt: "Post press conference"
       },
     ],
     bg: 'nsp-guinea-bg-2021',
