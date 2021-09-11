@@ -16,7 +16,7 @@ const Form = props => {
   // const [fatherName, updatefatherName] = useState("");
   // const [motherName, updatemotherName] = useState("");
   const [alertProp, updateAlertProp] = useState({
-    alertClassName: "",
+    alertClassName: "d-none",
     message: "",
   });
 
@@ -325,7 +325,15 @@ const Form = props => {
     <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
       <div className="modal-content">
         <div className="modal-header bt-form-header-conainer">
-        <h4 className="modal-title" id="exampleModalLongTitle">{formName} Form</h4>
+        <h4 className="modal-title" id="exampleModalLongTitle">{formName}</h4>
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked />
+          <label class="btn btn-outline-success" for="btnradio1">EN</label>
+
+
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" />
+          <label class="btn btn-outline-success" for="btnradio2">FR</label>
+        </div>
         </div>
 
         <div className="modal-body">

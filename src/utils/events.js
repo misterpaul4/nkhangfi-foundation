@@ -872,7 +872,7 @@ Soyez parmis ceux qui vont obtenir les bourses d'études  en Pologne, Chypre du 
     {/* form section */}
     <div>
     <BootstrapForm data={{
-      formName: "Application",
+      formName: "Application Form",
       submissionLink: nspGuinea2021
     }} />
     </div>

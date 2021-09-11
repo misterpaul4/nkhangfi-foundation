@@ -13,14 +13,16 @@ const Hero = () => {
         <div className="row no-gutters slider-text align-items-center">
         	<div className="col-lg-5">
             <div className="text mt-5 pt-5 container hp-hero-content" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <span className="subheading">Welcome to Nkhangfi Foundation</span>
+              <span className="subheading text-sm-left text-center">Welcome to Nkhangfi Foundation</span>
+              <div className="d-sm-block d-none">
           		<h1 className="mb-4">Give Your Child An Opportunity</h1>
               <Quote />
+              </div>
           		<p>
-              <Link to={{pathname: "/event/nkhangfi_scholarship_program_guinea_2021"}} className="btn btn-primary p-4 py-3 m-1">Programme de bourses Nkhangfi Guinée
+              <Link to={{pathname: "/event/nkhangfi_scholarship_program_guinea_2021"}} className="btn btn-primary p-4 py-3 m-1">PROGRAMME DE BOURSE UNIVERSITAIRE NKHANGFI
                 <img src={arrow} alt="arrow gif" className="arrow-gif ml-2"></img>
               </Link>
-                {/* <Link to={{pathname: "nkhangfi_scholarship_program_guinea_application"}} className="btn btn-white p-4 py-3 m-1">Application Form <span className="fas fa-long-arrow-alt-right"></span></Link> */}
+                <Link to={{pathname: "/nkhangfi_scholarship_scheme/application_form"}} className="btn btn-white p-4 py-3 m-1">Application Form <span className="fas fa-long-arrow-alt-right"></span></Link>
                 {/* <button className="btn btn-white p-4 py-3 m-1">Application Form</button> */}
               </p>
             </div>

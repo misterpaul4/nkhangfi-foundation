@@ -17,7 +17,7 @@ const defaultEmail = "info@nkhangfifoundation.com";
 const staffs= [
   {
     name: "Estelle A. Mabuh",
-    title: "founder of nkhangfi foundation & director general of nkhangfi travel",
+    title: "founder & president",
     facebook: defaultFacebook,
     instagram: defaultInstagram,
     email: "estelle@nkhangfifoundation.com",
@@ -25,7 +25,7 @@ const staffs= [
   },
   {
     name: "Chinecherem Favour Nweke",
-    title: "CO-FOUNDER & VICE-PRESIDENT, NKHANGFI FOUNDATION SENIOR ADVISOR, NKHANGFI TRAVEL",
+    title: "CO-FOUNDER & VICE-PRESIDENT",
     facebook: "https://www.facebook.com/nweke.favour.98",
     instagram: "https://www.instagram.com/i_am_neche_/",
     email: "neche@nkhangfifoundation.com",
@@ -49,15 +49,15 @@ const staffs= [
   },
   {
     name: "J. F. YETNA",
-    title: "Director NKHANGFI TRAVEL. Yaounde",
+    title: "Administrative manager",
     facebook: defaultFacebook,
     instagram: defaultInstagram,
-    email: defaultEmail,
+    email: "francis.yetna@nkhangfifoundation.com",
     image: img9,
   },
   {
     name: "chukwuebuka paul ajuizeogu",
-    title: "I.T manager and EDUCATIONAL CONSULTANT OF NKHANGFI TRAVEL",
+    title: "I.T manager",
     facebook: defaultFacebook,
     instagram: "https://www.instagram.com/paulajuze/",
     email: "ajuzepaul@gmail.com",

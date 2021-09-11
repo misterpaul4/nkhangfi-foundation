@@ -4,6 +4,7 @@ const contactForm = "https://submit-form.com/5dmvsmh8";
 const newsletterUrl = "https://submit-form.com/TKobHNPe";
 const studyAbroadFormUrl = "https://submit-form.com/tSSTxKJP";
 const nspGuinea2021 = "https://submit-form.com/Ldli89u1";
+const scholarshipApplication = "https://submit-form.com/XRrXUZiv";
 
 export {
   nspApplicationUrl,
@@ -12,4 +13,5 @@ export {
   newsletterUrl,
   studyAbroadFormUrl,
   nspGuinea2021,
+  scholarshipApplication,
 };
