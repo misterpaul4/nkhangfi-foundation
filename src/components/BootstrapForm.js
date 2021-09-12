@@ -16,7 +16,7 @@ const Form = props => {
   // const [fatherName, updatefatherName] = useState("");
   // const [motherName, updatemotherName] = useState("");
   const [alertProp, updateAlertProp] = useState({
-    alertClassName: "d-none",
+    alertclassName: "d-none",
     message: "",
   });
 
@@ -45,6 +45,8 @@ const Form = props => {
   const [felonyReason, updatefelonyReason] = useState("");
   const [travelledCountryList, updatetravelledCountryList] = useState("");
   const [applicationType, updateApplicationType] = useState("");
+
+  const [formLanguage, updateFormLanguage] = useState("english");
 
   const studyCountries = [
     "Belarus",
@@ -189,21 +191,21 @@ const Form = props => {
   );
 
   let formData = {};
-  const AlertClassDefault = "alert position-fixed alert-dismissible fade py-2";
+  const AlertclassNameDefault = "alert position-fixed alert-dismissible fade py-2";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     // const displayWarning = (errorMessage, inp) => {
     //   updateAlertProp({
-    //     alertClassName: `${AlertClassDefault} alert-warning show`,
+    //     alertclassName: `${AlertclassNameDefault} alert-warning show`,
     //     message: errorMessage,
     //   });
 
     //   setTimeout(() => {
     //     inp.focus();
     //     updateAlertProp({
-    //       alertClassName: AlertClassDefault,
+    //       alertclassName: AlertclassNameDefault,
     //       message: "",
     //     });
     //   }, 3000);
@@ -233,8 +235,8 @@ const Form = props => {
       const loadingGif = document.querySelector('.loading-gif');
       const appForm = document.getElementById('application-form-react');
 
-      loadingGif.classList.remove('d-none');
-      appForm.classList.add('unclickable');
+      loadingGif.classNameList.remove('d-none');
+      appForm.classNameList.add('unclickable');
 
 
       const FD = new FormData(appForm);
@@ -253,16 +255,16 @@ const Form = props => {
         body: JSON.stringify(formData),
       }).then(() => {
         // succesful
-        loadingGif.classList.add('d-none');
+        loadingGif.classNameList.add('d-none');
         updateAlertProp({
-          alertClassName: `${AlertClassDefault} alert-success show`,
+          alertclassName: `${AlertclassNameDefault} alert-success show`,
           message: "Votre candidature a été soumise avec succès",
         });
 
       setTimeout(() => {
-        appForm.classList.remove('unclickable');
+        appForm.classNameList.remove('unclickable');
         updateAlertProp({
-          alertClassName: AlertClassDefault,
+          alertclassName: AlertclassNameDefault,
           message: "",
         });
         appForm.reset();
@@ -295,16 +297,16 @@ const Form = props => {
 
       }).catch(Err => {
         // unsuccesful
-        loadingGif.classList.add('d-none');
+        loadingGif.classNameList.add('d-none');
         updateAlertProp({
-          alertClassName: `${AlertClassDefault} alert-danger show`,
+          alertclassName: `${AlertclassNameDefault} alert-danger show`,
           message: "Il semble y avoir un problème. Réessayer",
         });
 
         setTimeout(() => {
-          appForm.classList.remove('unclickable');
+          appForm.classNameList.remove('unclickable');
           updateAlertProp({
-            alertClassName: AlertClassDefault,
+            alertclassName: AlertclassNameDefault,
             message: "",
           });
         }, 3000);
@@ -316,7 +318,7 @@ const Form = props => {
   return (
     <>
     <Alert data={
-      {alertPropClass: alertProp.alertClassName,
+      {alertPropclassName: alertProp.alertclassName,
        message: alertProp.message,
       }
     } />
@@ -326,13 +328,15 @@ const Form = props => {
       <div className="modal-content">
         <div className="modal-header bt-form-header-conainer">
         <h4 className="modal-title" id="exampleModalLongTitle">{formName}</h4>
-        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-          <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked />
-          <label class="btn btn-outline-success" for="btnradio1">EN</label>
+        <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
+          <input onChange={() => updateFormLanguage("english")}
+           type="radio" className="btn-check" name="btnradio" id="btnradio1" autoComplete="off" checked={formLanguage==="english"} />
+          <label className={formLanguage==="english" ? "btn btn-outline-success" : "btn"} htmlFor="btnradio1">EN</label>
 
 
-          <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" />
-          <label class="btn btn-outline-success" for="btnradio2">FR</label>
+          <input onChange={() => updateFormLanguage("french")}
+           type="radio" className="btn-check" name="btnradio" id="btnradio2" autoComplete="off" checked={formLanguage==="french"} />
+          <label className={formLanguage==="french" ? "btn btn-outline-success" : "btn"} htmlFor="btnradio2">FR</label>
         </div>
         </div>
 
