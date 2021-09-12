@@ -19,6 +19,7 @@ import PopUp from '../components/PopUp';
 import preference from '../preference';
 import NotFound from '../pages/NotFound';
 import StudyApplicationForm from '../pages/StudyApplicationForm';
+import WorkAbroadApplication from '../pages/WorkAbroadForm';
 // import ApplicatoinForm from '../pages/ApplicationForm';
 import '../css/style.css';
 import '../css/flaticon.css';
@@ -31,6 +32,8 @@ const Routes = () => (
     <Switch>
       <Route exact path="/" component={Homepage} />
       <Route exact path="/nkhangfi_scholarship_scheme/application_form" component={StudyApplicationForm} />
+      <Route exact path="/work_abroad/application_form" component={WorkAbroadApplication} />
+
       <Route exact path="/donate" component={Donate} />
       <Route exact path="/services/overview" component={NkhangfiTravel} />
       <Route exact path="/studyAbroad/overview" component={StudyAbroad} />

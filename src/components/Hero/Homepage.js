@@ -19,10 +19,14 @@ const Hero = () => {
               <Quote />
               </div>
           		<p>
-              <Link to={{pathname: "/event/nkhangfi_scholarship_program_guinea_2021"}} className="btn btn-primary p-4 py-3 m-1">PROGRAMME DE BOURSE UNIVERSITAIRE NKHANGFI
-                <img src={arrow} alt="arrow gif" className="arrow-gif ml-2"></img>
+              <Link to={{pathname: "/work_abroad/application_form"}} className="btn btn-primary p-4 py-3 m-1">WORK ABROAD PROGRAM
+              <i class="fas fa-briefcase ml-1"></i>
+              {/* <span className="fas fa-long-arrow-alt-right"></span> */}
               </Link>
-                <Link to={{pathname: "/nkhangfi_scholarship_scheme/application_form"}} className="btn btn-white p-4 py-3 m-1">Application Form <span className="fas fa-long-arrow-alt-right"></span></Link>
+                <Link to={{pathname: "/nkhangfi_scholarship_scheme/application_form"}} className="btn btn-white p-4 py-3 m-1">STUDY ABROAD  SCHOLARSHIP PROGRAM
+                <i class="fas fa-graduation-cap ml-1"></i>
+                {/* <span className="fas fa-long-arrow-alt-right"></span> */}
+                </Link>
                 {/* <button className="btn btn-white p-4 py-3 m-1">Application Form</button> */}
               </p>
             </div>
