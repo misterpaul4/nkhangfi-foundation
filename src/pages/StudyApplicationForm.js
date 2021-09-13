@@ -26,7 +26,8 @@ const StudyApplication = () => {
       <div>
         <BootstrapForm data={{
             formName: "Get Started",
-            submissionLink: scholarshipApplication
+            submissionLink: scholarshipApplication,
+            formType: "studies",
           }
         }
         />

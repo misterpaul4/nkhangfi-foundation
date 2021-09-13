@@ -8,7 +8,7 @@ import Alert from './Alert';
 import '../css/form.css';
 
 const Form = props => {
-  const { formName, submissionLink } = props.data;
+  const { formName, submissionLink, formType } = props.data;
 
   const [program, updateProgram] = useState("");
   // const [fullname, updateFullname] = useState("");
@@ -314,6 +314,266 @@ const Form = props => {
       });
   };
 
+  const studiesForm = () => (
+    <div className="card-body">
+      <div className="form-row">
+        <div className="form-group col-md-4">
+          <label htmlFor="inputProgramLevel">Niveau du programme</label>
+          <select name="program" id="inputProgramLevel" className="form-control" onChange={(e) => updateProgram(e.target.value)} value={program}>
+            <option defaultValue>Sélectionner...</option>
+            <option value="undergraduate">Premier cycle</option>
+            <option value="masters">Maîtrise</option>
+            <option value="phd">Doctorat</option>
+            <option value="vocational">Ecole professionnelle (2 ans)</option>
+          </select>
+        </div>
+
+        <div className="form-group col-md-3">
+          <label htmlFor="inputAdmissionType"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Select 'Transfer' if you are currently admitted in a University and wish to continue from your current year. Select 'Direct' for a fresh admission"
+          >Direct/Transfert <i className="fa fa-info-circle" aria-hidden="true"></i></label>
+          <select onChange={(e) => updateadmissionType(e.target.value)} value={admissionType} name="admission type" id="inputAdmissionType" className="form-control">
+            <option defaultValue>Sélectionner...</option>
+            <option value="direct">Direct</option>
+            <option value="transfer">Transfert</option>
+          </select>
+        </div>
+
+        <div className="form-group col-md-5">
+          <label htmlFor="inputProgram">Que veux-tu étudier</label>
+          <input onChange={(e) => updatecourse(e.target.value)} value={course} name="course" list="programOptions" id="inputProgram" className="form-control" placeholder="par exemple, administration des affaires"/>
+          <datalist id="programOptions">
+            {courses.map(AttachOptions)}
+          </datalist>
+        </div>
+      </div>
+
+      <div className="form-row">
+        <div className="form-group col-md-12">
+          <span>Pays de choix</span><br />
+          <div className="col-md-4">
+          <label htmlFor="inputNationality">1er choix</label>
+          <select onChange={(e) => updatestudyFirstChoiceCountry(e.target.value)} value={studyFirstChoiceCountry} name="studies country 1" className="form-control">
+            <option>Sélectionner...</option>
+            {studyCountries.map(AttachOptions)}
+          </select>
+          </div>
+
+          <div className="col-md-4">
+          <label htmlFor="inputNationality">2ème choix</label>
+          <select onChange={(e) => updatestudySecondChoiceCountry(e.target.value)} value={studySecondChoiceCountry} name="studies country 2" id="inputNationality" className="form-control">
+            <option>Sélectionner...</option>
+            {studyCountries.map(AttachOptions)}
+          </select>
+          </div>
+        </div>
+      </div>
+
+      <h5 className="mt-2"><small>Télécharger des documents</small></h5>
+      <div className="mb-2">
+
+          <div className="form-row mt-2">
+          <div className="form-group col-md-6">
+            <label htmlFor="studentPhoto">Photo</label>
+            <input
+              name="student photo"
+              // onChange={(e) => updatestudentPhoto(e.target.value)} value={studentPhoto}
+              type="hidden"
+              role="uploadcare-uploader"
+              data-public-key="64c0a64485b8950cc40d"
+              className="form-control"
+              id="studentPhoto">
+              </input>
+          </div>
+
+          <div className="form-group col-md-6">
+            <label htmlFor="studentPassport">Passeport ou carte d'identité</label>
+            <input
+              name="student passport"
+              // onChange={(e) => updatestudentPassport(e.target.value)} value={studentPassport}
+              type="hidden"
+              role="uploadcare-uploader"
+              data-multiple="true"
+              data-multiple-min="1"
+              data-public-key="64c0a64485b8950cc40d"
+              className="form-control"
+              id="studentPassport">
+              </input>
+          </div>
+
+          {AttachUndergrad()}
+          {program === "masters" ? AttachMasters() : null}
+          {program === "phd" ? AttachPhD() : null}
+
+          <div className="form-group col-md-6">
+            <label htmlFor="studentAdditionalDocs">*Autres documents</label>
+            <input
+              name="student additional documents"
+              // onChange={(e) => updateotherStudentDocs(e.target.value)} value={otherStudentDocs}
+              type="hidden"
+              role="uploadcare-uploader"
+              data-multiple="true"
+              data-multiple-min="1"
+              data-public-key="64c0a64485b8950cc40d"
+              className="form-control"
+              id="studentAdditionalDocs"
+              multiple></input>
+          </div>
+          </div>
+
+      </div>
+    </div>
+  );
+
+  const workForm = () => (
+    <div className="card-body">
+      <div className="form-row">
+
+      <div className="form-group col-md-12">
+        <span>Pays de choix</span><br />
+        <div className="col-md-4">
+        <label htmlFor="inputNationality">1er choix</label>
+        <select onChange={(e) => updateworkFirstChoiceCountry(e.target.value)} value={workFirstChoiceCountry}
+        name="work country 1" id="inputNationality" className="form-control">
+          <option>Sélectionner...</option>
+          {workCountries.map(AttachOptions)}
+        </select>
+        </div>
+
+        <div className="col-md-4">
+        <label htmlFor="inputNationality">2ème choix</label>
+        <select onChange={(e) => updateworkSecondChoiceCountry(e.target.value)} value={workSecondChoiceCountry}
+        name="work country 2" id="inputNationality" className="form-control">
+          <option>Sélectionner...</option>
+          {workCountries.map(AttachOptions)}
+        </select>
+        </div>
+      </div>
+
+      <div className="form-group col-md-5">
+          <label htmlFor="inputProgramLevel">Plus haut degré</label>
+          <select onChange={(e) => updateworkerHighestDegree(e.target.value)} value={workerHighestDegree}
+          name="highest degree" id="inputProgramLevel" className="form-control">
+            <option defaultValue>Sélectionner...</option>
+            <option value="highschool">Baccalauréat</option>
+            <option value="undergraduate">Diplôme de premier cycle</option>
+            <option value="masters">Une maîtrise</option>
+            <option value="phd">Doctorat</option>
+          </select>
+        </div>
+
+        <div className="form-group col-md-12">
+          <label htmlFor="job-experience">Faites la liste de vos expériences professionnelles précédentes si vous en avez</label>
+          <input onChange={(e) => updatejobExperience(e.target.value)} value={jobExperience}
+          name="job experience" id="job-experience" className="form-control" placeholder="par exemple plombier, serveur..."/>
+        </div>
+
+        <div className="form-group col-md-12">
+          <label htmlFor="inputProgram">Langues parlées</label>
+          <input onChange={(e) => updatespokenLanguages(e.target.value)} value={spokenLanguages}
+          name="spoken languages" id="inputProgram" className="form-control" placeholder="par exemple français, anglais..."/>
+        </div>
+      </div>
+
+      <h5 className="mt-2"><small>Histoire de voyage</small></h5>
+      <div className="form-row">
+        <div className="form-group col-md-12">
+        <label htmlFor="visa-denial">Vous a-t-on déjà refusé un visa?</label><br></br>
+        <input onChange={(e) => updatevisadenial(e.target.value)} checked={visadenial === "yes"}
+        type="radio" value="yes" name="Have you ever been denied visa?" /> Oui<br></br>
+        <input onChange={(e) => updatevisadenial(e.target.value)} checked={visadenial === "no"}
+        type="radio" value="no" name="Have you ever been denied visa?" /> Non
+          <textarea onChange={(e) => updatevisaDenialReason(e.target.value)} value={visaDenialReason}
+          name="reason i was denied visa" className="form-control" placeholder="si oui, motiver" />
+      </div>
+
+        <div className="form-group col-md-12">
+        <label>Avez-vous déjà été expulsé d'un pays?</label><br></br>
+        <input onChange={(e) => updaterepatration(e.target.value)} checked={repatration === "yes"}
+        type="radio" value="yes" name="Have you ever been repatriated from a country" /> Oui<br></br>
+        <input onChange={(e) => updaterepatration(e.target.value)} checked={repatration === "no"}
+        type="radio" value="no" name="Have you ever been repatriated from a country" /> Non
+          <textarea onChange={(e) => updaterepatrationReason(e.target.value)} value={repatrationReason}
+          name="reason i was repatriated" className="form-control" placeholder="si oui, motiver" />
+      </div>
+
+      <div className="form-group col-md-12">
+        <label>Avez-vous déjà commis un crime dans votre pays ou à l'étranger?</label><br></br>
+        <input onChange={(e) => updatefelony(e.target.value)} checked={felony === "yes"}
+        type="radio" value="yes" name="Have you ever committed a felony at home or abroad" /> Oui<br></br>
+        <input onChange={(e) => updatefelony(e.target.value)} checked={felony === "no"}
+        type="radio" value="no" name="Have you ever committed a felony at home or abroad" /> Non
+          <textarea onChange={(e) => updatefelonyReason(e.target.value)} value={felonyReason}
+          name="reason i commited a felony" className="form-control" placeholder="si oui, motiver" />
+      </div>
+
+      <div className="form-group col-md-12">
+          <label htmlFor="inputProgram">Pays dans lesquels vous avez voyagé au cours des 24 derniers mois:</label>
+          <input onChange={(e) => updatetravelledCountryList(e.target.value)} value={travelledCountryList}
+          name="countries you have travelled to within the last 24 months" id="inputProgram" className="form-control" placeholder="ex. Libéria, France..."/>
+        </div>
+      </div>
+
+
+      <h5 className="mt-2"><small>Télécharger des documents</small></h5>
+      <div className="mb-2">
+
+          <div className="form-row mt-2">
+          <div className="form-group col-md-6">
+            <label htmlFor="workerPhoto">Photo</label>
+            <input
+              name="worker photo"
+              // onChange={(e) => updateworkerPhoto(e.target.value)} value={workerPhoto}
+              type="hidden"
+              role="uploadcare-uploader"
+              data-public-key="64c0a64485b8950cc40d"
+              className="form-control"
+              id="workerPhoto"
+              multiple
+              >
+              </input>
+          </div>
+
+          <div className="form-group col-md-6">
+            <label htmlFor="workerPassport">Passeport ou carte d'identité</label>
+            <input
+              name="worker passport"
+              // onChange={(e) => updateworkerPassport(e.target.value)} value={workerPassport}
+              type="hidden"
+              role="uploadcare-uploader"
+              data-public-key="64c0a64485b8950cc40d"
+              className="form-control"
+              data-multiple="true"
+              data-multiple-min="1"
+              id="workerPassport"
+              multiple
+              >
+              </input>
+          </div>
+
+
+          <div className="form-group col-md-6">
+            <label htmlFor="workerAdditionalDocs">*Documents supplémentaires</label>
+            <input
+              name="worker additional documents"
+              // onChange={(e) => updateworkerAdditionalDocs(e.target.value)} value={workerAdditionalDocs}
+              type="hidden"
+              role="uploadcare-uploader"
+              data-public-key="64c0a64485b8950cc40d"
+              className="form-control"
+              data-multiple="true"
+              data-multiple-min="1"
+              id="workerAdditionalDocs"
+              multiple></input>
+          </div>
+          </div>
+
+      </div>
+    </div>
+  );
+
 
   return (
     <>
@@ -427,294 +687,59 @@ const Form = props => {
         </div>
       </div>
 
-      <h5 className="mt-2">Pourquoi postulez-vous?</h5>
-      <input onChange={(e) => updateApplicationType(e.target.value)} checked={applicationType === "studies"}
-      type="radio" value="studies" name="application type" /> Études
-      <input onChange={(e) => updateApplicationType(e.target.value)} checked={applicationType === "work"}
-      type="radio" value="work" name="application type" className="ml-3" /> Travail
-      <div id="accordion">
-        {/* studeies */}
-        <div className={applicationType === "studies" ? "card m-0" : "unclickable"}>
-        <div className="card-header" id="headingOne">
-            <h5 className="mb-0">
-              <button type="button" className="btn btn-link text-dark text-small" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-              Études
-              </button>
-            </h5>
-          </div>
-
-          <div id="collapseOne" className={applicationType === "studies" ? "collapse show" : "collapse"} aria-labelledby="headingOne" data-parent="#accordion">
-            <div className="card-body">
-              <div className="form-row">
-								<div className="form-group col-md-4">
-									<label htmlFor="inputProgramLevel">Niveau du programme</label>
-                  <select name="program" id="inputProgramLevel" className="form-control" onChange={(e) => updateProgram(e.target.value)} value={program}>
-                    <option defaultValue>Sélectionner...</option>
-                    <option value="undergraduate">Premier cycle</option>
-                    <option value="masters">Maîtrise</option>
-                    <option value="phd">Doctorat</option>
-                    <option value="vocational">Ecole professionnelle (2 ans)</option>
-                  </select>
-                </div>
-
-								<div className="form-group col-md-3">
-									<label htmlFor="inputAdmissionType"
-									data-toggle="tooltip"
-									data-placement="top"
-									title="Select 'Transfer' if you are currently admitted in a University and wish to continue from your current year. Select 'Direct' for a fresh admission"
-									>Direct/Transfert <i className="fa fa-info-circle" aria-hidden="true"></i></label>
-									<select onChange={(e) => updateadmissionType(e.target.value)} value={admissionType} name="admission type" id="inputAdmissionType" className="form-control">
-										<option defaultValue>Sélectionner...</option>
-										<option value="direct">Direct</option>
-										<option value="transfer">Transfert</option>
-									</select>
-								</div>
-
-                <div className="form-group col-md-5">
-									<label htmlFor="inputProgram">Que veux-tu étudier</label>
-									<input onChange={(e) => updatecourse(e.target.value)} value={course} name="course" list="programOptions" id="inputProgram" className="form-control" placeholder="par exemple, administration des affaires"/>
-									<datalist id="programOptions">
-                    {courses.map(AttachOptions)}
-									</datalist>
-								</div>
-              </div>
-
-              <div className="form-row">
-                <div className="form-group col-md-12">
-                  <span>Pays de choix</span><br />
-                  <div className="col-md-4">
-                  <label htmlFor="inputNationality">1er choix</label>
-                  <select onChange={(e) => updatestudyFirstChoiceCountry(e.target.value)} value={studyFirstChoiceCountry} name="studies country 1" className="form-control">
-                    <option>Sélectionner...</option>
-                    {studyCountries.map(AttachOptions)}
-                  </select>
-                  </div>
-
-                  <div className="col-md-4">
-                  <label htmlFor="inputNationality">2ème choix</label>
-                  <select onChange={(e) => updatestudySecondChoiceCountry(e.target.value)} value={studySecondChoiceCountry} name="studies country 2" id="inputNationality" className="form-control">
-                    <option>Sélectionner...</option>
-                    {studyCountries.map(AttachOptions)}
-                  </select>
-                  </div>
-                </div>
-              </div>
-
-              <h5 className="mt-2"><small>Télécharger des documents</small></h5>
-              <div className="mb-2">
-
-                  <div className="form-row mt-2">
-                  <div className="form-group col-md-6">
-                    <label htmlFor="studentPhoto">Photo</label>
-                    <input
-                      name="student photo"
-                      // onChange={(e) => updatestudentPhoto(e.target.value)} value={studentPhoto}
-                      type="hidden"
-                      role="uploadcare-uploader"
-                      data-public-key="64c0a64485b8950cc40d"
-                      className="form-control"
-                      id="studentPhoto">
-                      </input>
-                  </div>
-
-                  <div className="form-group col-md-6">
-                    <label htmlFor="studentPassport">Passeport ou carte d'identité</label>
-                    <input
-                      name="student passport"
-                      // onChange={(e) => updatestudentPassport(e.target.value)} value={studentPassport}
-                      type="hidden"
-                      role="uploadcare-uploader"
-                      data-multiple="true"
-                      data-multiple-min="1"
-                      data-public-key="64c0a64485b8950cc40d"
-                      className="form-control"
-                      id="studentPassport">
-                      </input>
-                  </div>
-
-                  {AttachUndergrad()}
-                  {program === "masters" ? AttachMasters() : null}
-                  {program === "phd" ? AttachPhD() : null}
-
-                  <div className="form-group col-md-6">
-                    <label htmlFor="studentAdditionalDocs">*Autres documents</label>
-                    <input
-                      name="student additional documents"
-                      // onChange={(e) => updateotherStudentDocs(e.target.value)} value={otherStudentDocs}
-                      type="hidden"
-                      role="uploadcare-uploader"
-                      data-multiple="true"
-                      data-multiple-min="1"
-                      data-public-key="64c0a64485b8950cc40d"
-                      className="form-control"
-                      id="studentAdditionalDocs"
-                      multiple></input>
-                  </div>
-                  </div>
-
-              </div>
+      {/* studies or work */}
+      <hr />
+      { function () {
+        if (formType === "all") {
+          return (
+          <div>
+        <h5 className="mt-2">Pourquoi postulez-vous?</h5>
+        <input onChange={(e) => updateApplicationType(e.target.value)} checked={applicationType === "studies"}
+        type="radio" value="studies" name="application type" /> Études
+        <input onChange={(e) => updateApplicationType(e.target.value)} checked={applicationType === "work"}
+        type="radio" value="work" name="application type" className="ml-3" /> Travail
+        <div id="accordion">
+          {/* studeies */}
+          <div className={applicationType === "studies" ? "card m-0" : "unclickable"}>
+          <div className="card-header" id="headingOne">
+              <h5 className="mb-0">
+                <button type="button" className="btn btn-link text-dark text-small" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Études
+                </button>
+              </h5>
             </div>
-          </div>
-        </div>
-        {/* work */}
-        <div className={applicationType === "work" ? "card m-0" : "unclickable"}>
-        <div className="card-header" id="headingTwo">
-            <h5 className="mb-0">
-              <button type="button" className="btn btn-link text-dark text-small" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Travail
-              </button>
-            </h5>
-          </div>
 
-          <div id="collapseTwo" className={applicationType === "work" ? "collapse show" : "collapse"} aria-labelledby="headingTwo" data-parent="#accordion">
-            <div className="card-body">
-              <div className="form-row">
-
-              <div className="form-group col-md-12">
-                <span>Pays de choix</span><br />
-                <div className="col-md-4">
-                <label htmlFor="inputNationality">1er choix</label>
-                <select onChange={(e) => updateworkFirstChoiceCountry(e.target.value)} value={workFirstChoiceCountry}
-                name="work country 1" id="inputNationality" className="form-control">
-                  <option>Sélectionner...</option>
-                  {workCountries.map(AttachOptions)}
-                </select>
-                </div>
-
-                <div className="col-md-4">
-                <label htmlFor="inputNationality">2ème choix</label>
-                <select onChange={(e) => updateworkSecondChoiceCountry(e.target.value)} value={workSecondChoiceCountry}
-                name="work country 2" id="inputNationality" className="form-control">
-                  <option>Sélectionner...</option>
-                  {workCountries.map(AttachOptions)}
-                </select>
-                </div>
-              </div>
-
-              <div className="form-group col-md-5">
-									<label htmlFor="inputProgramLevel">Plus haut degré</label>
-                  <select onChange={(e) => updateworkerHighestDegree(e.target.value)} value={workerHighestDegree}
-                  name="highest degree" id="inputProgramLevel" className="form-control">
-                    <option defaultValue>Sélectionner...</option>
-                    <option value="highschool">Baccalauréat</option>
-                    <option value="undergraduate">Diplôme de premier cycle</option>
-                    <option value="masters">Une maîtrise</option>
-                    <option value="phd">Doctorat</option>
-                  </select>
-                </div>
-
-                <div className="form-group col-md-12">
-									<label htmlFor="job-experience">Faites la liste de vos expériences professionnelles précédentes si vous en avez</label>
-									<input onChange={(e) => updatejobExperience(e.target.value)} value={jobExperience}
-                  name="job experience" id="job-experience" className="form-control" placeholder="par exemple plombier, serveur..."/>
-								</div>
-
-                <div className="form-group col-md-12">
-									<label htmlFor="inputProgram">Langues parlées</label>
-									<input onChange={(e) => updatespokenLanguages(e.target.value)} value={spokenLanguages}
-                  name="spoken languages" id="inputProgram" className="form-control" placeholder="par exemple français, anglais..."/>
-								</div>
-              </div>
-
-              <h5 className="mt-2"><small>Histoire de voyage</small></h5>
-              <div className="form-row">
-                <div className="form-group col-md-12">
-                <label htmlFor="visa-denial">Vous a-t-on déjà refusé un visa?</label><br></br>
-                <input onChange={(e) => updatevisadenial(e.target.value)} checked={visadenial === "yes"}
-                type="radio" value="yes" name="Have you ever been denied visa?" /> Oui<br></br>
-                <input onChange={(e) => updatevisadenial(e.target.value)} checked={visadenial === "no"}
-                type="radio" value="no" name="Have you ever been denied visa?" /> Non
-                  <textarea onChange={(e) => updatevisaDenialReason(e.target.value)} value={visaDenialReason}
-                  name="reason i was denied visa" className="form-control" placeholder="si oui, motiver" />
-              </div>
-
-                <div className="form-group col-md-12">
-                <label>Avez-vous déjà été expulsé d'un pays?</label><br></br>
-                <input onChange={(e) => updaterepatration(e.target.value)} checked={repatration === "yes"}
-                type="radio" value="yes" name="Have you ever been repatriated from a country" /> Oui<br></br>
-                <input onChange={(e) => updaterepatration(e.target.value)} checked={repatration === "no"}
-                type="radio" value="no" name="Have you ever been repatriated from a country" /> Non
-                  <textarea onChange={(e) => updaterepatrationReason(e.target.value)} value={repatrationReason}
-                  name="reason i was repatriated" className="form-control" placeholder="si oui, motiver" />
-              </div>
-
-              <div className="form-group col-md-12">
-                <label>Avez-vous déjà commis un crime dans votre pays ou à l'étranger?</label><br></br>
-                <input onChange={(e) => updatefelony(e.target.value)} checked={felony === "yes"}
-                type="radio" value="yes" name="Have you ever committed a felony at home or abroad" /> Oui<br></br>
-                <input onChange={(e) => updatefelony(e.target.value)} checked={felony === "no"}
-                type="radio" value="no" name="Have you ever committed a felony at home or abroad" /> Non
-                  <textarea onChange={(e) => updatefelonyReason(e.target.value)} value={felonyReason}
-                  name="reason i commited a felony" className="form-control" placeholder="si oui, motiver" />
-              </div>
-
-              <div className="form-group col-md-12">
-									<label htmlFor="inputProgram">Pays dans lesquels vous avez voyagé au cours des 24 derniers mois:</label>
-                  <input onChange={(e) => updatetravelledCountryList(e.target.value)} value={travelledCountryList}
-                  name="countries you have travelled to within the last 24 months" id="inputProgram" className="form-control" placeholder="ex. Libéria, France..."/>
-								</div>
-              </div>
-
-
-              <h5 className="mt-2"><small>Télécharger des documents</small></h5>
-              <div className="mb-2">
-
-                  <div className="form-row mt-2">
-                  <div className="form-group col-md-6">
-                    <label htmlFor="workerPhoto">Photo</label>
-                    <input
-                      name="worker photo"
-                      // onChange={(e) => updateworkerPhoto(e.target.value)} value={workerPhoto}
-                      type="hidden"
-                      role="uploadcare-uploader"
-                      data-public-key="64c0a64485b8950cc40d"
-                      className="form-control"
-                      id="workerPhoto"
-                      multiple
-                      >
-                      </input>
-                  </div>
-
-                  <div className="form-group col-md-6">
-                    <label htmlFor="workerPassport">Passeport ou carte d'identité</label>
-                    <input
-                      name="worker passport"
-                      // onChange={(e) => updateworkerPassport(e.target.value)} value={workerPassport}
-                      type="hidden"
-                      role="uploadcare-uploader"
-                      data-public-key="64c0a64485b8950cc40d"
-                      className="form-control"
-                      data-multiple="true"
-                      data-multiple-min="1"
-                      id="workerPassport"
-                      multiple
-                      >
-                      </input>
-                  </div>
-
-
-                  <div className="form-group col-md-6">
-                    <label htmlFor="workerAdditionalDocs">*Documents supplémentaires</label>
-                    <input
-                      name="worker additional documents"
-                      // onChange={(e) => updateworkerAdditionalDocs(e.target.value)} value={workerAdditionalDocs}
-                      type="hidden"
-                      role="uploadcare-uploader"
-                      data-public-key="64c0a64485b8950cc40d"
-                      className="form-control"
-                      data-multiple="true"
-                      data-multiple-min="1"
-                      id="workerAdditionalDocs"
-                      multiple></input>
-                  </div>
-                  </div>
-
-              </div>
+            {/* stud */}
+            <div id="collapseOne" className={applicationType === "studies" ? "collapse show" : "collapse"} aria-labelledby="headingOne" data-parent="#accordion">
+              {studiesForm()}
             </div>
+
+          </div>
+          {/* work */}
+          <div className={applicationType === "work" ? "card m-0" : "unclickable"}>
+          <div className="card-header" id="headingTwo">
+              <h5 className="mb-0">
+                <button type="button" className="btn btn-link text-dark text-small" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Travail
+                </button>
+              </h5>
+            </div>
+
+            {/* wor */}
+            <div id="collapseTwo" className={applicationType === "work" ? "collapse show" : "collapse"} aria-labelledby="headingTwo" data-parent="#accordion">
+              {workForm()}
+            </div>
+
           </div>
         </div>
       </div>
-
+          )
+        } else if (formType === "work") {
+          return (workForm());
+        } else {
+          return (studiesForm());
+        }
+        }() }
       <div className="mt-2">
         <button type="submit" className="btn btn-primary mt-2" id="application-form-submit" onClick={handleSubmit}>Soumettre</button>
       </div>
