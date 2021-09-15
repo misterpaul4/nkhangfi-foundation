@@ -48,6 +48,193 @@ const Form = props => {
 
   const [formLanguage, updateFormLanguage] = useState("english");
 
+  const englishForm = {
+    personal_info: "Personal Information",
+    name: "Name",
+    surname: "Surname",
+    fatherName: "Father's Name",
+    motherName: "Mother's Name",
+    email: "Email Address",
+    telephone: "Telephone",
+    dob: "Date of Birth",
+    nationality: "Nationality",
+    defaultSelect: "Select...",
+    gender: {
+      placeholder: "Select...",
+      label: "Gender",
+      male: "Male",
+      female: "Female",
+    },
+    maritalStatus: {
+      placeholder: "Select...",
+      label: "Marital Status",
+      single: "Single",
+      married: "Married",
+    },
+    emergencyContact: "Emergency Contact",
+    address: "Address",
+    selectLevel: {
+      label: "Program Level",
+      placeholder: "Select Level...",
+      vocationalLevel: "Vocational School (2 years)",
+      undergradLevel: "Undergraduate",
+      masterLevel: "Masters",
+      phdLevel: "PhD",
+    },
+    admissionType: {
+      placeholder: "Select Type...",
+      label: "Direct/Transfer",
+      directType: "Direct",
+      transferType: "Transfer",
+    },
+    course: {
+      placeholder: "e.g Business Administration",
+      label: "Course",
+    },
+    country: {
+      header: "Country of Choice",
+      firstChoiceLabel: "First Choice",
+      secondChoiceLabel: "Second Choice",
+      placeholder: "Select...",
+    },
+    documents: {
+      header: "Upload Documents",
+      photoLabel: "Photo",
+      passportLabel: "Passport or ID",
+      highschoolDiplomaLabel: "Highschool Diploma",
+      highschoolTranscriptLabel: "Highschool Transcript",
+      UndergraduateDiplomaLabel: "Undergraduate Diploma",
+      UndergraduateTranscriptLabel: "Undergraduate Transcript",
+      MasterDiplomaLabel: "Master's Diploma",
+      MasterTranscriptLabel: "Master's Transcript",
+      AdditionalDocLlabel: "Additional Documents",
+    },
+    submit: "Submit",
+    applicationType: {
+      student: "Studies",
+      header: "What are you applying for?",
+      work: "Work"
+    },
+    highestDegree: {
+      label: "Highest Degree",
+      highschoolDegree: "Highschool",
+      undergradLevel: "Undergraduate",
+      masterLevel: "Masters",
+      phdLevel: "PhD",
+      none: "None",
+    },
+    jobExperiences: "List your previous job experiences if you have any",
+    jobExperiencePlaceholder: "e.g plumber, waiter...",
+    spokenLanguages: {
+      label: "Spoken Languages",
+      placeholder: "e.g french, english..."
+    },
+    travelHistory: "Travel History",
+    visaDenial: "Have you ever been denied visa?",
+    yes: "Yes",
+    no: "No",
+    visaDenialReason: "if yes, state reasons",
+    repatration: "Have you ever been repatriated from a country?",
+    felony: "Have you ever committed a felony at home or abroad?",
+    visitedCountries: "Country(s) you have travelled to within the last 24 months:",
+    visitedCountriesPlaceholder: "e.g Liberia, France...",
+  }
+
+  const frenchForm = {
+    visitedCountriesPlaceholder: "Par exemple, le Libéria, la France...",
+    visitedCountries: "Pays dans lesquels vous avez voyagé au cours des 24 derniers mois:",
+    felony: "Avez-vous déjà commis un crime dans votre pays ou à l'étranger?",
+    repatration: "Avez-vous déjà été expulsé d'un pays?",
+    visaDenialReason: "si oui, motiver",
+    yes: "Oui",
+    no: "Non",
+    visadenial: "Vous a-t-on déjà refusé un visa?",
+    travelHistory: "Histoire de voyage",
+    spokenLanguages: {
+      label: "Langues parlées",
+      placeholder: "par exemple français, anglais...",
+    },
+    jobExperiencePlaceholder: "par exemple plombier, serveur...",
+    jobExperiences: "Faites la liste de vos expériences professionnelles précédentes si vous en avez",
+    highestDegree: {
+      label: "Plus haut degré",
+      highschoolDegree: "Baccalauréat",
+      undergradLevel: "Diplôme de premier cycle",
+      masterLevel: "Une maîtrise",
+      phdLevel: "Doctorat",
+      none: "rien",
+    },
+    personal_info: "Informations Personnelles",
+    name: "Nom",
+    surname: "Nom de famille",
+    fatherName: "Le nom du père",
+    motherName: "Le nom de la mère",
+    defaultSelect: "Sélectionner...",
+    email: "E-mail",
+    telephone: "Numéro de téléphone",
+    dob: "Date de naissance",
+    nationality: "Nationalité",
+    gender: {
+      placeholder: "Sélectionner...",
+      label: "Sexe",
+      male: "Homme",
+      female: "Femme",
+    },
+    maritalStatus: {
+      placeholder: "Sélectionner...",
+      label: "État civil",
+      single: "Célibataire",
+      married: "Marié",
+    },
+    emergencyContact: "Personne à contacter en cas d'urgence",
+    address: "Adresse",
+    selectLevel: {
+      label: "Niveau du programme",
+      placeholder: "Sélectionner...",
+      vocationalLevel: "Ecole professionnelle (2 ans)",
+      undergradLevel: "Premier cycle",
+      masterLevel: "Maîtrise",
+      phdLevel: "Doctorat",
+    },
+    admissionType: {
+      placeholder: "Sélectionner...",
+      label: "Direct/Transfert",
+      directType: "Direct",
+      transferType: "Transfert",
+    },
+    course: {
+      placeholder: "par exemple, administration des affaires",
+      label: "Que veux-tu étudier",
+    },
+    country: {
+      header: "Pays de choix",
+      firstChoiceLabel: "1er choix",
+      secondChoiceLabel: "2ème choix",
+      placeholder: "Sélectionner...",
+    },
+    documents: {
+      header: "Télécharger des documents",
+      photoLabel: "Photo",
+      passportLabel: "Passeport ou carte d'identité",
+      highschoolDiplomaLabel: "Baccalauréat",
+      highschoolTranscriptLabel: "Relevé de notes du secondaire",
+      UndergraduateDiplomaLabel: "Diplôme de premier cycle",
+      UndergraduateTranscriptLabel: "Relevé de notes de premier cycle",
+      MasterDiplomaLabel: "Diplôme de maîtrise",
+      MasterTranscriptLabel: "Relevé de notes de maîtrise",
+      AdditionalDocLlabel: "Autres documents",
+    },
+    submit: "Soumettre",
+    applicationType: {
+      student: "Études",
+      header: "Pourquoi postulez-vous?",
+      work: "Travail"
+    },
+  }
+
+  const [translate, updateTranslation] = useState(englishForm);
+
+
   const studyCountries = [
     "Belarus",
     "Canada",
@@ -76,7 +263,7 @@ const Form = props => {
         data-toggle="tooltip"
         data-placement="top"
         title="If you are from West Africa (e.g Nigeria, Sierra Leone), upload your WAEC/WASSCE/NECO or NABTEB"
-        >*Baccalauréat <i className="fa fa-info-circle" aria-hidden="true"></i></label>
+        >{translate.documents.highschoolDiplomaLabel} <i className="fa fa-info-circle" aria-hidden="true"></i></label>
         <input
           name="highschool diploma"
           // onChange={(e) => updatehighSchoolDiploma(e.target.value)} value={highSchoolDiploma}
@@ -96,7 +283,7 @@ const Form = props => {
         data-toggle="tooltip"
         data-placement="top"
         title="Not required for West African students"
-        >*Relevé de notes du secondaire <i className="fa fa-info-circle" aria-hidden="true"></i></label>
+        >{translate.documents.highschoolTranscriptLabel} <i className="fa fa-info-circle" aria-hidden="true"></i></label>
         <input
           name="highschool transcript" type="hidden"
           // onChange={(e) => updatehighSchoolTranscript(e.target.value)} value={highSchoolTranscript}
@@ -117,7 +304,7 @@ const Form = props => {
         <label htmlFor="inputUndergraduateDiploma"
         data-toggle="tooltip"
         data-placement="top"
-        >*Diplôme de premier cycle</label>
+        >{translate.documents.UndergraduateDiplomaLabel}</label>
         <input
           name="undergraduate diploma"
           // onChange={(e) => updateundergraduateDiploma(e.target.value)} value={undergraduateDiploma}
@@ -136,7 +323,7 @@ const Form = props => {
         <label htmlFor="inputUndergraduateTranscript"
         data-toggle="tooltip"
         data-placement="top"
-        >*Relevé de notes de premier cycle</label>
+        >{translate.documents.UndergraduateTranscriptLabel}</label>
         <input
           name="undergraduate transcript" type="hidden"
           // onChange={(e) => updateundergraduateTranscript(e.target.value)} value={undergraduateTranscript}
@@ -156,7 +343,7 @@ const Form = props => {
     {AttachMasters()}
     <div className="form-group col-md-6">
         <label htmlFor="inputMasterDiploma"
-        >*Diplôme de Master</label>
+        >{translate.documents.MasterDiplomaLabel}</label>
         <input
           name="master diploma"
           // onChange={(e) => updatemastersDiploma(e.target.value)} value={mastersDiploma}
@@ -175,7 +362,7 @@ const Form = props => {
         <label htmlFor="inputMasterTranscript"
         data-toggle="tooltip"
         data-placement="top"
-        >*Relevé de notes de maîtrise</label>
+        >{translate.documents.MasterTranscriptLabel}</label>
         <input
           name="master transcript" type="hidden"
           // onChange={(e) => updatemastersTranscript(e.target.value)} value={mastersTranscript}
@@ -318,13 +505,13 @@ const Form = props => {
     <div className="card-body">
       <div className="form-row">
         <div className="form-group col-md-4">
-          <label htmlFor="inputProgramLevel">Niveau du programme</label>
+          <label htmlFor="inputProgramLevel">{translate.selectLevel.label}</label>
           <select name="program" id="inputProgramLevel" className="form-control" onChange={(e) => updateProgram(e.target.value)} value={program}>
-            <option defaultValue>Sélectionner...</option>
-            <option value="undergraduate">Premier cycle</option>
-            <option value="masters">Maîtrise</option>
-            <option value="phd">Doctorat</option>
-            <option value="vocational">Ecole professionnelle (2 ans)</option>
+            <option defaultValue>{translate.defaultSelect}</option>
+            <option value="undergraduate">{translate.selectLevel.undergradLevel}</option>
+            <option value="masters">{translate.selectLevel.masterLevel}</option>
+            <option value="phd">{translate.selectLevel.phdLevel}</option>
+            <option value="vocational">{translate.selectLevel.vocationalLevel}</option>
           </select>
         </div>
 
@@ -333,17 +520,17 @@ const Form = props => {
           data-toggle="tooltip"
           data-placement="top"
           title="Select 'Transfer' if you are currently admitted in a University and wish to continue from your current year. Select 'Direct' for a fresh admission"
-          >Direct/Transfert <i className="fa fa-info-circle" aria-hidden="true"></i></label>
+          >{translate.admissionType.label} <i className="fa fa-info-circle" aria-hidden="true"></i></label>
           <select onChange={(e) => updateadmissionType(e.target.value)} value={admissionType} name="admission type" id="inputAdmissionType" className="form-control">
-            <option defaultValue>Sélectionner...</option>
-            <option value="direct">Direct</option>
-            <option value="transfer">Transfert</option>
+            <option defaultValue>{translate.admissionType.placeholder}</option>
+            <option value="direct">{translate.admissionType.directType}</option>
+            <option value="transfer">{translate.admissionType.transferType}</option>
           </select>
         </div>
 
         <div className="form-group col-md-5">
-          <label htmlFor="inputProgram">Que veux-tu étudier</label>
-          <input onChange={(e) => updatecourse(e.target.value)} value={course} name="course" list="programOptions" id="inputProgram" className="form-control" placeholder="par exemple, administration des affaires"/>
+          <label htmlFor="inputProgram">{translate.course.label}</label>
+          <input onChange={(e) => updatecourse(e.target.value)} value={course} name="course" list="programOptions" id="inputProgram" className="form-control" placeholder={translate.course.placeholder}/>
           <datalist id="programOptions">
             {courses.map(AttachOptions)}
           </datalist>
@@ -352,31 +539,31 @@ const Form = props => {
 
       <div className="form-row">
         <div className="form-group col-md-12">
-          <span>Pays de choix</span><br />
+          <span>{translate.country.header}</span><br />
           <div className="col-md-4">
-          <label htmlFor="inputNationality">1er choix</label>
+          <label htmlFor="inputNationality">{translate.country.firstChoiceLabel}</label>
           <select onChange={(e) => updatestudyFirstChoiceCountry(e.target.value)} value={studyFirstChoiceCountry} name="studies country 1" className="form-control">
-            <option>Sélectionner...</option>
+            <option>{translate.defaultSelect}</option>
             {studyCountries.map(AttachOptions)}
           </select>
           </div>
 
           <div className="col-md-4">
-          <label htmlFor="inputNationality">2ème choix</label>
+          <label htmlFor="inputNationality">{translate.country.secondChoiceLabel}</label>
           <select onChange={(e) => updatestudySecondChoiceCountry(e.target.value)} value={studySecondChoiceCountry} name="studies country 2" id="inputNationality" className="form-control">
-            <option>Sélectionner...</option>
+            <option>{translate.defaultSelect}</option>
             {studyCountries.map(AttachOptions)}
           </select>
           </div>
         </div>
       </div>
 
-      <h5 className="mt-2"><small>Télécharger des documents</small></h5>
+      <h5 className="mt-2"><small>{translate.documents.header}</small></h5>
       <div className="mb-2">
 
           <div className="form-row mt-2">
           <div className="form-group col-md-6">
-            <label htmlFor="studentPhoto">Photo</label>
+            <label htmlFor="studentPhoto">{translate.documents.header}</label>
             <input
               name="student photo"
               // onChange={(e) => updatestudentPhoto(e.target.value)} value={studentPhoto}
@@ -389,7 +576,7 @@ const Form = props => {
           </div>
 
           <div className="form-group col-md-6">
-            <label htmlFor="studentPassport">Passeport ou carte d'identité</label>
+            <label htmlFor="studentPassport">{translate.documents.passportLabel}</label>
             <input
               name="student passport"
               // onChange={(e) => updatestudentPassport(e.target.value)} value={studentPassport}
@@ -408,7 +595,7 @@ const Form = props => {
           {program === "phd" ? AttachPhD() : null}
 
           <div className="form-group col-md-6">
-            <label htmlFor="studentAdditionalDocs">*Autres documents</label>
+            <label htmlFor="studentAdditionalDocs">*{translate.documents.AdditionalDocLlabel}</label>
             <input
               name="student additional documents"
               // onChange={(e) => updateotherStudentDocs(e.target.value)} value={otherStudentDocs}
@@ -432,21 +619,21 @@ const Form = props => {
       <div className="form-row">
 
       <div className="form-group col-md-12">
-        <span>Pays de choix</span><br />
+        <span>{translate.country.header}</span><br />
         <div className="col-md-4">
-        <label htmlFor="inputNationality">1er choix</label>
+        <label htmlFor="inputNationality">{translate.country.firstChoiceLabel}</label>
         <select onChange={(e) => updateworkFirstChoiceCountry(e.target.value)} value={workFirstChoiceCountry}
         name="work country 1" id="inputNationality" className="form-control">
-          <option>Sélectionner...</option>
+          <option>{translate.defaultSelect}</option>
           {workCountries.map(AttachOptions)}
         </select>
         </div>
 
         <div className="col-md-4">
-        <label htmlFor="inputNationality">2ème choix</label>
+        <label htmlFor="inputNationality">{translate.country.secondChoiceLabel}</label>
         <select onChange={(e) => updateworkSecondChoiceCountry(e.target.value)} value={workSecondChoiceCountry}
         name="work country 2" id="inputNationality" className="form-control">
-          <option>Sélectionner...</option>
+          <option>{translate.defaultSelect}</option>
           {workCountries.map(AttachOptions)}
         </select>
         </div>
@@ -456,73 +643,74 @@ const Form = props => {
           <label htmlFor="inputProgramLevel">Plus haut degré</label>
           <select onChange={(e) => updateworkerHighestDegree(e.target.value)} value={workerHighestDegree}
           name="highest degree" id="inputProgramLevel" className="form-control">
-            <option defaultValue>Sélectionner...</option>
-            <option value="highschool">Baccalauréat</option>
-            <option value="undergraduate">Diplôme de premier cycle</option>
-            <option value="masters">Une maîtrise</option>
-            <option value="phd">Doctorat</option>
+            <option defaultValue>{translate.defaultSelect}</option>
+            <option value="highschool">{translate.highestDegree.highschoolDegree}</option>
+            <option value="undergraduate">{translate.highestDegree.undergradLevel}</option>
+            <option value="masters">{translate.highestDegree.masterLevel}</option>
+            <option value="phd">{translate.highestDegree.phdLevel}</option>
+            <option value="none">{translate.highestDegree.none}</option>
           </select>
         </div>
 
         <div className="form-group col-md-12">
-          <label htmlFor="job-experience">Faites la liste de vos expériences professionnelles précédentes si vous en avez</label>
+          <label htmlFor="job-experience">{translate.jobExperiences}</label>
           <input onChange={(e) => updatejobExperience(e.target.value)} value={jobExperience}
-          name="job experience" id="job-experience" className="form-control" placeholder="par exemple plombier, serveur..."/>
+          name="job experience" id="job-experience" className="form-control" placeholder={translate.jobExperiencePlaceholder}/>
         </div>
 
         <div className="form-group col-md-12">
-          <label htmlFor="inputProgram">Langues parlées</label>
+          <label htmlFor="inputProgram">{translate.spokenLanguages.label}</label>
           <input onChange={(e) => updatespokenLanguages(e.target.value)} value={spokenLanguages}
-          name="spoken languages" id="inputProgram" className="form-control" placeholder="par exemple français, anglais..."/>
+          name="spoken languages" id="inputProgram" className="form-control" placeholder={translate.spokenLanguages.placeholder}/>
         </div>
       </div>
 
-      <h5 className="mt-2"><small>Histoire de voyage</small></h5>
+      <h5 className="mt-2"><small>{translate.travelHistory}</small></h5>
       <div className="form-row">
         <div className="form-group col-md-12">
-        <label htmlFor="visa-denial">Vous a-t-on déjà refusé un visa?</label><br></br>
+        <label htmlFor="visa-denial">{translate.visaDenial}</label><br></br>
         <input onChange={(e) => updatevisadenial(e.target.value)} checked={visadenial === "yes"}
-        type="radio" value="yes" name="Have you ever been denied visa?" /> Oui<br></br>
+        type="radio" value="yes" name="Have you ever been denied visa?" /> {translate.yes}<br></br>
         <input onChange={(e) => updatevisadenial(e.target.value)} checked={visadenial === "no"}
-        type="radio" value="no" name="Have you ever been denied visa?" /> Non
+        type="radio" value="no" name="Have you ever been denied visa?" /> {translate.no}
           <textarea onChange={(e) => updatevisaDenialReason(e.target.value)} value={visaDenialReason}
-          name="reason i was denied visa" className="form-control" placeholder="si oui, motiver" />
+          name="reason i was denied visa" className="form-control" placeholder={translate.visaDenialReason} />
       </div>
 
         <div className="form-group col-md-12">
-        <label>Avez-vous déjà été expulsé d'un pays?</label><br></br>
+        <label>{translate.repatration}</label><br></br>
         <input onChange={(e) => updaterepatration(e.target.value)} checked={repatration === "yes"}
-        type="radio" value="yes" name="Have you ever been repatriated from a country" /> Oui<br></br>
+        type="radio" value="yes" name="Have you ever been repatriated from a country" /> {translate.yes}<br></br>
         <input onChange={(e) => updaterepatration(e.target.value)} checked={repatration === "no"}
-        type="radio" value="no" name="Have you ever been repatriated from a country" /> Non
+        type="radio" value="no" name="Have you ever been repatriated from a country" /> {translate.no}
           <textarea onChange={(e) => updaterepatrationReason(e.target.value)} value={repatrationReason}
-          name="reason i was repatriated" className="form-control" placeholder="si oui, motiver" />
+          name="reason i was repatriated" className="form-control" placeholder={translate.visaDenialReason} />
       </div>
 
       <div className="form-group col-md-12">
-        <label>Avez-vous déjà commis un crime dans votre pays ou à l'étranger?</label><br></br>
+        <label>{translate.felony}</label><br></br>
         <input onChange={(e) => updatefelony(e.target.value)} checked={felony === "yes"}
-        type="radio" value="yes" name="Have you ever committed a felony at home or abroad" /> Oui<br></br>
+        type="radio" value="yes" name="Have you ever committed a felony at home or abroad" /> {translate.yes}<br></br>
         <input onChange={(e) => updatefelony(e.target.value)} checked={felony === "no"}
-        type="radio" value="no" name="Have you ever committed a felony at home or abroad" /> Non
+        type="radio" value="no" name="Have you ever committed a felony at home or abroad" /> {translate.no}
           <textarea onChange={(e) => updatefelonyReason(e.target.value)} value={felonyReason}
-          name="reason i commited a felony" className="form-control" placeholder="si oui, motiver" />
+          name="reason i commited a felony" className="form-control" placeholder={translate.visaDenialReason} />
       </div>
 
       <div className="form-group col-md-12">
-          <label htmlFor="inputProgram">Pays dans lesquels vous avez voyagé au cours des 24 derniers mois:</label>
+          <label htmlFor="inputProgram">{translate.visitedCountries}</label>
           <input onChange={(e) => updatetravelledCountryList(e.target.value)} value={travelledCountryList}
-          name="countries you have travelled to within the last 24 months" id="inputProgram" className="form-control" placeholder="ex. Libéria, France..."/>
+          name="countries you have travelled to within the last 24 months" id="inputProgram" className="form-control" placeholder={translate.visitedCountriesPlaceholder}/>
         </div>
       </div>
 
 
-      <h5 className="mt-2"><small>Télécharger des documents</small></h5>
+      <h5 className="mt-2"><small>{translate.documents.header}</small></h5>
       <div className="mb-2">
 
           <div className="form-row mt-2">
           <div className="form-group col-md-6">
-            <label htmlFor="workerPhoto">Photo</label>
+            <label htmlFor="workerPhoto">{translate.documents.photoLabel}</label>
             <input
               name="worker photo"
               // onChange={(e) => updateworkerPhoto(e.target.value)} value={workerPhoto}
@@ -537,7 +725,7 @@ const Form = props => {
           </div>
 
           <div className="form-group col-md-6">
-            <label htmlFor="workerPassport">Passeport ou carte d'identité</label>
+            <label htmlFor="workerPassport">{translate.documents.passportLabel}</label>
             <input
               name="worker passport"
               // onChange={(e) => updateworkerPassport(e.target.value)} value={workerPassport}
@@ -555,7 +743,7 @@ const Form = props => {
 
 
           <div className="form-group col-md-6">
-            <label htmlFor="workerAdditionalDocs">*Documents supplémentaires</label>
+            <label htmlFor="workerAdditionalDocs">{translate.documents.AdditionalDocLlabel}</label>
             <input
               name="worker additional documents"
               // onChange={(e) => updateworkerAdditionalDocs(e.target.value)} value={workerAdditionalDocs}
@@ -589,12 +777,18 @@ const Form = props => {
         <div className="modal-header bt-form-header-conainer">
         <h4 className="modal-title" id="exampleModalLongTitle">{formName}</h4>
         <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
-          <input onChange={() => updateFormLanguage("english")}
+          <input onChange={() => {
+            updateFormLanguage("english");
+            updateTranslation(englishForm);
+          }}
            type="radio" className="btn-check" name="btnradio" id="btnradio1" autoComplete="off" checked={formLanguage==="english"} />
           <label className={formLanguage==="english" ? "btn btn-outline-success" : "btn"} htmlFor="btnradio1">EN</label>
 
 
-          <input onChange={() => updateFormLanguage("french")}
+          <input onChange={() => {
+            updateFormLanguage("french");
+            updateTranslation(frenchForm);
+          }}
            type="radio" className="btn-check" name="btnradio" id="btnradio2" autoComplete="off" checked={formLanguage==="french"} />
           <label className={formLanguage==="french" ? "btn btn-outline-success" : "btn"} htmlFor="btnradio2">FR</label>
         </div>
@@ -602,87 +796,87 @@ const Form = props => {
 
         <div className="modal-body">
         <form id="application-form-react">
-      <h5 className="mt-2">Informations personnelles</h5>
+      <h5 className="mt-2">{translate.personal_info}</h5>
 
       <div className="form-row">
         <div className="form-group col-md-6">
-          <label htmlFor="stdName">Nom</label>
+          <label htmlFor="stdName">{translate.name}</label>
           <input
           // onChange={(e) => updateFullname(e.target.value)} value={fullname}
-          type="text" name="name" className="form-control" id="stdName" placeholder="Nom"></input>
+          type="text" name="name" className="form-control" id="stdName" placeholder={translate.name}></input>
         </div>
 
         <div className="form-group col-md-6">
-          <label htmlFor="stdSurname">Nom de famille</label>
+          <label htmlFor="stdSurname">{translate.surname}</label>
           <input
           // onChange={(e) => updatesurname(e.target.value)} value={surname}
-          type="text" name="surname" className="form-control" id="stdSurname" placeholder="Nom de famille"></input>
+          type="text" name="surname" className="form-control" id="stdSurname" placeholder={translate.surname}></input>
         </div>
 
         <div className="form-group col-md-6">
-          <label htmlFor="stdFatherName">Le nom du père</label>
+          <label htmlFor="stdFatherName">{translate.fatherName}</label>
           <input
           // onChange={(e) => updatefatherName(e.target.value)} value={fatherName}
-          type="text" name="father name" className="form-control" id="stdFatherName" placeholder="Le nom du père"></input>
+          type="text" name="father name" className="form-control" id="stdFatherName" placeholder={translate.fatherName}></input>
         </div>
 
         <div className="form-group col-md-6">
-          <label htmlFor="stdMotherName">Le nom de la mère</label>
+          <label htmlFor="stdMotherName">{translate.motherName}</label>
           <input
           // onChange={(e) => updatemotherName(e.target.value)} value={motherName}
-          type="text" name="mother name" className="form-control" id="stdMotherName" placeholder="Le nom de la mère"></input>
+          type="text" name="mother name" className="form-control" id="stdMotherName" placeholder={translate.motherName}></input>
         </div>
 
         <div className="form-group col-md-6">
-          <label htmlFor="inputEmail4">E-mail</label>
-          <input onChange={(e) => updateemail(e.target.value)} value={email} type="email" name="email address" className="form-control" id="inputEmail4" placeholder="E-mail"></input>
+          <label htmlFor="inputEmail4">{translate.email}</label>
+          <input onChange={(e) => updateemail(e.target.value)} value={email} type="email" name="email address" className="form-control" id="inputEmail4" placeholder={translate.email}></input>
         </div>
 
         <div className="form-group col-md-6">
-          <label htmlFor="inputTelephone">Numéro de téléphone</label>
-          <input onChange={(e) => updatetelephone(e.target.value)} value={telephone} type="tel" name="phone number" className="form-control" id="inputTelephone" placeholder="Numéro de téléphone"></input>
+          <label htmlFor="inputTelephone">{translate.telephone}</label>
+          <input onChange={(e) => updatetelephone(e.target.value)} value={telephone} type="tel" name="phone number" className="form-control" id="inputTelephone" placeholder={translate.telephone}></input>
         </div>
       </div>
 
       <div className="form-row">
         <div className="form-group col-md-3">
-          <label htmlFor="inputDOB">Date de naissance</label>
-          <input onChange={(e) => updatedob(e.target.value)} value={dob} type="date" name="date of birth" className="form-control" id="inputDOB" placeholder="Date de naissance"></input>
+          <label htmlFor="inputDOB">{translate.dob}</label>
+          <input onChange={(e) => updatedob(e.target.value)} value={dob} type="date" name="date of birth" className="form-control" id="inputDOB" placeholder={translate.dob}></input>
         </div>
 
         <div className="form-group col-md-3">
-          <label htmlFor="inputNationality">Nationalité</label>
+          <label htmlFor="inputNationality">{translate.nationality}</label>
           <select onChange={(e) => updatenationality(e.target.value)} value={nationality} name="nationality" id="inputNationality" className="form-control">
-            <option>Choose...</option>
+            <option>{translate.defaultSelect}</option>
             {nationalities.map(AttachOptions)}
           </select>
         </div>
 
         <div className="form-group col-md-3">
-          <label htmlFor="inputGender">Sexe</label>
+          <label htmlFor="inputGender">{translate.gender.label}</label>
           <select onChange={(e) => updategender(e.target.value)} value={gender} name="gender" id="inputGender" className="form-control">
-            <option defaultValue>Sélectionnez...</option>
-            <option value="male">Homme</option>
-            <option value="female">Femme</option>
+            <option defaultValue>{translate.defaultSelect}</option>
+            <option value="male">{translate.gender.male}</option>
+            <option value="female">{translate.gender.female}</option>
           </select>
         </div>
 
         <div className="form-group col-md-3">
-          <label htmlFor="inputMaritalStatus">État civil</label>
+          <label htmlFor="inputMaritalStatus">{translate.maritalStatus.label}</label>
           <select onChange={(e) => updatemaritalStatus(e.target.value)} value={maritalStatus} name="marital status" id="inputMaritalStatus" className="form-control">
-            <option defaultValue>Sélectionner...</option>
-            <option value="single">Célibataire</option>
-            <option value="married">Marié</option>
+            <option defaultValue>{translate.defaultSelect}</option>
+            <option value="single">{translate.maritalStatus.single}</option>
+            <option value="married">{translate.maritalStatus.married}</option>
           </select>
         </div>
 
         <div className="form-group col-md-6">
-          <label htmlFor="emergencyContact">Personne à contacter en cas d'urgence</label>
-          <input onChange={(e) => updateemergencyContact(e.target.value)} value={emergencyContact} type="tel" name="emergency contact" className="form-control" id="emergencyContact" placeholder="Personne à contacter en cas d'urgence"></input>
+          <label htmlFor="emergencyContact">{translate.emergencyContact}</label>
+          <input onChange={(e) => updateemergencyContact(e.target.value)} value={emergencyContact} type="tel" name="emergency contact" className="form-control" id="emergencyContact" placeholder={translate.emergencyContact}></input>
         </div>
 
         <div className="form-group col-md-12">
-          <label htmlFor="inputAddress">Adresse</label>
+          <label htmlFor="inputAddress">{translate.address}</label>
           <input onChange={(e) => updateaddress(e.target.value)} value={address} name="address" type="text" className="form-control" id="inputAddress" placeholder="12 Main Street..."></input>
         </div>
       </div>
@@ -693,18 +887,18 @@ const Form = props => {
         if (formType === "all") {
           return (
           <div>
-        <h5 className="mt-2">Pourquoi postulez-vous?</h5>
+        <h5 className="mt-2">{translate.applicationType.header}</h5>
         <input onChange={(e) => updateApplicationType(e.target.value)} checked={applicationType === "studies"}
-        type="radio" value="studies" name="application type" /> Études
+        type="radio" value="studies" name="application type" /> {translate.applicationType.student}
         <input onChange={(e) => updateApplicationType(e.target.value)} checked={applicationType === "work"}
-        type="radio" value="work" name="application type" className="ml-3" /> Travail
+        type="radio" value="work" name="application type" className="ml-3" /> {translate.applicationType.work}
         <div id="accordion">
           {/* studeies */}
           <div className={applicationType === "studies" ? "card m-0" : "unclickable"}>
           <div className="card-header" id="headingOne">
               <h5 className="mb-0">
                 <button type="button" className="btn btn-link text-dark text-small" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                Études
+                {translate.applicationType.student}
                 </button>
               </h5>
             </div>
@@ -720,7 +914,7 @@ const Form = props => {
           <div className="card-header" id="headingTwo">
               <h5 className="mb-0">
                 <button type="button" className="btn btn-link text-dark text-small" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Travail
+                {translate.applicationType.work}
                 </button>
               </h5>
             </div>
@@ -741,7 +935,7 @@ const Form = props => {
         }
         }() }
       <div className="mt-2">
-        <button type="submit" className="btn btn-primary mt-2" id="application-form-submit" onClick={handleSubmit}>Soumettre</button>
+        <button type="submit" className="btn btn-primary mt-2" id="application-form-submit" onClick={handleSubmit}>{translate.submit}</button>
       </div>
     </form>
         </div>
