@@ -563,7 +563,7 @@ const Form = props => {
 
           <div className="form-row mt-2">
           <div className="form-group col-md-6">
-            <label htmlFor="studentPhoto">{translate.documents.header}</label>
+            <label htmlFor="studentPhoto">{translate.documents.photoLabel}</label>
             <input
               name="student photo"
               // onChange={(e) => updatestudentPhoto(e.target.value)} value={studentPhoto}
@@ -640,7 +640,7 @@ const Form = props => {
       </div>
 
       <div className="form-group col-md-5">
-          <label htmlFor="inputProgramLevel">Plus haut degré</label>
+          <label htmlFor="inputProgramLevel">{translate.highestDegree.label}</label>
           <select onChange={(e) => updateworkerHighestDegree(e.target.value)} value={workerHighestDegree}
           name="highest degree" id="inputProgramLevel" className="form-control">
             <option defaultValue>{translate.defaultSelect}</option>

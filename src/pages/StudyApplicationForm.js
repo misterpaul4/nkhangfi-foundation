@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react';
+import React from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero/Others';
 import Footer from '../components/Footer';
@@ -7,10 +7,6 @@ import { scholarshipApplication } from '../utils/Forms';
 import '../css/form.css';
 
 const StudyApplication = () => {
-  useEffect(() => {
-
-    return null;
-  }, []);
 
   const heroContent = {
     name: "scholarship",
