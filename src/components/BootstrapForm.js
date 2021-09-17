@@ -8,17 +8,13 @@ import Alert from './Alert';
 import '../css/form.css';
 
 const Form = props => {
-  const { formName, submissionLink, formType } = props.data;
+  const { formName, formNameFrench, submissionLink, formType } = props.data;
 
   const [program, updateProgram] = useState("");
   // const [fullname, updateFullname] = useState("");
   // const [surname, updatesurname] = useState("");
   // const [fatherName, updatefatherName] = useState("");
   // const [motherName, updatemotherName] = useState("");
-  const [alertProp, updateAlertProp] = useState({
-    alertclassName: "d-none",
-    message: "",
-  });
 
   const [email, updateemail] = useState("");
   const [telephone, updatetelephone] = useState("");
@@ -48,7 +44,17 @@ const Form = props => {
 
   const [formLanguage, updateFormLanguage] = useState("english");
 
+  const [alertProp, updateAlertProp] = useState({
+    alertclassName: "",
+    message: "",
+  });
+
+  const AlertclassDefault = "alert position-fixed alert-dismissible fade py-2";
+
   const englishForm = {
+    alertSuccess: "Your application have been submitted successfully",
+    alertFailure: "There seems to be a problem. Try again",
+    formHeading: formName,
     personal_info: "Personal Information",
     name: "Name",
     surname: "Surname",
@@ -141,6 +147,9 @@ const Form = props => {
   }
 
   const frenchForm = {
+    alertSuccess: "Votre candidature a été soumise avec succès",
+    alertFailure: "Il semble y avoir un problème. Réessayer",
+    formHeading: formNameFrench,
     visitedCountriesPlaceholder: "Par exemple, le Libéria, la France...",
     visitedCountries: "Pays dans lesquels vous avez voyagé au cours des 24 derniers mois:",
     felony: "Avez-vous déjà commis un crime dans votre pays ou à l'étranger?",
@@ -378,21 +387,20 @@ const Form = props => {
   );
 
   let formData = {};
-  const AlertclassNameDefault = "alert position-fixed alert-dismissible fade py-2";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     // const displayWarning = (errorMessage, inp) => {
     //   updateAlertProp({
-    //     alertclassName: `${AlertclassNameDefault} alert-warning show`,
+    //     alertclass: `${AlertclassDefault} alert-warning show`,
     //     message: errorMessage,
     //   });
 
     //   setTimeout(() => {
     //     inp.focus();
     //     updateAlertProp({
-    //       alertclassName: AlertclassNameDefault,
+    //       alertclass: AlertclassDefault,
     //       message: "",
     //     });
     //   }, 3000);
@@ -422,8 +430,7 @@ const Form = props => {
       const loadingGif = document.querySelector('.loading-gif');
       const appForm = document.getElementById('application-form-react');
 
-      loadingGif.classNameList.remove('d-none');
-      appForm.classNameList.add('unclickable');
+
 
 
       const FD = new FormData(appForm);
@@ -432,6 +439,9 @@ const Form = props => {
       for(var pair of FD.entries()) {
         formData[pair[0]] = pair[1];
       }
+
+      loadingGif.classList.remove('d-none');
+      appForm.classList.add('unclickable');
 
       await fetch(submissionLink, {
         method: "POST",
@@ -442,16 +452,16 @@ const Form = props => {
         body: JSON.stringify(formData),
       }).then(() => {
         // succesful
-        loadingGif.classNameList.add('d-none');
+        loadingGif.classList.add('d-none');
         updateAlertProp({
-          alertclassName: `${AlertclassNameDefault} alert-success show`,
-          message: "Votre candidature a été soumise avec succès",
+          alertclassName: `${AlertclassDefault} alert-success show`,
+          message: translate.alertSuccess,
         });
 
       setTimeout(() => {
-        appForm.classNameList.remove('unclickable');
+        appForm.classList.remove('unclickable');
         updateAlertProp({
-          alertclassName: AlertclassNameDefault,
+          alertclassName: AlertclassDefault,
           message: "",
         });
         appForm.reset();
@@ -484,16 +494,16 @@ const Form = props => {
 
       }).catch(Err => {
         // unsuccesful
-        loadingGif.classNameList.add('d-none');
+        loadingGif.classList.add('d-none');
         updateAlertProp({
-          alertclassName: `${AlertclassNameDefault} alert-danger show`,
-          message: "Il semble y avoir un problème. Réessayer",
+          alertclassName: `${AlertclassDefault} alert-danger show`,
+          message: translate.alertFailure,
         });
 
         setTimeout(() => {
-          appForm.classNameList.remove('unclickable');
+          appForm.classList.remove('unclickable');
           updateAlertProp({
-            alertclassName: AlertclassNameDefault,
+            alertclassName: AlertclassDefault,
             message: "",
           });
         }, 3000);
@@ -766,7 +776,7 @@ const Form = props => {
   return (
     <>
     <Alert data={
-      {alertPropclassName: alertProp.alertclassName,
+      {alertPropClassName: alertProp.alertclassName,
        message: alertProp.message,
       }
     } />
@@ -775,7 +785,7 @@ const Form = props => {
     <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
       <div className="modal-content">
         <div className="modal-header bt-form-header-conainer">
-        <h4 className="modal-title" id="exampleModalLongTitle">{formName}</h4>
+        <h4 className="modal-title" id="exampleModalLongTitle">{translate.formHeading}</h4>
         <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
           <input onChange={() => {
             updateFormLanguage("english");

@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Hero from '../components/Hero/Others';
 import Footer from '../components/Footer';
 import BootstrapForm from '../components/BootstrapForm';
-import { scholarshipApplication } from '../utils/Forms';
+import { workApplciation } from '../utils/Forms';
 import '../css/form.css';
 
 const WorkAbroadApplication = () => {
@@ -22,7 +22,8 @@ const WorkAbroadApplication = () => {
       <div>
         <BootstrapForm data={{
             formName: "Get Started",
-            submissionLink: scholarshipApplication,
+            formNameFrench: "Commencer",
+            submissionLink: workApplciation,
             formType: "work",
           }
         }

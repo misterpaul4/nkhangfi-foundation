@@ -1,14 +1,11 @@
 import React from 'react';
 
 const Alert = prop => {
-  const { alertPropClass, message } = prop.data;
+  const { alertPropClassName, message } = prop.data;
 
   return(
-  <div className={alertPropClass} id="appStatus" role="alert">
+  <div className={alertPropClassName} id="appStatus" role="alert">
     <span id="application-form-status-message">{message}</span>
-    <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
   </div>
 )
 }
