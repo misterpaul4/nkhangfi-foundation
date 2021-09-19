@@ -35,6 +35,11 @@
 *::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+  .carouselPopUpBtn {
+    background: none;
+    border: none;
+  }
 /*
 @media (prefers-reduced-motion: no-preference) {
   :root {

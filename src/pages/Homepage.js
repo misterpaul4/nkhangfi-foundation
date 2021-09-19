@@ -30,7 +30,7 @@ function Homepage() {
     message: () => (
       <>
         <p>A Non-Governmental organization developed by young African Educational Consultants and Travel Agencies from different countries, using education as a tool to alleviate poverty in Africa.</p>
-        <p>The Nkhangfi Foundation Team sources for scholarships in reputable and world-className universities around the globe. We bring them to students in African communities who have little or no financial resources to travel abroad to continue their undergraduate or post-graduate studies.</p>
+        <p>The Nkhangfi Foundation Team sources for scholarships in reputable and world class universities around the globe. We bring them to students in African communities who have little or no financial resources to travel abroad to continue their undergraduate or post-graduate studies.</p>
       </>
     ),
     spread: [
